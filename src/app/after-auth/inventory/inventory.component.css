@@ -1,0 +1,249 @@
+.main-container{
+    /* border: 2px solid black; */
+    /* box-shadow: -10px -10px 10px grey; */
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+/* .main-container .container1{ */
+    /* border: 5px solid red; */
+    /* width: 16%; */
+    /* width: 300px; */
+/* } */
+
+.main-container .container2{
+    /* margin: 0; */
+    /* border: 10px solid black; */
+    width: 100%;
+    display: flex;
+} 
+
+ 
+
+
+
+
+
+
+
+
+
+ 
+/* taskbar page */
+
+.main-container .container2 .taskbar{
+    /* border: 2px solid black; */
+    width: 300px;
+    /* width: 1; */
+    padding: 10px 20px;
+    /* height: 100%; */
+    /* position: absolute; */
+    font-family: 'Inter';
+    max-height: 100%;
+    overflow-y: scroll;
+}
+ 
+.main-container .container2 .taskbar .heading h1{ 
+    font-weight: bold;
+    font-size: 24px;
+    font-family: 'Inter';
+    color: #2F1A00;
+}
+
+.main-container .container2 .taskbar .search-bar{
+    /* border: 2px solid red; */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.main-container .container2 .taskbar .search-bar .search{
+    border: 3px solid rgb(187, 185, 185);
+    display: flex;
+    font-size: 18px;
+    /* padding: 15px; */
+    border-radius: 5px;
+}
+
+.main-container .container2 .taskbar .search-bar .search .search-logo{
+    padding-top: 6px;
+    padding-bottom: 0;
+    padding-left: 5px;
+    /* border: 2px solid black; */
+    /* color: rgb(129, 127, 127); */
+    cursor: pointer;
+}
+
+.main-container .container2 .taskbar .search-bar .search .search-input{
+    /* border: 2px solid black; */
+    font-family: 'Inter';
+    padding-top: 8px;
+    width: 80%;
+    padding-left: 5px;
+    font-size: 14px;
+}
+
+.main-container .container2 .taskbar .search-bar .counting{
+    font-style: italic;
+    font-size: 12px;
+}
+
+.main-container .container2 .taskbar .menu-task{
+    /* border: 2px solid red; */
+    margin-top: 30px;
+}
+
+.main-container .container2 .taskbar .menu-task .task{
+    /* border: 2px solid blue; */
+    cursor: pointer;
+}
+
+.main-container .container2 .taskbar .menu-task .task h2{
+    /* border: 2px solid black; */
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter';
+    font-size: 16px;
+}
+
+.main-container .container2 .taskbar .menu-task .task p{
+    /* border: 2px solid blueviolet; */
+    font-family: 'Inter';
+    font-size: 12px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* inventory page */
+.main-container .container2 .inventory{
+    /* border: 2px solid blueviolet; */
+    width: 100%;
+    height: 100%;
+    /* position: relative; */
+    border-radius: 40px;
+    margin: 15px;
+    /* box-shadow: -5px -5px 10px lightgrey; */
+    box-shadow: -15px 15px 99px rgba(48, 66, 84, 0.15);
+}
+
+.main-container .container2 .inventory .inventory-section{
+    /* border: 2px solid blueviolet; */
+    margin: 10px;
+}
+
+.main-container .container2 .header{
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content:space-between;
+    margin: 30px;
+}
+
+.main-container .container2 .header .heading{
+    /* border: 2px solid blue; */
+    font-size: 35px;
+    padding-top: 10px;
+    font-family: Montserrat;
+    font-weight: bold;
+
+}
+
+.main-container .container2 .header .add-icon{
+    /* border: 2px solid blueviolet;     */
+    border-radius: 50px;
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    background-color: #FFA500;
+    font-size: 30px;
+    color: #ffff;
+    font-weight: 0;
+    cursor: pointer;
+    box-shadow: -5px -5px 10px lightgrey;
+    position: relative;
+    transition-duration: 0.4s;
+    text-decoration: none;
+    user-select:none;
+}
+
+.main-container .container2 .header .add-icon:active{
+    top: 1px;
+}
+
+.main-container .container2 .dropdown{
+    /* border: 10px solid black; */
+    margin: 30px;
+}
+
+.main-container .container2 .dropdown .expand-bar{
+    margin-top: 15px;
+    /* border: 2px solid red; */
+}
+
+.main-container .container2 .dropdown .expand-bar mat-accordion mat-expansion-panel{
+    /* background-color: rgb(199, 194, 194); */
+    background-color: lightgrey;
+    border-radius: 15px;
+    /* height: 60px; */
+    vertical-align: middle;
+    /* padding-top: 10px; */
+}
+
+.main-container .container2 .dropdown .expand-bar mat-accordion mat-expansion-panel mat-panel-title{
+    color: black;
+    /* font-weight: bold; */
+    padding: 0 10px;
+    font-size: 20px;
+    font-family: 'Inter';
+    line-height: 20px;
+    /* background-color: lightgrey; */
+}
+
+
+.main-container .container2 .dropdown .expand-bar mat-accordion mat-expansion-panel .data p{
+    color: black;
+    /* font-weight: bold; */
+    padding: 0 10px;
+    font-size: 17px;
+    /* background-color: #ffff; */
+    cursor: pointer;
+}
+
+.main-container .container2 .dropdown .expand-bar mat-accordion mat-expansion-panel .data{
+    /* border: 2px solid black; */
+    margin-left: 3%;
+}
+
+/* .main-container .dropdown .expand-bar mat-accordion mat-expansion-panel .data:hover{
+    
+} */
+
+.main-container .container2 .dropdown .expand-bar mat-accordion .content mat-accordion mat-expansion-panel mat-expansion-panel-header mat-panel-title:hover{
+    border-left: 7px solid #FFA500;
+}
+
+.main-container .container2 .dropdown .expand-bar mat-accordion .content mat-accordion mat-expansion-panel .data p:hover{
+    border-left: 4px solid #FFA500;
+}
+
+/* .display{
+    border-left: 3px solid #FFA500;
+} */

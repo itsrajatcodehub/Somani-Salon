@@ -1,0 +1,99 @@
+.main-container{
+    display: flex;
+    width: 100%;
+}
+
+
+
+ 
+/* section 1 */
+.main-container .logo-section{
+    /* border: 10px solid red; */
+    width: 55%;
+    background-color: rgb(64, 28, 0);
+    height: 890px;
+}
+
+.main-container .logo-section .logo{
+    margin: auto;
+    text-align: center;
+    align-items: center;
+    /* border: 0px solid #5b2804; */
+    margin-top: 100px;
+}
+
+
+
+
+/* section 2 */
+.main-container .login-section{
+    /* border: 10px solid blue; */
+    width: 45%;
+}
+
+.main-container .login-section .login{
+    margin: auto;
+    margin-top: 140px;
+    /* border: 2px solid orangered; */
+    width: 347px;
+}
+
+.main-container .login-section .login .forget-password{
+    font-size: 30px;
+    font-family: 'Roboto';
+    font-weight: 500;
+}
+
+.main-container .login-section .login .forget-text{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.main-container .login-section .login .login-form{
+    margin-top: 80px;
+    font-size: 23px;
+    /* border: 10px solid olivedrab; */
+    font-family: 'Roboto';
+}
+
+
+.main-container .login-section .login .login-form .form-field{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+
+.main-container .login-section .login .buttons{
+    margin-top: 30px;
+    font-family: 'Roboto';
+}
+
+.main-container .login-section .login .buttons .login-now{
+    width: 100%;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    font-size: 16px;
+    background-color: orange;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.main-container .login-section .join{
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 200px;
+    font-family: 'Roboto';
+}

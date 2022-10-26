@@ -1,0 +1,208 @@
+.main-container{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* transaction */
+.container2{
+    width: 16%;
+}
+
+.container3{
+    margin-top: 50px;
+    width: 80%;
+    /* border: 5px solid red; */
+    padding: 0 30px;
+}
+
+.container3 table {
+    border-collapse: collapse;
+    width: 100%;
+    background: #F8F9FD;
+}
+
+.container3 table th {
+    border-bottom: 1px solid #706a6b;
+    padding: 0.5em ;
+    text-align: left;
+    
+}
+  
+.container3 table td {
+    padding: 0.7em ;
+    border-bottom: 1px solid #706a6b;
+    
+}
+
+.container3 .client{
+    display: flex;
+}
+
+.container3 .client .name{
+    /* border: 1px solid red; */
+    padding-top: 12px;
+    padding-left: 5px;
+}
+
+.container3 .heading{
+    font-size: 40px;
+    padding: 25px 0;
+    border-radius: 20px 20px 0 0;
+    background-color: #2F1A00;
+    color: #ffff;
+} 
+ 
+.container3 .heading p{
+    margin-top: 10px;
+    text-align: center;
+    font-size: 32px;
+}
+
+.container3 .transaction{
+    margin-top: 60px;
+}
+
+.container3 .display{
+    display: flex;
+    justify-content: space-between;
+}
+
+.container3 .display h2{
+    font-size: 24px;
+    font-family: 'Inter';
+}
+
+.display .calendar mat-form-field mat-label{
+    text-align: center;
+    justify-content: center;
+}
+
+.container3 .total{
+    /* border: 2px solid red; */
+    width: 250px;
+    text-align: center;
+    border-radius: 20px;
+    background-color: #2F1A00;
+    color: #ffff;
+}
+
+.container3 .total p{
+    font-size: 30px;
+    font-family: 'Inter';
+}
+
+.container3 .calendar{
+    /* border: 2px solid blue; */
+}
+
+
+
+
+
+
+
+/* taskbar */
+
+.container2 .taskbar{
+    /* border: 2px solid black; */
+    width: 230px;
+    padding: 10px 20px;
+    /* height: 100%; */
+    position: absolute;
+    font-family: 'Inter';
+    /* overflow-y: scroll; */
+    max-height: 100%;
+
+}
+
+.container2 .taskbar .heading h1{ 
+    font-weight: bold;
+    font-size: 24px;
+    font-family: 'Inter';
+    line-height: 24px;
+}
+
+.container2 .taskbar .recent{
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+    text-align: center;
+    border: 1px solid #E8E8E8;
+    height: 35px;
+    margin-top: 20px;
+}
+
+.container2 .taskbar .recent h1{
+    font-size: 24px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+}
+
+.container2 .taskbar .select-year{
+    /* border: 2px solid red; */
+    margin-top: 60px;
+    text-align: center;
+    justify-content: center;
+    /* width: 100; */
+    border-radius: 5px;
+    
+}
+
+.container2 .taskbar .select-year select{
+    height: 40px;
+    width: 100%;
+    font-family: 'Inter';
+    font-size: 20px;
+}
+
+.container2 .taskbar .select-year mat-form-field{
+    width: 100%;
+    text-align: center;
+    font-family: 'Inter';
+}
+
+.container2 .taskbar .select-year mat-label{
+    justify-content: center;
+    font-family: 'Inter';
+    font-size: 20px;
+}
+
+.container2 .select-year p{
+    font-size: 24px;
+    font-weight: bold;
+    color: #2F1A00;
+    user-select: none;
+    margin-top: 20px;
+}
+
+.container2 .select-month .months{
+    /* border: 2px solid blueviolet; */
+}
+
+.container2 .select-month .months .month{
+    /* border: 2px solid blue; */
+    border-bottom: 1px solid lightgrey;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 24px;
+    font-family: 'Inter';
+    color: #2F1A00;
+    cursor: pointer;
+    user-select: none;
+}
+
+.container2 .select-month .months .month:hover{
+    color: #fff;
+    background-color: #2F1A00;
+    user-select: none;
+}
+
+.container2 .select-month .months .month:active{
+    background-color: #2F1A00;
+    user-select: none;
+}

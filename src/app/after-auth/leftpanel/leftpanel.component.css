@@ -1,0 +1,79 @@
+.side-bar{
+    /* border: 2px solid black; */
+    width: 215px;
+    padding: 20px 10px;
+    height: 100%;
+    background-color: #2F1A00;
+    color: #ffff;
+    font-family: 'Inter';
+    /* overflow-y: scroll; */ 
+    user-select: none;
+}
+ 
+.side-bar .heading{
+    /* border: 2px solid black; */
+    margin-bottom: 60px;
+    cursor: pointer;
+}
+
+.side-bar .heading p{
+    font-size: 24px;
+    padding-top: 15px;
+    font-family: 'Inter';
+}
+
+/* .side-bar .menu{ */
+    /* border: 2px solid red; */
+    /* position: absolute; */
+    /* height: 90%; */
+/* } */
+
+.side-bar .menu .items{
+    /* border: 2px solid blue; */
+    margin: 6px 0;
+    padding-left: 10px;
+    padding-top: 12px; 
+    border-radius: 10px;
+    display: flex;
+    cursor: pointer;
+    width: 200px;
+}
+ 
+.side-bar .menu .items p{
+    font-size: 17px;
+    /* border: 2px solid black; */
+    padding-top: 2.5px;
+}
+
+.side-bar .menu .items:hover{
+    color: #2F1A00;
+    background-color: #ffff;
+}
+
+.hover{
+    color: #2F1A00;
+    background-color: #ffff;
+}
+
+.side-bar .menu .logout{
+    display: flex;
+    /* border: 2px solid orange; */
+    border-radius: 10px;
+    margin: 6px 0;
+    padding-left: 15px;
+    padding-top: 10px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+    width: 195px;
+}
+
+.side-bar .menu .logout:hover{
+    background-color: #ffff;
+    color: #2F1A00;
+}
+
+.side-bar .menu .logout p{
+    padding-top: 2.5px;
+    font-size: 17px;
+}

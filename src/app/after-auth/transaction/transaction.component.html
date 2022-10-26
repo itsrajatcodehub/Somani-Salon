@@ -1,0 +1,148 @@
+<div class="main-container">
+    
+
+    <!-- container 1* -->
+    <div class="left-panel">
+        <app-leftpanel></app-leftpanel>
+    </div>
+    
+    
+    
+
+    <!-- container 2* -->
+    <div class="container2">
+
+        <div class="taskbar">
+            <!-- section 1 -->
+            <div class="heading">
+                <h1>Total Sales</h1>
+            </div>
+        
+            <!-- section 2 -->
+            <div class="recent">
+                <h1>Recent</h1>
+            </div>
+        
+            <!-- section 3 -->
+            <div class="select-year">
+                <mat-form-field>
+                    <mat-label>Select Year</mat-label>
+                    <mat-select [(value)]="selected">
+                      <mat-option>None</mat-option>
+                      <mat-option value="2020">2020</mat-option>
+                      <mat-option value="2021">2021</mat-option>
+                      <mat-option value="2022">2022</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                  
+                  <p>{{selected}}</p>
+                  
+            </div>
+
+            <!-- section 4 -->
+            <div class="select-month">
+                <div class="months">
+                    <div class="month">January</div>
+                    <div class="month">Febuary</div>
+                    <div class="month">March</div>
+                    <div class="month">April</div>
+                    <div class="month">May</div>
+                    <div class="month">June</div>
+                    <div class="month">July</div>
+                    <div class="month">August</div>
+                    <div class="month">September</div>
+                    <div class="month">October</div>
+                    <div class="month">November</div>
+                    <div class="month">December</div>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+ 
+  
+    
+
+    <!-- container 3* -->
+    <div class="container3">
+
+
+            <div class="display">
+                <div class="total">
+                    <h1>Total</h1>
+                    <p>{{'₹70,000'}}</p>
+                </div>
+    
+                <div class="calendar">
+                    <mat-form-field>
+                        <mat-label>Select Date</mat-label>
+                        <input matInput [matDatepicker]="picker">
+                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                      </mat-form-field>
+                      
+                </div>
+            </div>
+
+
+
+            <!-- transaction content -->
+            <div class="transaction">
+    
+                <div class="heading">
+                    <p>Recent Sales</p>
+                </div>
+    
+    
+                <div class="table">
+                <table>
+                    <table>
+                      <thead>
+                        <tr>
+                          <th *ngFor="let header of headers" style="font-size: 24px;">
+                            {{ header }}
+                          </th>
+                        </tr>
+                      </thead>
+                
+                      <tr *ngFor="let client of clients">
+                        <td style="font-size: 18px; font-family: 'Inter';">
+                          {{ client.sno }}
+                        </td>
+    
+                        <td>
+                            <div class="client">
+                                <div class="dp"><img src="assets/img/dp.png" alt=""></div>
+                                <div class="name">{{ client.name }}</div>
+                            </div>
+                        </td>
+    
+                        <td style="font-size: 18px; font-family: 'Inter';">
+                          {{ client.email }}
+                        </td>
+    
+                        <td style="font-size: 18px; font-family: 'Inter';">
+                          {{ client.transfer }}
+                        </td>
+                
+                        <td style="font-size: 18px; font-family: 'Inter';">
+                          {{ client.amount }}
+                        </td>
+                       
+                      </tr>
+                    </table>
+                  </table>
+            </div>
+    
+    
+    
+    
+    
+            </div>
+    </div>
+
+
+
+
+</div>
