@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
- import { CalendarOptions } from '@fullcalendar/core';
+import { HttpClient,HttpHeaders } from '@angular/common/http';
+import { CalendarOptions } from '@fullcalendar/angular';
 
 
 @Component({
@@ -9,25 +10,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StaffcalendarComponent implements OnInit {
 
- Events = []
-
- calendarOptions !: CalendarOptions
- onDateClick(res:{dateStr:string}){
-   alert("You clicked on :" + res.dateStr)
- }
-
-  constructor() {}
-
-  ngOnInit(): void {
-     setTimeout(() => {
- this.calendarOptions = {
-   initialView: 'dayGridMonth',
-  //  dateClick:this.onDateClick.bind(this),
-   events:this.Events
- }
-     },3500)
-   }
-
+  events = [];
+  calendarOptions: CalendarOptions | undefined;
+  constructor(private http:HttpClient) {}
+  
+  ngOnInit(){
+    //web api calling to get dynamic events
+    this.http.get('http://localhost/events.php').subscribe(data => {
+        // this.events.push(data);
+        console.log(this.events);
+        
+   });
+   setTimeout(() => {
+   //full calendar setting and event binding
+    this.calendarOptions = {
+        initialView: 'dayGridMonth',
+        events: this.events[0]};
+    }, 1000);
   }
+}
   
   

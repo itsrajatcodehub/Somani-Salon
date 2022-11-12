@@ -10,15 +10,18 @@ import { StaffcalendarComponent } from './staffcalendar/staffcalendar.component'
 import { MessageComponent } from './message/message.component';
 import { AddmessageComponent } from './message/addmessage/addmessage.component';
 import { ReviewsComponent } from './reviews/reviews.component';
-//  import { FullCalendarModule } from '@fullcalendar/angular';
-//  import dayGridPlugin from '@fullcalendar/daygrid';
-//  import interactionPlugin from '@fullcalendar/interaction';
- 
+import { TaskComponent } from './task/task.component'; 
+import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
+import { FullCalendarModule } from '@fullcalendar/angular'; 
+import dayGridPlugin from '@fullcalendar/daygrid'; 
+import interactionPlugin from '@fullcalendar/interaction'; 
+FullCalendarModule.registerPlugins([ 
+  dayGridPlugin,
+  interactionPlugin
+]);
 
-//  FullCalendarModule.registerPlugins([
-//    interactionPlugin,
-//    dayGridPlugin
-//  ])
+  
 
 @NgModule({
   declarations: [
@@ -29,18 +32,21 @@ import { ReviewsComponent } from './reviews/reviews.component';
     MessageComponent,
     AddmessageComponent,
     ReviewsComponent,
+    TaskComponent,
     
   ],
   imports: [
     CommonModule,
     MatDialogModule,
-    //  FullCalendarModule,
+       FullCalendarModule,
+       HttpClientModule,
     RouterModule.forChild([
       { path: 'client', component: ClientComponent},
       { path: 'staffattendence', component: StaffAttendenceComponent},
       { path: 'staffcalendar', component: StaffcalendarComponent },
       { path: 'message', component: MessageComponent },
       { path: 'review', component: ReviewsComponent },
+      { path: 'task', component: TaskComponent }
     ])
   ]
 })
