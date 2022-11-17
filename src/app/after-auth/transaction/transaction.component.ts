@@ -83,9 +83,6 @@ export class TransactionComponent implements OnInit {
       "amount" : "₹10,000"
   
     },
-<<<<<<< Updated upstream
-    
-=======
     {
       "sno" : "08",
       // "image" : "",
@@ -145,7 +142,6 @@ export class TransactionComponent implements OnInit {
     //   "amount" : "₹10,000"
   
     // }
->>>>>>> Stashed changes
   
   ]
 }

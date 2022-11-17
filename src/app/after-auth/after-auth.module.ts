@@ -6,32 +6,33 @@ import { AfterAuthComponent } from './after-auth.component';
 import { TransactionComponent } from './transaction/transaction.component';
 import { InventoryComponent } from './inventory/inventory.component';
 import { LeftpanelComponent } from './leftpanel/leftpanel.component';
-<<<<<<< Updated upstream
-=======
 import { HomeComponent } from './home/home.component';
->>>>>>> Stashed changes
 import { MatIconModule} from '@angular/material/icon';
 import {MatExpansionModule} from '@angular/material/expansion';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import {MatNativeDateModule} from '@angular/material/core';
-import { MatLegacyFormFieldModule as MatFormFieldModule } from '@angular/material/legacy-form-field';
-import {MatLegacyInputModule as MatInputModule} from '@angular/material/legacy-input';
-import {MatLegacySelectModule as MatSelectModule} from '@angular/material/legacy-select';
-<<<<<<< Updated upstream
-=======
+import { MatFormFieldModule } from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import {MatSelectModule} from '@angular/material/select';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
->>>>>>> Stashed changes
- 
+import { ClientComponent } from './client/client.component';
+import { TaskComponent } from './task/task.component';
+import { MessageComponent } from './message/message.component';
+import { ReviewsComponent } from './reviews/reviews.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import { AddmessageComponent } from './message/addmessage/addmessage.component';
 @NgModule({
   declarations: [
     AfterAuthComponent,
     TransactionComponent,
     InventoryComponent,
     LeftpanelComponent,
-<<<<<<< Updated upstream
-=======
     HomeComponent,
->>>>>>> Stashed changes
+    ClientComponent,
+    TaskComponent,
+    MessageComponent,
+    ReviewsComponent,
+    AddmessageComponent,
   ],
   imports: [
     CommonModule,
@@ -42,21 +43,19 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
     MatNativeDateModule,
     MatFormFieldModule,
     MatInputModule,
-<<<<<<< Updated upstream
-    MatSelectModule
-=======
     MatSelectModule,
-    MatProgressBarModule
->>>>>>> Stashed changes
+    MatProgressBarModule,
+    MatDialogModule
   ],
   exports: [ 
     TransactionComponent,
     InventoryComponent,
     LeftpanelComponent,
-<<<<<<< Updated upstream
-=======
     HomeComponent,
->>>>>>> Stashed changes
+    ClientComponent,
+    TaskComponent,
+    MessageComponent,
+    ReviewsComponent
   ]
 })
 export class AfterAuthModule { }

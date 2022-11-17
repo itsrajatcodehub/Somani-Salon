@@ -1,16 +1,10 @@
 .main-container{
     display: flex;
     width: 100%;
-<<<<<<< Updated upstream
-}
-
-
-=======
     user-select: none;
 }
 
  
->>>>>>> Stashed changes
 /* section 1 */
 .main-container .logo-section{
     /* border: 10px solid red; */
@@ -86,10 +80,7 @@
     cursor: pointer;
     font-family: 'Roboto';
     font-size: 14px;
-<<<<<<< Updated upstream
-=======
     user-select: none;
->>>>>>> Stashed changes
 }
 
 .main-container .login-section .login .check-btn .forget{

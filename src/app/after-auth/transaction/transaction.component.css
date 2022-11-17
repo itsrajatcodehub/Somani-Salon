@@ -1,12 +1,9 @@
-<<<<<<< Updated upstream
-=======
 @import url('https://fonts.googleapis.com/css2?family=Antic+Slab&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Signika&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
 
->>>>>>> Stashed changes
 .main-container{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
@@ -18,16 +15,6 @@
 
 /* transaction */
 .container2{
-<<<<<<< Updated upstream
-    width: 16%;
-}
-
-.container3{
-    margin-top: 50px;
-    width: 80%;
-    /* border: 5px solid red; */
-    padding: 0 30px;
-=======
     width: 16%; 
 }
 /*  */
@@ -39,7 +26,6 @@
     padding: 0 30px;
     border-radius: 15px;
     /* box-shadow: -15px 15px 19px rgba(48, 66, 84, 0.15); */
->>>>>>> Stashed changes
 }
 
 .container3 table {
@@ -48,8 +34,6 @@
     background: #F8F9FD;
 }
 
-<<<<<<< Updated upstream
-=======
 .container3 .transaction .table{
     overflow-y: scroll;
     max-height: 550px;
@@ -57,27 +41,16 @@
 
 }
 
->>>>>>> Stashed changes
 .container3 table th {
     border-bottom: 1px solid #706a6b;
     padding: 0.5em ;
     text-align: left;
-<<<<<<< Updated upstream
-    
-}
-  
-.container3 table td {
-    padding: 0.7em ;
-    border-bottom: 1px solid #706a6b;
-    
-=======
 }
   
 .container3 table tr td {
     /* padding: 0.7em ; */
     padding: 0.1em 0 0.1em 0.7em;
     border-bottom: 1px solid #706a6b;
->>>>>>> Stashed changes
 }
 
 .container3 .client{
@@ -90,70 +63,79 @@
     padding-left: 5px;
 }
 
-<<<<<<< Updated upstream
-.container3 .heading{
-=======
 .container3 .transaction .heading{
->>>>>>> Stashed changes
     font-size: 40px;
     padding: 25px 0;
     border-radius: 20px 20px 0 0;
     background-color: #2F1A00;
     color: #ffff;
+<<<<<<< Updated upstream
+=======
+    /* display: flex; */
+    /* justify-content: space-between; */
+    /* text-align: center;
+    justify-content: center; */
+    /* display: flex; */
+>>>>>>> Stashed changes
 } 
  
-<<<<<<< Updated upstream
-.container3 .heading p{
-    margin-top: 10px;
-    text-align: center;
-    font-size: 32px;
-}
-
-.container3 .transaction{
-    margin-top: 60px;
-=======
 .container3 .transaction .heading p{
     margin-top: 10px;
     text-align: center;
     font-size: 40px;
     font-family: 'Raleway', sans-serif;
+<<<<<<< Updated upstream
+=======
 }
 
-.container3 .transaction{
+.container3 .transaction .heading .add-icon{
+    border-radius: 50px;
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    /* justify-content: right; */
+    background-color: #FFA500;
+    font-size: 30px;
+    color: #ffff;
+    font-weight: 0;
+    cursor: pointer;
+    /* box-shadow: -5px -5px 10px lightgrey; */
+    /* position: relative; */
+    transition-duration: 0.4s;
+    text-decoration: none;
+    user-select: none;
+    margin-right: 15px;
+    float: right;
+}
+
+.container3 .transaction .heading .add-icon:hover{
+    background-color: #ffb120;
+>>>>>>> Stashed changes
+}
+
+.container3 .transaction{ 
     margin-top: 40px;
     border-right: 2px solid rgb(218, 209, 209);
     border-left: 2px solid rgb(218, 209, 209);;
     border-radius: 20px 20px 0 0;
     box-shadow: -10px 10px 9px rgba(48, 66, 84, 0.15);
->>>>>>> Stashed changes
 }
 
 .container3 .display{
     display: flex;
     justify-content: space-between;
-<<<<<<< Updated upstream
-}
-
-.container3 .display h2{
-    font-size: 24px;
-    font-family: 'Inter';
-}
-=======
     margin-top: 30px;
 }
 
->>>>>>> Stashed changes
 
 .display .calendar mat-form-field mat-label{
     text-align: center;
     justify-content: center;
 }
 
-<<<<<<< Updated upstream
-.container3 .total{
-=======
 .container3 .display .total{
->>>>>>> Stashed changes
     /* border: 2px solid red; */
     width: 250px;
     text-align: center;
@@ -162,12 +144,6 @@
     color: #ffff;
 }
 
-<<<<<<< Updated upstream
-.container3 .total p{
-    font-size: 30px;
-    font-family: 'Inter';
-}
-=======
     .container3 .display .total h1{
         font-size: 32px;
         font-family: 'Antic Slab', serif;
@@ -181,15 +157,12 @@
         /* border: 1px solid blue; */
         /* margin: 0px; */
     }
->>>>>>> Stashed changes
 
 .container3 .calendar{
     /* border: 2px solid blue; */
 }
 
 
-<<<<<<< Updated upstream
-=======
 /* .container3 .table .data-table{
     border: 2px solid blueviolet;
     overflow-y: scroll;
@@ -197,7 +170,6 @@
 } */
 
 
->>>>>>> Stashed changes
 
 
 
@@ -217,13 +189,6 @@
 
 }
 
-<<<<<<< Updated upstream
-.container2 .taskbar .heading h1{ 
-    font-weight: bold;
-    font-size: 24px;
-    font-family: 'Inter';
-    line-height: 24px;
-=======
 .container2 .taskbar .heading{
     /* border: 2px solid red; */
     text-align: center;
@@ -235,7 +200,6 @@
     font-size: 30px;
     font-family: 'Antic Slab', serif;
     line-height: 30px;
->>>>>>> Stashed changes
 }
 
 .container2 .taskbar .recent{
@@ -243,60 +207,36 @@
     font-weight: 600;
     line-height: 24px;
     text-align: center;
-<<<<<<< Updated upstream
-    border: 1px solid #E8E8E8;
-    height: 35px;
-    margin-top: 20px;
-=======
     border-top: 1px solid #E8E8E8;
     border-bottom: 1px solid #E8E8E8;
     height: 35px;
     margin-top: 20px;
     
->>>>>>> Stashed changes
 }
 
 .container2 .taskbar .recent h1{
     font-size: 24px;
-<<<<<<< Updated upstream
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-=======
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 400;
     color: #706a6b;
->>>>>>> Stashed changes
 }
 
 .container2 .taskbar .select-year{
     /* border: 2px solid red; */
-<<<<<<< Updated upstream
-    margin-top: 60px;
-=======
     margin-top: 35px;
     margin-bottom: 25px;
->>>>>>> Stashed changes
     text-align: center;
     justify-content: center;
     /* width: 100; */
     border-radius: 5px;
-<<<<<<< Updated upstream
-    
-=======
     /* font-family: 'Raleway', sans-serif; */
->>>>>>> Stashed changes
 }
 
 .container2 .taskbar .select-year select{
     height: 40px;
     width: 100%;
-<<<<<<< Updated upstream
-    font-family: 'Inter';
-=======
     /* font-family: 'Inter'; */
->>>>>>> Stashed changes
     font-size: 20px;
 }
 
@@ -304,10 +244,7 @@
     width: 100%;
     text-align: center;
     font-family: 'Inter';
-<<<<<<< Updated upstream
-=======
     margin: 0;
->>>>>>> Stashed changes
 }
 
 .container2 .taskbar .select-year mat-label{
@@ -324,10 +261,6 @@
     margin-top: 20px;
 }
 
-<<<<<<< Updated upstream
-.container2 .select-month .months{
-    /* border: 2px solid blueviolet; */
-=======
 .selected{
     /* border: 1px solid blueviolet; */
     height: 30px;
@@ -338,7 +271,6 @@
 .container2 .select-month .months{
     /* border: 2px solid pink; */
     font-family: 'Raleway', sans-serif;
->>>>>>> Stashed changes
 }
 
 .container2 .select-month .months .month{
@@ -347,11 +279,7 @@
     text-align: center;
     padding: 10px 0;
     font-size: 24px;
-<<<<<<< Updated upstream
-    font-family: 'Inter';
-=======
     /* font-family: 'Inter'; */
->>>>>>> Stashed changes
     color: #2F1A00;
     cursor: pointer;
     user-select: none;
@@ -366,8 +294,4 @@
 .container2 .select-month .months .month:active{
     background-color: #2F1A00;
     user-select: none;
-<<<<<<< Updated upstream
 }
-=======
-}
->>>>>>> Stashed changes

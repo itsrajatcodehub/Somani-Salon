@@ -2,11 +2,12 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { AfterAuthComponent } from './after-auth.component';
-<<<<<<< Updated upstream
-=======
+import { ClientComponent } from './client/client.component';
 import { HomeComponent } from './home/home.component';
->>>>>>> Stashed changes
 import { InventoryComponent } from './inventory/inventory.component';
+import { MessageComponent } from './message/message.component';
+import { ReviewsComponent } from './reviews/reviews.component';
+import { TaskComponent } from './task/task.component';
 import { TransactionComponent } from './transaction/transaction.component';
 
 const routes: Routes = [
@@ -17,15 +18,27 @@ const routes: Routes = [
   {
     path: 'transaction',
     component: TransactionComponent
-<<<<<<< Updated upstream
-  }
-=======
   },
   {
     path : 'home',
     component: HomeComponent
   },
->>>>>>> Stashed changes
+  {
+    path : 'client',
+    component: ClientComponent
+  },
+  {
+    path : 'message',
+    component: MessageComponent
+  },
+  {
+    path : 'task',
+    component: TaskComponent
+  },
+  {
+    path : 'review',
+    component: ReviewsComponent
+  },
 ];
 
 

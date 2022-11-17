@@ -1,10 +1,7 @@
-<<<<<<< Updated upstream
-=======
 @import url('https://fonts.googleapis.com/css2?family=Antic+Slab&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 
->>>>>>> Stashed changes
 .main-container{
     /* border: 2px solid black; */
     /* box-shadow: -10px -10px 10px grey; */
@@ -48,22 +45,13 @@
     /* position: absolute; */
     font-family: 'Inter';
     max-height: 100%;
-<<<<<<< Updated upstream
-    overflow-y: scroll;
-=======
     /* overflow-y: scroll; */
->>>>>>> Stashed changes
 }
  
 .main-container .container2 .taskbar .heading h1{ 
     font-weight: bold;
-<<<<<<< Updated upstream
-    font-size: 24px;
-    font-family: 'Inter';
-=======
     font-size: 30px;
     font-family: 'Antic Slab', serif;
->>>>>>> Stashed changes
     color: #2F1A00;
 }
 
@@ -105,13 +93,9 @@
 
 .main-container .container2 .taskbar .menu-task{
     /* border: 2px solid red; */
-<<<<<<< Updated upstream
-    margin-top: 30px;
-=======
     margin-top: 20px;
     overflow-y: scroll;
     height: 90%;
->>>>>>> Stashed changes
 }
 
 .main-container .container2 .taskbar .menu-task .task{
@@ -123,22 +107,13 @@
     /* border: 2px solid black; */
     margin: 0;
     padding: 0;
-<<<<<<< Updated upstream
-    font-family: 'Inter';
-    font-size: 16px;
-=======
     font-family: 'Lato', sans-serif;
     font-size: 18px;
->>>>>>> Stashed changes
 }
 
 .main-container .container2 .taskbar .menu-task .task p{
     /* border: 2px solid blueviolet; */
-<<<<<<< Updated upstream
-    font-family: 'Inter';
-=======
     font-family: 'Lato', sans-serif;
->>>>>>> Stashed changes
     font-size: 12px;
 }
 
@@ -159,11 +134,7 @@
 
 
 
-<<<<<<< Updated upstream
-
-=======
  
->>>>>>> Stashed changes
 
 
 /* inventory page */
@@ -192,15 +163,9 @@
 
 .main-container .container2 .header .heading{
     /* border: 2px solid blue; */
-<<<<<<< Updated upstream
-    font-size: 35px;
-    padding-top: 10px;
-    font-family: Montserrat;
-=======
     font-size: 45px;
     padding-top: 10px;
     font-family: 'Montserrat', sans-serif;
->>>>>>> Stashed changes
     font-weight: bold;
 
 }
@@ -237,35 +202,19 @@
 .main-container .container2 .dropdown .expand-bar{
     margin-top: 15px;
     /* border: 2px solid red; */
-<<<<<<< Updated upstream
-=======
     /* background: 2px solid blueviolet; */
->>>>>>> Stashed changes
 }
 
 .main-container .container2 .dropdown .expand-bar mat-accordion mat-expansion-panel{
     /* background-color: rgb(199, 194, 194); */
-<<<<<<< Updated upstream
-    background-color: lightgrey;
-    border-radius: 15px;
-=======
     background-color: rgb(230, 230, 230);
     border-radius: 15px;
     /* border: 2px solid red; */
->>>>>>> Stashed changes
     /* height: 60px; */
     vertical-align: middle;
     /* padding-top: 10px; */
 }
 
-<<<<<<< Updated upstream
-.main-container .container2 .dropdown .expand-bar mat-accordion mat-expansion-panel mat-panel-title{
-    color: black;
-    /* font-weight: bold; */
-    padding: 0 10px;
-    font-size: 20px;
-    font-family: 'Inter';
-=======
 .main-container .container2 .dropdown .expand-bar mat-accordion mat-expansion-panel:hover{
     /* border: 2px solid black; */
     /* margin-left: 3%; */
@@ -278,31 +227,18 @@
     padding: 0 10px;
     font-size: 20px;
     font-family: 'Montserrat', sans-serif;
->>>>>>> Stashed changes
     line-height: 20px;
     /* background-color: lightgrey; */
 }
 
 
-<<<<<<< Updated upstream
-.main-container .container2 .dropdown .expand-bar mat-accordion mat-expansion-panel .data p{
-=======
 .main-container .container2 .dropdown .expand-bar mat-accordion mat-expansion-panel p{
->>>>>>> Stashed changes
     color: black;
     /* font-weight: bold; */
     padding: 0 10px;
     font-size: 17px;
     /* background-color: #ffff; */
     cursor: pointer;
-<<<<<<< Updated upstream
-}
-
-.main-container .container2 .dropdown .expand-bar mat-accordion mat-expansion-panel .data{
-    /* border: 2px solid black; */
-    margin-left: 3%;
-}
-=======
     font-family: 'Antic Slab', serif;
 }
 
@@ -311,26 +247,15 @@
 }
  
 
->>>>>>> Stashed changes
 
 /* .main-container .dropdown .expand-bar mat-accordion mat-expansion-panel .data:hover{
     
 } */
 
-<<<<<<< Updated upstream
-.main-container .container2 .dropdown .expand-bar mat-accordion .content mat-accordion mat-expansion-panel mat-expansion-panel-header mat-panel-title:hover{
-    border-left: 7px solid #FFA500;
-}
-
-.main-container .container2 .dropdown .expand-bar mat-accordion .content mat-accordion mat-expansion-panel .data p:hover{
-    border-left: 4px solid #FFA500;
-}
-=======
 .main-container .container2 .dropdown .expand-bar mat-accordion mat-accordion mat-expansion-panel mat-expansion-panel-header mat-panel-title:hover{
     border-left: 7px solid #FFA500;
 }
 
->>>>>>> Stashed changes
 
 /* .display{
     border-left: 3px solid #FFA500;
