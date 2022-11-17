@@ -7,13 +7,22 @@ import { LoginComponent } from './login/login.component';
 import { OtpComponent } from './otp/otp.component';
 import { ForgetComponent } from './forget/forget.component';
 import { ReactiveFormsModule } from '@angular/forms';
+<<<<<<< Updated upstream
+=======
+import { SignUpComponent } from './sign-up/sign-up.component';
+>>>>>>> Stashed changes
 
 @NgModule({
   declarations: [
     BeforeAuthComponent,
     LoginComponent,
     OtpComponent,
+<<<<<<< Updated upstream
     ForgetComponent
+=======
+    ForgetComponent,
+    SignUpComponent
+>>>>>>> Stashed changes
   ],
   imports: [
     CommonModule,

@@ -83,7 +83,69 @@ export class TransactionComponent implements OnInit {
       "amount" : "₹10,000"
   
     },
+<<<<<<< Updated upstream
     
+=======
+    {
+      "sno" : "08",
+      // "image" : "",
+      "name" :"Travis",
+      "email" : "travis@gmail.com",
+      "transfer" :"AAFF2587892652652F",
+      "amount" : "₹10,000"
+  
+    },
+    {
+      "sno" : "09",
+      // "image" : "",
+      "name" :"Travis",
+      "email" : "travis@gmail.com",
+      "transfer" :"AAFF2587892652652F",
+      "amount" : "₹10,000"
+  
+    },
+    {
+      "sno" : "10",
+      // "image" : "",
+      "name" :"Travis",
+      "email" : "travis@gmail.com",
+      "transfer" :"AAFF2587892652652F",
+      "amount" : "₹10,000"
+  
+    },
+    // {
+    //   "sno" : "11",
+    //   "name" :"Travis",
+    //   "email" : "travis@gmail.com",
+    //   "transfer" :"AAFF2587892652652F",
+    //   "amount" : "₹10,000"
+  
+    // },
+    // {
+    //   "sno" : "12",
+    //   "name" :"Travis",
+    //   "email" : "travis@gmail.com",
+    //   "transfer" :"AAFF2587892652652F",
+    //   "amount" : "₹10,000"
+  
+    // },
+    // {
+    //   "sno" : "13",
+    //   "name" :"Travis",
+    //   "email" : "travis@gmail.com",
+    //   "transfer" :"AAFF2587892652652F",
+    //   "amount" : "₹10,000"
+  
+    // },
+    // {
+    //   "sno" : "14",
+    //   "name" :"Travis",
+    //   "email" : "travis@gmail.com",
+    //   "transfer" :"AAFF2587892652652F",
+    //   "amount" : "₹10,000"
+  
+    // }
+>>>>>>> Stashed changes
   
   ]
 }

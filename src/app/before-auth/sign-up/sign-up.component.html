@@ -1,0 +1,68 @@
+<div class="main-container">
+
+    <!-- LOGO SECTION 1 -->
+    <div class="logo-section">
+        <div class="logo">
+            <img src="assets/img/21.png">
+        </div>
+    </div>
+     
+    
+    <!-- LOGIN CREDENTIALS SECTION 2 --> 
+    <div class="login-section">
+        <div class="login">
+    
+            <div class="greeting">
+                <!-- MORNING -->
+                <h2 *ngIf = "time<12">Good Morning,</h2>
+
+                <!-- AFTERNOON -->
+                <h2 *ngIf = "time>=12">Good Afternoon,</h2>
+
+                <!-- EVENING -->
+                <h2 *ngIf = "time>17">Good Evening,</h2>
+            </div>
+
+            <!-- 1 -->
+            <div class="heading">Sign up</div>
+    
+     
+    
+            <!-- 2 -->
+            <div class="login-form">
+                <form [formGroup] = "loginForm"> 
+                    <label for="email" style="font-family: 'Roboto'; font-size: 16px;">Email</label>
+                    <input type="text" name="email" class ="form-field" placeholder="Enter your email" formControlName = "email" style="font-family: 'Roboto'; font-size: 14px;">   
+    
+                    <label for="password" style="font-family: 'Roboto'; font-size: 16px;">Password</label>
+                    <input type="password" name="password" class ="form-field" placeholder="Enter your Password" formControlName="password" style="font-family: 'Roboto'; font-size: 14px;">
+                </form>     
+            </div>
+    
+    
+    
+            <!-- 3 -->
+            <div class="buttons">
+                <!-- row 1 -->
+                <div class="login-now"  (click) = "register()">Sign up</div>
+                <!-- row 2 -->
+                <div class="login-google"  (click) = "googleSignup()">
+                    <div class="google-logo"><img src="assets/img/logo-google-final.png" class="google-logo"></div>
+                    <div class="google-text">Or sign-up with google</div>
+                </div>
+            </div>
+        
+    
+    
+            <!-- 4 -->
+            <div class="join" (click) ="login()">
+                <p>Already have an account?</p> &nbsp;
+                <p style="color: #2B6CB0">login</p>
+            </div>
+    
+    
+    
+        </div>
+    </div>
+     
+    </div>

@@ -1,0 +1,220 @@
+<div class="main-container">
+    <!-- 1st container  -->
+    <div class="container1">
+        <app-leftpanel></app-leftpanel>
+    </div>
+
+    <!-- 2nd container  -->
+    <div class="container2">
+
+         
+        <div class="taskbar">
+            <!-- section 1 -->
+            <div class="heading"> 
+                <h1>Task</h1>
+            </div>
+         
+            <!-- section 2 -->
+            <div class="search-bar">
+                <div class="search">
+                    <div class="search-logo">
+                        <mat-icon fontIcon="search"></mat-icon>
+                    </div>
+                    
+                    <div class="search-input">
+                        <input type="text" name="search" placeholder="Search ..." style="outline: none; border: 0; font-size: 15px; width: 60%;">
+                    </div>
+        
+                </div>
+                
+                <div class="counting">
+                    <!-- use binding to display the data -->
+                    {{'0 records found'}}
+                </div>
+            </div>
+        
+            <!-- section 3 -->
+            <div class="menu-task">
+                <div class="task">
+                    <h2>Task 1</h2>        
+                    <p>12th Sep 2022</p>
+                </div>
+        
+                <div class="task">
+                    <h2>Task 2</h2>        
+                    <p>12th Sep 2022</p>
+                </div>
+        
+                <div class="task">
+                    <h2>Task 3</h2>        
+                    <p>12th Sep 2022</p>
+                </div>
+        
+                <div class="task">
+                    <h2>Task 4</h2>        
+                    <p>12th Sep 2022</p>
+                </div>
+        
+                <div class="task">
+                    <h2>Task 4</h2>        
+                    <p>12th Sep 2022</p>
+                </div>
+        
+                <div class="task">
+                    <h2>Task 5</h2>        
+                    <p>12th Sep 2022</p>
+                </div>
+        
+                <div class="task">
+                    <h2>Task 6</h2>        
+                    <p>12th Sep 2022</p>
+                </div>
+        
+                <div class="task">
+                    <h2>Task 7</h2>        
+                    <p>12th Sep 2022</p>
+                </div>
+        
+                <div class="task"> 
+                    <h2>Task 8</h2>        
+                    <p>12th Sep 2022</p>
+                </div>
+        
+                <div class="task">
+                    <h2>Task 9</h2>        
+                    <p>12th Sep 2022</p>
+                </div>
+        
+                <div class="task">
+                    <h2>Task 10</h2>        
+                    <p>12th Sep 2022</p>
+                </div>
+        
+                <div class="task">
+                    <h2>Task 11</h2>        
+                    <p>12th Sep 2022</p>
+                </div>
+        
+                <div class="task">
+                    <h2>Task 12</h2>        
+                    <p>12th Sep 2022</p>
+                </div>
+        
+                <div class="task">
+                    <h2>Task 13</h2>        
+                    <p>12th Sep 2022</p>
+                </div>
+        
+            </div>
+        </div>
+
+
+        <div class="home-content">
+            <!-- data & time -->
+            <div class="date-time">
+                <div class="time">
+                    <!-- <i class="fa-regular fa-clock"></i> -->
+                    <mat-icon fontIcon="alarm"></mat-icon>
+                    <p>{{time}}</p>
+                </div>
+                <div class="date">
+                    <p>{{date}}</p>
+                </div>
+            </div>
+
+            <!-- search bar -->
+            <div class="long-search-bar">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Search">
+            </div>
+            <div class="upper-section">
+                <div class="first-upper">
+                    <p>Hello,{{name}}</p>
+                    <p>{{todo}}</p>
+                    <div class="buttons">
+                        <button>
+                            Add Event
+                        </button><button>Add Message</button>
+                    </div>
+                </div>
+                <div class="graphs"></div>
+                <div class="graphs"></div>
+            </div>
+            <div class="lower-section">
+                <div class="first-half">
+                    <div class="sales">
+                        <div class="target">Target Sales</div>
+                        <div class="padding">
+                            <p>Total performance this month</p>
+                            <div class="parent-container">
+                                <div class="orders">
+                                    <div class="info">
+                                        <p>Orders</p>
+                                        <p>{{orders}}</p>
+                                    </div>
+                                    <mat-progress-bar mode="determinate" value="40"></mat-progress-bar>
+                                    <p class="opacity">Monthly Target</p>
+                                </div>
+                                <div class="orders">
+                                    <div class="info">
+                                        <p>Income</p>
+                                        <p>{{income}}</p>
+                                    </div>
+                                    <mat-progress-bar mode="determinate" value="40"></mat-progress-bar>
+                                    <p class="opacity">Monthly Target</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="activity">
+                        <div class="heading">
+                            <p>Recent Activities</p>
+                            <button>View all</button>
+                        </div>
+                        <p id="small">Activities of this Month</p>
+                        <div class="task">
+                            <p>Completed task {{task_Name}}</p>
+                            <div class="date">
+                                {{task_date}}, {{task_time}}
+                            </div>
+                        </div>
+                        <div class="task">
+                            <p>Completed task {{task_Name}}</p>
+                            <div class="date">
+                                {{task_date}}, {{task_time}}
+                            </div>
+                        </div>
+                        <div class="task">
+                            <p>Completed task {{task_Name}}</p>
+                            <div class="date">
+                                {{task_date}}, {{task_time}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="second-half">
+                    <div class="todo">
+                        <p id="heading"><i class="fa-solid fa-calendar"></i>  To-Do List</p>
+                        <div class="todos">
+                            <p class="big">Complete Task<i class="fa-solid fa-ellipsis"></i></p>
+                            <p>{{task_Description}}</p>
+                            <div class="images"></div>
+                        </div>
+                        <div class="todos">
+                            <p class="big">Complete Task<i class="fa-solid fa-ellipsis"></i></p>
+                            <p>{{task_Description}}</p>
+                            <div class="images"></div>
+                        </div>
+                        <div class="todos">
+                            <p class="big">Complete Task<i class="fa-solid fa-ellipsis"></i></p>
+                            <p>{{task_Description}}</p>
+                            <div class="images"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+</div>
+</div>

@@ -1,16 +1,10 @@
 .main-container{
     display: flex;
     width: 100%;
-<<<<<<< Updated upstream
-}
-
-
-=======
     user-select: none;
 }
 
  
->>>>>>> Stashed changes
 /* section 1 */
 .main-container .logo-section{
     /* border: 10px solid red; */
@@ -44,11 +38,19 @@
     width: 347px;
 }
 
-.main-container .login-section .login .welcome{
-    font-size: 16px;
-    font-family: 'Roboto';
-    /* font-weight: bold; */
+
+
+.main-container .login-section .greeting{
+    /* border: 2px solid green; */
+    height: 20px;
 }
+
+.main-container .login-section .greeting h2{
+    /* border: 2px solid green; */
+    font-size: 14px;
+}
+
+
 
 .main-container .login-section .login .heading{
     font-size: 30px;
@@ -77,30 +79,11 @@
     font-family: 'Roboto';
 }
 
-.main-container .login-section .login .check-btn{
-    display: flex;
-    justify-content: space-between;
-}
-
-.main-container .login-section .login .check-btn .checkbox{
-    cursor: pointer;
-    font-family: 'Roboto';
-    font-size: 14px;
-<<<<<<< Updated upstream
-=======
-    user-select: none;
->>>>>>> Stashed changes
-}
-
-.main-container .login-section .login .check-btn .forget{
-    color: #2C5282;
-    cursor: pointer;
-    font-family: 'Roboto';
-}
 
 .main-container .login-section .login .buttons{
-    margin-top: 30px;
+    margin-top: 20px;
     font-family: 'Roboto';
+    /* border: 1px solid red; */
 }
 
 .main-container .login-section .login .buttons .login-now{
@@ -114,7 +97,11 @@
     text-align: center;
     cursor: pointer;
     border-radius: 5px;
-    
+    user-select: none;
+}
+
+.main-container .login-section .login .buttons .login-now:active{
+    transform: translateY(0.6px);
 }
 
 .main-container .login-section .login .buttons .login-google{
@@ -130,12 +117,20 @@
     justify-content: center;
     border-radius: 5px;
     font-size: 16px;
+
+    transition-duration: 0.4s;
+    text-decoration: none;
+    user-select:none;
+}
+.main-container .login-section .login .buttons .login-google:active{
+    transform: translateY(2px);
 }
 
 .main-container .login-section .login .buttons .login-google .google-logo{
     height: 35px;
-    width: 50px;
+    /* width: 50px; */
     /* border: 2px solid white; */
+    margin-right: 1px;
 }
 
 .main-container .login-section .login .buttons .login-google .google-text{
