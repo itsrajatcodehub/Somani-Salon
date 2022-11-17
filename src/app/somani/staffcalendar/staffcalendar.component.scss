@@ -1,0 +1,129 @@
+
+section {
+    display: flex;
+  }
+  .task {
+    width: 20%;
+    background-color: #fff;
+    margin: 1em;
+  }
+  .task h2 {
+    margin: 10px;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 24px;
+    /* identical to box height, or 100% */
+  
+    color: #2f1a00;
+  }
+  .search {
+    margin: 10px;
+    border: 1px solid black;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 0.5em;
+    border-radius: 10px;
+  }
+  .search i {
+    position: relative;
+    top: 2px;
+  }
+  
+  .search input {
+    margin: 0;
+    padding: 0.5em;
+    border: transparent;
+    background-color: transparent;
+  }
+  p {
+    margin: 10px;
+    font-family: "Inter";
+    font-style: italic;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 12px;
+    /* identical to box height, or 100% */
+  
+    /* Text/500 */
+  
+    color: #61758a;
+  }
+  .boxes {
+    width: 100%;
+    overflow-y: auto;
+    max-height: 80vh;
+  }
+  .box {
+    margin-bottom: 10px;
+  }
+  .box h3 {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 16px;
+    margin: 10px;
+    color: #304254;
+    margin-bottom: 4px;
+  }
+  .box p {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 12px;
+    margin-top: 0;
+    color: #61758a;
+  }
+  .calendar{
+    width: 80%;
+    margin: 1em 1.5em;
+    background-color: #ffffff;
+    padding: 1em;
+    box-shadow: 0px 5px 15px rgba(28, 27, 27, 0.25);
+    border-radius: 20px;
+  }
+  .top{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+  }
+  .top h3{
+    margin-top: 1em;
+    font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 26px;
+line-height: 32px;
+color: #304254;
+  }
+  .buttons{
+    display: flex;
+    margin-right: 5px;
+    justify-content: center;
+    text-align: center;
+  }
+  .d-btn i{
+    font-size: 15px;
+  }
+  .d-btn button{
+    border: none;
+    background-color: transparent;
+    font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 24px;
+color: #304254;
+transition: .3s;
+cursor: pointer;
+  }
+  .d-btn{
+    transition: .3s;
+    margin-right: 10px;
+  }
+  .d-btn:hover{
+    transform: scale(1.1);
+  }

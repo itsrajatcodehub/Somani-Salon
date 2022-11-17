@@ -7,6 +7,10 @@ import { AppComponent } from './app.component';
 import { AfterAuthModule } from './after-auth/after-auth.module';
 import { BeforeAuthModule } from './before-auth/before-auth.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SomaniModule } from './somani/somani.module';
+// import { FullCalendarModule } from '@fullcalendar/angular';
+
+
 import {MatBadgeModule} from '@angular/material/badge';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
@@ -80,4 +84,6 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+  
+}
