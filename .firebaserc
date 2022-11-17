@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "project-somani": {
+      "hosting": {
+        "SOMANI": [
+          "project-somani"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "project-somani"
+  }
+}

@@ -3,13 +3,9 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "AngularSomaniPanel": {
+    "SOMANI": {
       "projectType": "application",
-      "schematics": {
-        "@schematics/angular:component": {
-          "style": "scss"
-        }
-      },
+      "schematics": {},
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -17,18 +13,18 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/angular-somani-panel",
+            "outputPath": "dist/somani",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
-            "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+              "src/styles.css"
             ],
             "scripts": []
           },
@@ -69,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "AngularSomaniPanel:build:production"
+              "browserTarget": "SOMANI:build:production"
             },
             "development": {
-              "browserTarget": "AngularSomaniPanel:build:development"
+              "browserTarget": "SOMANI:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -80,7 +76,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "AngularSomaniPanel:build"
+            "browserTarget": "SOMANI:build"
           }
         },
         "test": {
@@ -90,21 +86,28 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
-            "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+              "src/styles.css"
             ],
             "scripts": []
+          }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "SOMANI:build:production",
+            "firebaseProject": "project-somani",
+            "firebaseHostingSite": "project-somani"
           }
         }
       }
     }
-  },
-  "cli": {
-    "analytics": "853ab196-ae82-4d42-b140-ee02eb99ca09"
   }
 }
