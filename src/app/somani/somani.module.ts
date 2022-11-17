@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ClientComponent } from './client/client.component';
 import { RouterModule } from '@angular/router';
 import { StaffAttendenceComponent } from './staff-attendence/staff-attendence.component';
-import { MatDialogModule } from '@angular/material/dialog';
+import { MatLegacyDialogModule as MatDialogModule } from '@angular/material/legacy-dialog';
 import { AddstaffComponent } from './staffAttendence/addstaff/addstaff.component';
 import {  CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { StaffcalendarComponent } from './staffcalendar/staffcalendar.component';

@@ -1,0 +1,307 @@
+<div class="main-container">
+    
+        <!-- 1st container -->
+        <div class="container1">
+          <app-leftpanel></app-leftpanel>
+        </div>
+<<<<<<< Updated upstream
+ 
+        <!-- 2rd container -->
+=======
+  
+        <!-- 2rd container --> 
+>>>>>>> Stashed changes
+        <div class="container2">
+
+          <div class="taskbar">
+            <!-- section 1 -->
+            <div class="heading"> 
+<<<<<<< Updated upstream
+                <h1>Task</h1>
+=======
+                <h1>Tasks</h1>
+>>>>>>> Stashed changes
+            </div>
+         
+            <!-- section 2 -->
+            <div class="search-bar">
+                <div class="search">
+                    <div class="search-logo">
+                        <mat-icon fontIcon="search"></mat-icon>
+                    </div>
+                    
+                    <div class="search-input">
+                        <input type="text" name="search" placeholder="Search ..." style="outline: none; border: 0; font-size: 15px; width: 60%;">
+                    </div>
+        
+                </div>
+                
+                <div class="counting">
+                    <!-- use binding to display the data -->
+                    {{'0 records found'}}
+                </div>
+            </div>
+        
+            <!-- section 3 -->
+            <div class="menu-task">
+                <div class="task">
+                    <h2>Task 1</h2>        
+                    <p>12th Sep 2022</p>
+                </div>
+        
+                <div class="task">
+                    <h2>Task 2</h2>        
+                    <p>12th Sep 2022</p>
+                </div>
+        
+                <div class="task">
+                    <h2>Task 3</h2>        
+                    <p>12th Sep 2022</p>
+                </div>
+        
+                <div class="task">
+                    <h2>Task 4</h2>        
+                    <p>12th Sep 2022</p>
+                </div>
+        
+                <div class="task">
+                    <h2>Task 4</h2>        
+                    <p>12th Sep 2022</p>
+                </div>
+        
+                <div class="task">
+                    <h2>Task 5</h2>        
+                    <p>12th Sep 2022</p>
+                </div>
+        
+                <div class="task">
+                    <h2>Task 6</h2>        
+                    <p>12th Sep 2022</p>
+                </div>
+        
+                <div class="task">
+                    <h2>Task 7</h2>        
+                    <p>12th Sep 2022</p>
+                </div>
+        
+                <div class="task"> 
+                    <h2>Task 8</h2>        
+                    <p>12th Sep 2022</p>
+                </div>
+        
+                <div class="task">
+                    <h2>Task 9</h2>        
+                    <p>12th Sep 2022</p>
+                </div>
+        
+                <div class="task">
+                    <h2>Task 10</h2>        
+                    <p>12th Sep 2022</p>
+                </div>
+        
+                <div class="task">
+                    <h2>Task 11</h2>        
+                    <p>12th Sep 2022</p>
+                </div>
+        
+                <div class="task">
+                    <h2>Task 12</h2>        
+                    <p>12th Sep 2022</p>
+                </div>
+        
+                <div class="task">
+                    <h2>Task 13</h2>        
+                    <p>12th Sep 2022</p>
+                </div>
+        
+            </div>
+        </div>
+        
+        
+
+<<<<<<< Updated upstream
+
+=======
+ 
+>>>>>>> Stashed changes
+          <div class="inventory">
+            <div class="inventory-section">
+          <div class="header">
+              <div class="heading">Inventory Management</div>
+              <div class="add-icon">+</div>
+          </div>
+      
+          
+          <div class="dropdown">
+              
+                    <!-- row 1    -->
+                    <div class="expand-bar">
+                      <mat-accordion>
+                          <mat-expansion-panel (opened)="panelOpenState = true"
+                                               (closed)="panelOpenState = false" style="padding: 10px 0;">
+                            <mat-expansion-panel-header>
+                              <mat-panel-title>
+                                Facial
+                              </mat-panel-title>
+                              
+                            </mat-expansion-panel-header>
+                            <p>I'm visible because I am open</p>
+                          </mat-expansion-panel>
+                        </mat-accordion>
+                  </div>
+          
+                  <!-- row 2 -->
+                  <div class="expand-bar">
+                      <mat-accordion>
+                          <mat-expansion-panel (opened)="panelOpenState = true"
+                                               (closed)="panelOpenState = false" style="padding: 10px 0;">
+                            <mat-expansion-panel-header>
+                              <mat-panel-title>
+                                Hair
+                              </mat-panel-title>
+                              
+                            </mat-expansion-panel-header>
+                            <!-- <p>I'm visible because I am open</p> -->
+                            <div class="content">
+                              <!-- type 1 -->
+                              <mat-accordion>
+                                  <mat-expansion-panel (opened)="panelOpenState = true"
+                                                       (closed)="panelOpenState = false"
+                                                       style="background-color: #ffff;">
+                                    <mat-expansion-panel-header>
+                                      <mat-panel-title>
+                                        Styling
+                                      </mat-panel-title>
+                  
+                                    </mat-expansion-panel-header>
+                                    <!-- <p>Facial Type 1</p>
+                                    <p>Facial Type 2</p>
+                                    <p>Facial Type 3</p>
+                                    <p>Facial Type 4</p>
+                                    <p>Facial Type 5</p> -->
+                                  </mat-expansion-panel>
+                                </mat-accordion>
+          
+                                <!-- type 2 -->
+                                <mat-accordion>
+                                  <mat-expansion-panel (opened)="panelOpenState = true"
+                                                       (closed)="panelOpenState = false"
+                                                       style="background-color: #ffff;">
+                                    <mat-expansion-panel-header>
+                                      <mat-panel-title>
+                                        Treatement
+                                      </mat-panel-title>
+                  
+                                    </mat-expansion-panel-header>
+                                    <!-- <p>Facial Type 1</p>
+                                    <p>Facial Type 2</p>
+                                    <p>Facial Type 3</p>
+                                    <p>Facial Type 4</p>
+                                    <p>Facial Type 5</p> -->
+                                  </mat-expansion-panel>
+                                </mat-accordion>
+          
+                                <!-- type 3 -->
+                                <mat-accordion>
+                                  <mat-expansion-panel (opened)="panelOpenState = true"
+                                                       (closed)="panelOpenState = false"
+                                                       style="background-color: #ffff;">
+                                    <mat-expansion-panel-header>
+                                      <mat-panel-title>
+                                        Color
+                                      </mat-panel-title>
+                  
+                                    </mat-expansion-panel-header>
+                                    <!-- <p>Facial Type 1</p>
+                                    <p>Facial Type 2</p>
+                                    <p>Facial Type 3</p>
+                                    <p>Facial Type 4</p>
+                                    <p>Facial Type 5</p> -->
+                                  </mat-expansion-panel>
+                                </mat-accordion>
+          
+                                <!-- type 4 -->
+                                <mat-accordion>
+                                  <mat-expansion-panel (opened)="panelOpenState = true"
+                                                       (closed)="panelOpenState = false"
+                                                       style="background-color: #ffff;">
+                                    <mat-expansion-panel-header>
+                                      <mat-panel-title class = "display" (opened)="click()">
+                                        Haircut
+                                      </mat-panel-title>
+                  
+                                    </mat-expansion-panel-header>
+                                    <div class="data">
+                                        <p>Haircut 1</p>
+                                        <p>Haircut 2</p>
+                                        <p>Haircut 3</p>
+                                        <p>Haircut 4</p>
+                                        <p>Haircut 5</p>
+                                    </div>
+                                  </mat-expansion-panel>
+                                </mat-accordion>
+                        </div>
+                          </mat-expansion-panel>
+                        </mat-accordion>
+                  </div>
+          
+                  <!-- row 3 -->
+                  <div class="expand-bar">
+                      <mat-accordion>
+                          <mat-expansion-panel (opened)="panelOpenState = true"
+                                               (closed)="panelOpenState = false" style="padding: 10px 0;">
+                            <mat-expansion-panel-header>
+                              <mat-panel-title>
+                                Body Care
+                              </mat-panel-title>
+                              
+                            </mat-expansion-panel-header>
+                            <p>I'm visible because I am open</p>
+                          </mat-expansion-panel>
+                        </mat-accordion>
+                  </div>
+          
+                  <!-- row 4 -->
+                  <div class="expand-bar">
+                      <mat-accordion>
+                          <mat-expansion-panel (opened)="panelOpenState = true"
+                                               (closed)="panelOpenState = false" style="padding: 10px 0;">
+                            <mat-expansion-panel-header>
+                              <mat-panel-title>
+                                Occasion Specific
+                              </mat-panel-title>
+          
+                            </mat-expansion-panel-header>
+                            <p>I'm visible because I am open</p>
+                            
+                          </mat-expansion-panel>
+                        </mat-accordion>
+                  </div>
+          
+                  <!-- row 5 -->
+                  <div class="expand-bar">
+                      <mat-accordion>
+                          <mat-expansion-panel (opened)="panelOpenState = true"
+                                               (closed)="panelOpenState = false" style="padding: 10px 0;">
+                            <mat-expansion-panel-header>
+                              <mat-panel-title>
+                                Bridal Makeup
+                              </mat-panel-title>
+                              
+                            </mat-expansion-panel-header>
+                            <p>I'm visible because I am open</p>
+                          </mat-expansion-panel>
+                        </mat-accordion>
+                  </div>
+          
+                
+                
+          </div>
+        
+        </div>
+      </div>
+    </div>
+
+
+
+</div>
