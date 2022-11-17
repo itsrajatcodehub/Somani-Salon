@@ -12,14 +12,13 @@ import { AddmessageComponent } from './message/addmessage/addmessage.component';
 import { ReviewsComponent } from './reviews/reviews.component';
 import { TaskComponent } from './task/task.component'; 
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
-import { FullCalendarModule } from '@fullcalendar/angular'; 
-import dayGridPlugin from '@fullcalendar/daygrid'; 
-import interactionPlugin from '@fullcalendar/interaction'; 
-FullCalendarModule.registerPlugins([ 
-  dayGridPlugin,
-  interactionPlugin
-]);
+import { FormsModule } from '@angular/forms';
+// import { FlatpickrModule } from 'angularx-flatpickr';
+// import { NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CalendarModule, DateAdapter } from 'angular-calendar';
+import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
+// import { staffcalendar } from './component';
 
   
 
@@ -28,7 +27,6 @@ FullCalendarModule.registerPlugins([
     ClientComponent,
     StaffAttendenceComponent,
     AddstaffComponent,
-    StaffcalendarComponent,
     MessageComponent,
     AddmessageComponent,
     ReviewsComponent,
@@ -38,8 +36,13 @@ FullCalendarModule.registerPlugins([
   imports: [
     CommonModule,
     MatDialogModule,
-       FullCalendarModule,
-       HttpClientModule,
+    FormsModule,
+    
+    // FlatpickrModule.forRoot(),
+    CalendarModule.forRoot({
+      provide: DateAdapter,
+      useFactory: adapterFactory,
+    }),
     RouterModule.forChild([
       { path: 'client', component: ClientComponent},
       { path: 'staffattendence', component: StaffAttendenceComponent},
@@ -48,6 +51,8 @@ FullCalendarModule.registerPlugins([
       { path: 'review', component: ReviewsComponent },
       { path: 'task', component: TaskComponent }
     ])
+    
   ]
+  
 })
 export class SomaniModule { }

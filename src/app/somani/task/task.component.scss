@@ -132,7 +132,123 @@ color: #91A4B7;
   .watch{
     margin: 2em;
     width: 20%;
-    background-color: cyan;
+    background-color: red;
     color: #0000;
   }
+  
+
+
+  // _________________________
+
+
+
+  .parent-container{
+       
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+    margin: auto;
+    background-color: var(--color-primary);
+    color: #fff;
+    .buttons{
+        button{
+            border:none;
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            padding: 10px;
+            margin-left: 10px;
+            transition: .3s;
+            cursor: pointer;
+            font-size: 15px;
+            &:hover,&:focus{
+                outline: none;
+                transform: scale(1.12);
+            }
+        }
+    }
+}
+.detail-section{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    .opacity{
+        margin-top: 20px;
+        opacity: .5;
+        text-align: center;
+        margin-bottom: 20px;
+    } 
+    #mart{
+        margin-top: 20px;
+    }
+    .inputs{
+        display: flex;
+        margin: auto;
+        input{
+            margin-left: 15px;
+            border: none;
+            background-color: #f3f3f3;
+            padding: 8px;
+            border-radius: 5px;
+            font-family: var(--font);
+            border: none;
+            transition: .3s;
+            &:hover{
+                border: 1px solid var(--color-primary);
+            }
+        }
+        select{
+            padding: 8px 15px;
+            background-color: #f3f3f3;
+            font-family: var(--font);
+            border: none;
+            border-radius: 10px;
+            margin-right: 10px;
+        }
+        button{
+            background-color: #f3f3f3;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 10px;
+            transition: .3s;
+            cursor: pointer;
+            font-family: var(--font);
+            &:hover,&:focus{
+                border: 1px solid var(--color-primary);
+            }
+        }
+    }
+    .tasks{
+        display: block;
+        margin: auto;
+        margin-top: 15px;
+        input{
+            border: 1px solid #969696;
+            font-family: var(--font);
+            padding: 8px;
+            border-radius: 10px;
+            margin-right: 10px;
+            width: 250px;
+        }
+        #blue{
+            background-color: #E1E8F0;
+            color: var(--color-primary);
+            font-family: var(--font);
+            border: none;
+            padding: 10px 25px;
+            border-radius: 10px;
+            margin-right: 10px;
+        }
+        #complete{
+            background-color: var(--color-primary);
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            font-family: var(--font);
+            border-radius: 10px;
+        }
+    }
+}
+
    
