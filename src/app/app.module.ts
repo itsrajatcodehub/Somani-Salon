@@ -21,28 +21,10 @@ import {MatNativeDateModule} from '@angular/material/core';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
-<<<<<<< Updated upstream
  
 @NgModule({
   declarations: [
     AppComponent
-=======
-import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
-import { environment } from '../environments/environment';
-import { provideAnalytics,getAnalytics,ScreenTrackingService,UserTrackingService } from '@angular/fire/analytics';
-import { provideAuth,getAuth } from '@angular/fire/auth';
-import { provideFirestore,getFirestore } from '@angular/fire/firestore';
-import { provideFunctions,getFunctions } from '@angular/fire/functions';
-import { provideMessaging,getMessaging } from '@angular/fire/messaging';
-import { providePerformance,getPerformance } from '@angular/fire/performance';
-import { provideRemoteConfig,getRemoteConfig } from '@angular/fire/remote-config';
-import { provideStorage,getStorage } from '@angular/fire/storage';
-import { HttpClientModule } from '@angular/common/http';
- 
-@NgModule({
-  declarations: [
-    AppComponent,
->>>>>>> Stashed changes
   ],
   imports: [
     BrowserModule,
@@ -56,17 +38,11 @@ import { HttpClientModule } from '@angular/common/http';
     MatExpansionModule,
     MatDatepickerModule,
     FormsModule,
-<<<<<<< Updated upstream
-=======
     HttpClientModule,
->>>>>>> Stashed changes
     ReactiveFormsModule,
     MatNativeDateModule,
     MatFormFieldModule,
     MatInputModule,
-<<<<<<< Updated upstream
-    MatSelectModule
-=======
     MatSelectModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAnalytics(() => getAnalytics()),
@@ -80,7 +56,6 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   providers: [
     ScreenTrackingService,UserTrackingService
->>>>>>> Stashed changes
   ],
   bootstrap: [AppComponent]
 })
