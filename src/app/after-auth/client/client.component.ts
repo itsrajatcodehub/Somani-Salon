@@ -11,7 +11,7 @@ export class ClientComponent implements OnInit {
 
   ngOnInit(): void {
     
-  }
+  } 
 
   title = 'Table'
     headers = [ "Name", "MobileNo", "Email", "Date"]

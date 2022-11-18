@@ -13,9 +13,10 @@
 }
 
 
-/* transaction */
+/* transaction */ 
 .container2{
     width: 16%; 
+    display: flex;
 }
 /*  */
 
@@ -69,14 +70,11 @@
     border-radius: 20px 20px 0 0;
     background-color: #2F1A00;
     color: #ffff;
-<<<<<<< Updated upstream
-=======
     /* display: flex; */
     /* justify-content: space-between; */
     /* text-align: center;
     justify-content: center; */
     /* display: flex; */
->>>>>>> Stashed changes
 } 
  
 .container3 .transaction .heading p{
@@ -84,8 +82,6 @@
     text-align: center;
     font-size: 40px;
     font-family: 'Raleway', sans-serif;
-<<<<<<< Updated upstream
-=======
 }
 
 .container3 .transaction .heading .add-icon{
@@ -112,7 +108,7 @@
 
 .container3 .transaction .heading .add-icon:hover{
     background-color: #ffb120;
->>>>>>> Stashed changes
+
 }
 
 .container3 .transaction{ 

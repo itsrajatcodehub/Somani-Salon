@@ -1,20 +1,20 @@
 import { Component, OnInit } from '@angular/core';
-import { MatLegacyDialog as MatDialog } from '@angular/material/legacy-dialog'
+import {MatDialog} from '@angular/material/dialog';
 import { AddmessageComponent } from './addmessage/addmessage.component';
 
 @Component({
   selector: 'app-message',
   templateUrl: './message.component.html',
-  styleUrls: ['./message.component.scss']
+  styleUrls: ['./message.component.css']
 })
 export class MessageComponent implements OnInit {
 
   constructor(private dialog : MatDialog) { }
 
-  openDialog(){
-    this.dialog.open(AddmessageComponent);
-  }
   ngOnInit(): void {
   }
 
+  openDialog(){
+    this.dialog.open(AddmessageComponent);
+  }
 }

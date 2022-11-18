@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {MatDialog} from '@angular/material/dialog';
+import { AddmessageComponent } from './addmessage/addmessage.component';
 
 @Component({
   selector: 'app-transaction',
@@ -7,14 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TransactionComponent implements OnInit {
 
-  constructor() { }
+  constructor(private dialog : MatDialog) { }
 
   ngOnInit(): void {
   }
 
   selected = 'Select Year';
   
-
+ 
   title = 'Table'
   headers = ["S.No", "Name", "Billing Email Address", "Transaction ID", "Amount"]
 
@@ -110,38 +112,9 @@ export class TransactionComponent implements OnInit {
       "amount" : "₹10,000"
   
     },
-    // {
-    //   "sno" : "11",
-    //   "name" :"Travis",
-    //   "email" : "travis@gmail.com",
-    //   "transfer" :"AAFF2587892652652F",
-    //   "amount" : "₹10,000"
-  
-    // },
-    // {
-    //   "sno" : "12",
-    //   "name" :"Travis",
-    //   "email" : "travis@gmail.com",
-    //   "transfer" :"AAFF2587892652652F",
-    //   "amount" : "₹10,000"
-  
-    // },
-    // {
-    //   "sno" : "13",
-    //   "name" :"Travis",
-    //   "email" : "travis@gmail.com",
-    //   "transfer" :"AAFF2587892652652F",
-    //   "amount" : "₹10,000"
-  
-    // },
-    // {
-    //   "sno" : "14",
-    //   "name" :"Travis",
-    //   "email" : "travis@gmail.com",
-    //   "transfer" :"AAFF2587892652652F",
-    //   "amount" : "₹10,000"
-  
-    // }
-  
   ]
+
+  openDialog(){
+    this.dialog.open(AddmessageComponent);
+  }
 }

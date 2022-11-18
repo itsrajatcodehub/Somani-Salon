@@ -17,22 +17,23 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import { ClientComponent } from './client/client.component';
 import { TaskComponent } from './task/task.component';
-import { MessageComponent } from './message/message.component';
 import { ReviewsComponent } from './reviews/reviews.component';
 import {MatDialogModule} from '@angular/material/dialog';
-import { AddmessageComponent } from './message/addmessage/addmessage.component';
+import { AddmessageComponent } from './transaction/addmessage/addmessage.component';
+import { MessageComponent } from './message/message.component';
 @NgModule({
   declarations: [
-    AfterAuthComponent,
+    AfterAuthComponent, 
     TransactionComponent,
     InventoryComponent,
     LeftpanelComponent,
     HomeComponent,
     ClientComponent,
     TaskComponent,
-    MessageComponent,
     ReviewsComponent,
     AddmessageComponent,
+    MessageComponent,
+
   ],
   imports: [
     CommonModule,
@@ -54,8 +55,8 @@ import { AddmessageComponent } from './message/addmessage/addmessage.component';
     HomeComponent,
     ClientComponent,
     TaskComponent,
+    ReviewsComponent,
     MessageComponent,
-    ReviewsComponent
   ]
 })
 export class AfterAuthModule { }
