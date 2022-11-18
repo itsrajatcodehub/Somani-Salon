@@ -21,6 +21,8 @@ import { ReviewsComponent } from './reviews/reviews.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import { AddmessageComponent } from './transaction/addmessage/addmessage.component';
 import { MessageComponent } from './message/message.component';
+import {MatStepperModule} from '@angular/material/stepper';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AfterAuthComponent, 
@@ -46,7 +48,10 @@ import { MessageComponent } from './message/message.component';
     MatInputModule,
     MatSelectModule,
     MatProgressBarModule,
-    MatDialogModule
+    MatDialogModule,
+    MatStepperModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   exports: [ 
     TransactionComponent,

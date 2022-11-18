@@ -1,1 +1,74 @@
-<p>addmessage works!</p>
+
+  <form [formGroup] ="appointment" (ngSubmit) ="submit()">
+    
+    <!-- name Field -->
+  <mat-stepper [linear]="isLinear" #stepper name="name" formControlName="name">
+    <mat-step [stepControl]="firstFormGroup">
+      <form [formGroup] = "firstFormGroup">
+        <ng-template matStepLabel>Name</ng-template>
+        <mat-form-field appearance="fill">
+          <mat-label>Name</mat-label>
+          <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+
+
+        <!-- services Field  -->
+    <mat-step [stepControl]="secondFormGroup" label="Service" name="stylists" formControlName="services">
+      <form [formGroup] = "secondFormGroup">
+        <mat-form-field appearance="fill">
+          <mat-label>Service</mat-label>
+                    <mat-select>
+                      <mat-option *ngFor="let service of services" [value]="service.value">
+                        {{service.viewValue}}
+                      </mat-option>
+                    </mat-select>
+        </mat-form-field>
+        
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+
+
+
+    <!-- stylist field -->
+    <mat-step [stepControl]="secondFormGroup" label="Stylist" name="stylists" formControlName="stylists">
+        <form [formGroup] = "secondFormGroup">
+          <mat-form-field appearance="fill">
+            <mat-label>Stylist</mat-label>
+                      <mat-select>
+                        <mat-option *ngFor="let stylist of stylists" [value]="stylist.value">
+                          {{stylist.viewValue}}
+                        </mat-option>
+                      </mat-select>
+          </mat-form-field>
+          
+          <div>
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button matStepperNext>Next</button>
+          </div>
+        </form>
+      </mat-step>
+
+
+
+      <!-- final page field  -->
+    <mat-step>
+      <ng-template matStepLabel>Done</ng-template>
+      <p>Submit to book the Appointment.</p>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button (click)="stepper.reset()">Reset</button>
+        <button mat-button (click)="submit()">Submit</button>
+      </div>
+    </mat-step>
+  </mat-stepper>
+</form>
+  
