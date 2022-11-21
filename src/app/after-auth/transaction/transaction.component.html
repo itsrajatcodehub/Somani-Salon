@@ -1,148 +1,170 @@
 <div class="main-container">
-    
 
-    <!-- container 1* -->
-    <div class="left-panel">
-        <app-leftpanel></app-leftpanel>
-    </div>
-    
-    
-    
- 
-    <!-- container 2* -->
-    <div class="container2">
 
-        <div class="taskbar">
-            <!-- section 1 -->
-            <div class="heading"> 
-                <h1>Total Sales</h1>
-            </div>
-        
-            <!-- section 2 -->
-            <div class="recent">
-                <h1>Recent</h1>
-            </div>
-        
-            <!-- section 3 -->
-            <div class="select-year">
-                <mat-form-field>
-                    <mat-label>Select Year</mat-label>
-                    <mat-select [(value)]="selected">
-                      <mat-option>None</mat-option>
-                      <mat-option value="2020">2020</mat-option>
-                      <mat-option value="2021">2021</mat-option>
-                      <mat-option value="2022">2022</mat-option>
-                    </mat-select>
-                  </mat-form-field>
-                  
-                  <p class="selected">{{selected}}</p>
-            </div>
+  <!-- container 1* -->
+  <div class="left-panel">
+    <app-leftpanel></app-leftpanel>
+  </div>
 
-            <!-- section 4 -->
-            <div class="select-month">
-                <div class="months">
-                    <div class="month">January</div>
-                    <div class="month">Febuary</div>
-                    <div class="month">March</div>
-                    <div class="month">April</div>
-                    <div class="month">May</div>
-                    <div class="month">June</div>
-                    <div class="month">July</div>
-                    <div class="month">August</div>
-                    <div class="month">September</div>
-                    <div class="month">October</div>
-                    <div class="month">November</div>
-                    <div class="month">December</div>
-                </div>
-            </div>
+
+
+
+  <!-- container 2* -->
+  <div class="container2">
+
+    <div class="taskbar"> 
+      <!-- section 1 -->
+      <div class="heading">
+        <h1>Total Sales</h1>
+      </div>
+
+      <!-- section 2 -->
+      <div class="recent"> 
+        <h1>Recent</h1>
+      </div>
+
+      <!-- section 3 -->
+      <div class="select-year">
+        <mat-form-field style="width: 100%">
+          <mat-label style="font-size: 15px;">Select Year</mat-label>
+          <mat-select [(value)]="selected" style="width: 80%;">
+            <mat-option style="font-size: 15px;">None</mat-option>
+            <mat-option style="font-size: 15px;" value="2020">2020</mat-option>
+            <mat-option style="font-size: 15px;" value="2021">2021</mat-option>
+            <mat-option style="font-size: 15px;" value="2022">2022</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <!-- <p class="selected">{{selected}}</p> -->
+      </div>
+
+      <!-- section 4 -->
+      <div class="select-month">
+        <div class="months">
+          <div class="month">January</div>
+          <div class="month">Febuary</div>
+          <div class="month">March</div>
+          <div class="month">April</div>
+          <div class="month">May</div>
+          <div class="month">June</div>
+          <div class="month">July</div>
+          <div class="month">August</div>
+          <div class="month">September</div>
+          <div class="month">October</div>
+          <div class="month">November</div>
+          <div class="month">December</div>
         </div>
-        
-        
+      </div>
     </div>
+
+
+  </div>
+
+
+
+
+  <!-- container 3* -->
+  <div class="container3">
+
+
+    <div class="display">
+      <div class="total">
+        <h1>Total</h1>
+        <p>{{'₹ 1,00,000'}}</p>
+      </div>
+
+      <div class="calendar">
+        <mat-form-field>
+          <mat-label style="font-size: 16px;">Select Date</mat-label>
+          <input matInput [matDatepicker]="picker">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+
+      </div>
+    </div>
+
+
+    
+    <!-- transaction content -->
+    <div class="transaction">
+      
+      <div class="heading">
+        <div class="heading-icons">
+          
+          <!-- heading para -->
+          <div class="head">
+            <p>Recent Sales</p>
+          </div>
+          
+          <!-- heading Add Icon -->
+          <nav class="add-icon" (click)="openDialog()">+</nav>
+          <div class="icon">
+          </div>
+
+        </div> 
+
+
+      </div>
+
+
+      <div class="table">
+        <table>
+          <table> 
+            <thead>
+              <tr>
+                <th *ngFor="let header of headers" style="font-size: 16px;">
+                  {{ header }}
+                </th>
+              </tr> 
+            </thead>
+
+            <!-- <tr *ngFor="let client of clients"> -->
+            <tr *ngFor="let item of items">
+              <td style="font-size: 14px; font-family: 'Lato', sans-serif;">
+
+              </td> 
  
-  
-    
-
-    <!-- container 3* -->
-    <div class="container3">
-
-
-            <div class="display">
-                <div class="total">
-                    <h1>Total</h1>
-                    <p>{{'₹ 1,00,000'}}</p>
+              <td>
+                <div class="client">
+                  <div class="dp"><img src="assets/img/dp.png" alt=""></div>
+                  <div class="name" style="font-size: 14px; font-family: 'Lato', sans-serif;">    
+                    {{item.name}}
+                  </div>
                 </div>
-    
-                <div class="calendar">
-                    <mat-form-field>
-                        <mat-label>Select Date</mat-label>
-                        <input matInput [matDatepicker]="picker">
-                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-                        <mat-datepicker #picker></mat-datepicker>
-                      </mat-form-field>
-                      
-                </div>
-            </div>
+              </td>
+
+              <td style="font-size: 14px; font-family: 'Lato', sans-serif;">
+                {{item.email}}
+              </td>
+
+              <td style="font-size: 14px; font-family: 'Lato', sans-serif;"> 
+                {{item.services}}
+              </td>
+
+              <td style="font-size: 14px; font-family: 'Lato', sans-serif;">
+                {{item.stylists}}
+              </td>
+
+              <td style="font-size: 14px; font-family: 'Lato', sans-serif;">
+                {{ item.transaction_id }}
+              </td>
+
+              <td style="font-size: 14px; font-family: 'Lato', sans-serif;">
+                {{ item.amount }}
+              </td>
+
+            </tr>
+          </table>
+        </table>
+      </div>
 
 
 
-            <!-- transaction content -->
-            <div class="transaction">
-    
-                <div class="heading">
-                    <p>Recent Sales</p>
 
-                    <nav class="add-icon" (click)="openDialog()">+</nav>
 
-                </div>
-    
-    
-                <div class="table">
-                <table>
-                    <table>
-                      <thead>
-                        <tr>
-                          <th *ngFor="let header of headers" style="font-size: 28px;">
-                            {{ header }}
-                          </th>
-                        </tr>
-                      </thead>
-
-                        <tr *ngFor="let client of clients">
-                        <td style="font-size: 22px; font-family: 'Lato', sans-serif;">
-                          {{ client.sno }}
-                        </td>
-    
-                        <td>
-                            <div class="client">
-                                <div class="dp"><img src="assets/img/dp.png" alt=""></div>
-                                <div class="name">{{ client.name }}</div>
-                            </div>
-                        </td>
-    
-                        <td style="font-size: 22px; font-family: 'Lato', sans-serif;">
-                          {{ client.email }}
-                        </td>
-    
-                        <td style="font-size: 22px; font-family: 'Lato', sans-serif;">
-                          {{ client.transfer }}
-                        </td>
-                
-                        <td style="font-size: 22px; font-family: 'Lato', sans-serif;">
-                          {{ client.amount }}
-                        </td>
-                       
-                        </tr>
-                    </table>
-                  </table>
-            </div>
-    
-    
-    
-    
-    
-            </div>
     </div>
+  </div>
 
 
 

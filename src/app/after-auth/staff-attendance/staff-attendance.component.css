@@ -1,69 +1,76 @@
-.main-container{
-  display: flex;
+@import url('https://fonts.googleapis.com/css2?family=Alexandria&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+.main-container {
+    display: flex;
+    height: 100%;
 }
 
 section {
     display: flex;
     width: 100%;
-  }
-  .task {
-    width: 20%;
+}
+
+/* .task {
+    width: 15%;
     background-color: #fff;
-    margin: 1em;
-  }
-  .task h2 {
+    padding-left: 5px;
+    height: 100%;
+    font-family: ''Montserrat', sans-serif;';
+}
+
+.task h2 {
     margin: 10px;
-    font-family: "Inter";
     font-style: normal;
     font-weight: 600;
     font-size: 24px;
     line-height: 24px;
-    /* identical to box height, or 100% */
-  
+
     color: #2f1a00;
-  }
-  .search {
+}
+
+.search {
     margin: 10px;
     border: 1px solid black;
-    width: 100%;
     background-color: #ffffff;
+    display: flex;
     padding: 0.5em;
     border-radius: 10px;
-  }
-  .search i {
+}
+
+.search i {
     position: relative;
     top: 2px;
-  }
-  
-  .search input {
+}
+
+.search input {
     margin: 0;
     padding: 0.5em;
     border: transparent;
     background-color: transparent;
-  }
-  p {
+}
+
+p {
     margin: 10px;
-    font-family: "Inter";
     font-style: italic;
     font-weight: 500;
     font-size: 12px;
     line-height: 12px;
-    /* identical to box height, or 100% */
-  
-    /* Text/500 */
-  
     color: #61758a;
-  }
-  .boxes {
+} */
+
+.boxes {
     width: 100%;
     overflow-y: auto;
     max-height: 80vh;
-  }
-  .box {
+}
+
+.box {
     margin-bottom: 10px;
-  }
-  .box h3 {
-    font-family: "Inter";
+}
+
+.box h3 {
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
@@ -71,77 +78,87 @@ section {
     margin: 10px;
     color: #304254;
     margin-bottom: 4px;
-  }
-  .box p {
-    font-family: "Inter";
+}
+
+.box p {
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
     line-height: 12px;
     margin-top: 0;
     color: #61758a;
-  }
-  .staff {
+}
+
+.staff {
     width: 80%;
     margin: 1em 1.5em;
     background-color: #ffffff;
     padding: 1em;
     box-shadow: 0px 5px 15px rgba(28, 27, 27, 0.25);
     border-radius: 20px;
-  }
-  .team {
+    max-width: 100%;
+    overflow-y: scroll;
+} 
+
+.team {
     width: 50%;
     padding: 10px;
     cursor: pointer;
     background-color: #ececec;
     color: #000000;
-    font-weight: 600;
+    font-weight: 500;
+    font-size: 16px;
     margin-top: 4px;
     border-radius: 10px;
-  }
-  .scontent {
+}
+
+.scontent {
     width: 98%;
     transition: 4s ease-in-out;
     padding: 10px;
     background: #ffffff;
-  /* //   border: 1px solid black; */
     border-radius: 10px 10px 15px 15px;
     box-shadow: 0px 5px 15px rgba(28, 27, 27, 0.25);
-  }
-  #t1 {
+}
+
+#t1 {
     width: 98%;
-  }
-  #t2 {
+}
+
+#t2 {
     width: 98%;
-  }
-  table {
-    /* // margin: 0 2em ; */
-    /* // margin-top: 10px; */
+}
+
+table {
+
     border-collapse: collapse;
     width: 100%;
-    /* // background: #F8F9FD; */
-  }
-  table th {
+
+}
+
+table th {
     border-bottom: 1px solid #706a6b;
     padding: 0.5em;
     text-align: left;
-  }
-  
-  table td {
+}
+
+table td {
     padding: 0.7em;
     border-bottom: 1px solid #706a6b;
-  }
-  table td:hover {
+}
+
+table td:hover {
     border-left: 10px solid #FFA500;
-  }
-  
-  .top {
+}
+
+.top {
     display: flex;
     justify-content: space-between;
     margin-bottom: 2em;
     margin-top: 2em;
-  }
-  .plus-btn {
+}
+
+.plus-btn {
     border-radius: 50px;
     width: 39px;
     align-items: center;
@@ -150,23 +167,116 @@ section {
     background: #ffa500;
     box-shadow: 0px 5px 15px rgba(28, 27, 27, 0.25);
     transition: 0.3s;
-  }
-  .plus-btn:hover {
+}
+
+.plus-btn:hover {
     transform: scale(1.1);
-  }
-  .plus-btn button {
+}
+
+.plus-btn button {
     font-size: 30px;
     border: none;
     background-color: transparent;
     margin-top: 2px;
     cursor: pointer;
-  }
-  .top h3 {
-    font-family: "Inter";
-    font-style: normal;
+}
+
+.top h3 {
+    font-family: 'Montserrat', sans-serif;
     font-weight: 500;
-    font-size: 20px;
+    font-size: 24px;
     line-height: 20px;
     color: #304254;
-  }
-  
+}
+
+
+
+
+
+/* taskbar */
+
+.taskbar{
+    /* border: 2px solid black; */
+    width: 15%;
+    padding: 10px 20px;
+    font-family: 'Inter';
+    max-height: 100%;
+}
+ 
+.heading{
+    height: 5%;
+}
+
+.heading h1{ 
+    font-weight: bold;
+    font-size: 24px;
+    /* font-family: 'Inter'; */
+    font-family: 'Alexandria', sans-serif;
+    color: #2F1A00;
+}
+
+.search-bar{
+    /* border: 2px solid red; */
+    font-family: Arial, Helvetica, sans-serif;
+    height: 7%;
+}
+
+ .search{
+    border: 3px solid rgb(187, 185, 185);
+    display: flex;
+    font-size: 18px;
+    /* padding: 15px; */
+    border-radius: 5px;
+}
+.search-logo{
+    padding-top: 6px;
+    padding-bottom: 0;
+    padding-left: 5px;
+    /* border: 2px solid black; */
+    /* color: rgb(129, 127, 127); */
+    cursor: pointer;
+}
+
+.search-input{
+    /* border: 2px solid black; */
+    font-family: 'Inter';
+    padding-top: 8px;
+    width: 80%;
+    padding-left: 5px;
+    font-size: 14px;
+}
+
+.counting{
+    font-style: italic;
+    font-size: 12px;
+}
+
+.menu-task{
+    /* border: 2px solid red; */
+    margin-top: 20px;
+    overflow-y: scroll;
+    height: 86%;
+}
+
+.task{
+    /* border: 2px solid blue; */
+    cursor: pointer;
+    
+}
+
+.task h2{
+    /* border: 2px solid black; */
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.task p{
+    /* border: 2px solid blueviolet; */
+    font-family: 'Montserrat', sans-serif;
+    line-height: 12px;
+    font-size: 12px;
+}
+

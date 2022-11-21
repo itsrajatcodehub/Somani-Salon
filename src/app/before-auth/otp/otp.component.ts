@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-@Component({
+@Component({ 
   selector: 'app-otp',
   templateUrl: './otp.component.html',
   styleUrls: ['./otp.component.css']
@@ -20,6 +20,6 @@ export class OtpComponent implements OnInit {
 
   reset(){
     console.log("reset works");
-    this.route.navigate(['/after-auth/inventory']);
+    this.route.navigate(['/before-auth/login']);
   }
 }

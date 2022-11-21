@@ -2,6 +2,8 @@
     display: flex;
     width: 100%;
     user-select: none;
+    /* border: 2px solid blueviolet; */
+    height: 100%;
 }
 
  
@@ -10,16 +12,17 @@
     /* border: 10px solid red; */
     width: 55%;
     background-color: rgb(64, 28, 0);
-    height: 890px;
-}
+    height: 100%;
+    margin: 0;
+} 
 
 .main-container .logo-section .logo{
-    margin: auto;
+    /* border: 2px solid red; */
     text-align: center;
-    align-items: center;
-    /* border: 0px solid #5b2804; */
-    margin-top: 100px;
+    margin-top: 50px;
 }
+ 
+
  
 
 
@@ -32,8 +35,7 @@
 
 .main-container .login-section .login{
     margin: auto;
-    /*  */
-    margin-top: 180px;
+    margin-top: 140px;
     /* border: 2px solid orangered; */
     width: 347px;
 }
@@ -53,7 +55,7 @@
 
 
 .main-container .login-section .login .heading{
-    font-size: 30px;
+    font-size: 24px;
     font-family: 'Roboto';
     font-weight: bold;
     /* border: 2px solid blue; */
@@ -62,8 +64,7 @@
 
 .main-container .login-section .login .login-form{
     margin-top: 20px;
-    font-size: 23px;
-    
+    /* border: 1px solid red; */
 }
 
 
@@ -79,6 +80,10 @@
     font-family: 'Roboto';
 }
 
+.main-container .login-section .login .login-form label{
+    font-size: 12px;
+}
+
 
 .main-container .login-section .login .buttons{
     margin-top: 20px;
@@ -86,12 +91,12 @@
     /* border: 1px solid red; */
 }
 
-.main-container .login-section .login .buttons .login-now{
+.main-container .login-section .login .buttons .signup-now{
     /* width: 100%; */
     width: 347px;
-    padding-top: 12px;
-    padding-bottom: 12px;
-    font-size: 16px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    /* font-size: 16px; */
     background-color: orange;
     color: white;
     text-align: center;
@@ -100,15 +105,15 @@
     user-select: none;
 }
 
-.main-container .login-section .login .buttons .login-now:active{
+.main-container .login-section .login .buttons .signup-now:active{
     transform: translateY(0.6px);
 }
 
 .main-container .login-section .login .buttons .login-google{
     margin-top: 10px;
     width: 100%;
-    padding-top: 12px;
-    padding-bottom: 12px;
+    padding-top: 7px;
+    padding-bottom: 7px;
     display: flex;
     background-color: black;
     cursor: pointer;
@@ -116,7 +121,7 @@
     text-align: center;
     justify-content: center;
     border-radius: 5px;
-    font-size: 16px;
+    /* font-size: 16px; */
 
     transition-duration: 0.4s;
     text-decoration: none;
@@ -149,7 +154,7 @@
     display: flex;
     justify-content: center;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 14px;
     font-family: 'Roboto';
     margin-top: 10px;
 }

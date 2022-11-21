@@ -7,104 +7,105 @@
     <!-- 2nd container  -->
     <div class="container2">
 
-         
+
         <div class="taskbar">
             <!-- section 1 -->
-            <div class="heading"> 
+            <div class="heading">
                 <h1>Task</h1>
             </div>
-         
+
             <!-- section 2 -->
             <div class="search-bar">
                 <div class="search">
                     <div class="search-logo">
                         <mat-icon fontIcon="search"></mat-icon>
                     </div>
-                    
+
                     <div class="search-input">
-                        <input type="text" name="search" placeholder="Search ..." style="outline: none; border: 0; font-size: 15px; width: 60%;">
+                        <input type="text" name="search" placeholder="Search ..."
+                            style="outline: none; border: 0; font-size: 15px; width: 60%;">
                     </div>
-        
+
                 </div>
-                
+
                 <div class="counting">
                     <!-- use binding to display the data -->
                     {{'0 records found'}}
                 </div>
             </div>
-        
+
             <!-- section 3 -->
             <div class="menu-task">
                 <div class="task">
-                    <h2>Task 1</h2>        
+                    <h2>Task 1</h2>
                     <p>12th Sep 2022</p>
                 </div>
-        
+
                 <div class="task">
-                    <h2>Task 2</h2>        
+                    <h2>Task 2</h2>
                     <p>12th Sep 2022</p>
                 </div>
-        
+
                 <div class="task">
-                    <h2>Task 3</h2>        
+                    <h2>Task 3</h2>
                     <p>12th Sep 2022</p>
                 </div>
-        
+
                 <div class="task">
-                    <h2>Task 4</h2>        
+                    <h2>Task 4</h2>
                     <p>12th Sep 2022</p>
                 </div>
-        
+
                 <div class="task">
-                    <h2>Task 4</h2>        
+                    <h2>Task 4</h2>
                     <p>12th Sep 2022</p>
                 </div>
-        
+
                 <div class="task">
-                    <h2>Task 5</h2>        
+                    <h2>Task 5</h2>
                     <p>12th Sep 2022</p>
                 </div>
-        
+
                 <div class="task">
-                    <h2>Task 6</h2>        
+                    <h2>Task 6</h2>
                     <p>12th Sep 2022</p>
                 </div>
-        
+
                 <div class="task">
-                    <h2>Task 7</h2>        
+                    <h2>Task 7</h2>
                     <p>12th Sep 2022</p>
                 </div>
-        
-                <div class="task"> 
-                    <h2>Task 8</h2>        
-                    <p>12th Sep 2022</p>
-                </div>
-        
+
                 <div class="task">
-                    <h2>Task 9</h2>        
+                    <h2>Task 8</h2>
                     <p>12th Sep 2022</p>
                 </div>
-        
+
                 <div class="task">
-                    <h2>Task 10</h2>        
+                    <h2>Task 9</h2>
                     <p>12th Sep 2022</p>
                 </div>
-        
+
                 <div class="task">
-                    <h2>Task 11</h2>        
+                    <h2>Task 10</h2>
                     <p>12th Sep 2022</p>
                 </div>
-        
+
                 <div class="task">
-                    <h2>Task 12</h2>        
+                    <h2>Task 11</h2>
                     <p>12th Sep 2022</p>
                 </div>
-        
+
                 <div class="task">
-                    <h2>Task 13</h2>        
+                    <h2>Task 12</h2>
                     <p>12th Sep 2022</p>
                 </div>
-        
+
+                <div class="task">
+                    <h2>Task 13</h2>
+                    <p>12th Sep 2022</p>
+                </div>
+
             </div>
         </div>
 
@@ -112,41 +113,60 @@
         <div class="home-content">
             <!-- data & time -->
             <div class="date-time">
+
+                <!-- time -->
                 <div class="time">
-                    <!-- <i class="fa-regular fa-clock"></i> -->
-                    <mat-icon fontIcon="alarm"></mat-icon>
-                    <p>{{time}}</p>
+                    <i class="ri-time-line" style="margin-right: 5px;"></i>
+                    <p style="font-weight: bold;">{{time}}</p>
                 </div>
+
+                <!-- date -->
                 <div class="date">
-                    <p>{{date}}</p>
+                    <i class="ri-calendar-event-line" style="margin-right: 5px;"></i>
+                    <p style="font-weight: bold;">{{date}}</p>
                 </div>
             </div>
 
             <!-- search bar -->
             <div class="long-search-bar">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="text" placeholder="Search">
+                <i class="ri-search-line" style="cursor: pointer;"></i>
+                <input type="text">
+                <i class="ri-mic-line" style="cursor: pointer;"></i>
             </div>
+
+            <!-- row-1 -->
             <div class="upper-section">
+                <!-- col 1 -->
                 <div class="first-upper">
                     <p>Hello,{{name}}</p>
                     <p>{{todo}}</p>
                     <div class="buttons">
-                        <button>
-                            Add Event
-                        </button><button>Add Message</button>
+                        <button>Add Event</button>
+                        <button>Add Message</button>
                     </div>
                 </div>
-                <div class="graphs"></div>
-                <div class="graphs"></div>
+
+                <!-- col 2 -->
+                <div class="graph-1">
+                    <img src="assets/img/graph-1.png" style="height: 100%;">
+                </div>
+
+                <!-- col 3 -->
+                <div class="graph-2">
+                    <img src="assets/img/graph-2.png" style="height: 100%;">
+                </div>
             </div>
+
+            <!-- row-2  -->
             <div class="lower-section">
+                <!-- col 1 -->
                 <div class="first-half">
                     <div class="sales">
                         <div class="target">Target Sales</div>
                         <div class="padding">
                             <p>Total performance this month</p>
                             <div class="parent-container">
+                                <!-- orders -->
                                 <div class="orders">
                                     <div class="info">
                                         <p>Orders</p>
@@ -155,6 +175,7 @@
                                     <mat-progress-bar mode="determinate" value="40"></mat-progress-bar>
                                     <p class="opacity">Monthly Target</p>
                                 </div>
+                                <!-- income -->
                                 <div class="orders">
                                     <div class="info">
                                         <p>Income</p>
@@ -169,7 +190,7 @@
                     <div class="activity">
                         <div class="heading">
                             <p>Recent Activities</p>
-                            <button>View all</button>
+                            <div class="view-all">View all</div>
                         </div>
                         <p id="small">Activities of this Month</p>
                         <div class="task">
@@ -192,29 +213,76 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- col 2 -->
                 <div class="second-half">
                     <div class="todo">
-                        <p id="heading"><i class="fa-solid fa-calendar"></i>  To-Do List</p>
-                        <div class="todos">
-                            <p class="big">Complete Task<i class="fa-solid fa-ellipsis"></i></p>
-                            <p>{{task_Description}}</p>
-                            <div class="images"></div>
+                        <!-- heading -->
+                        <div class="heading">
+                            <i class="ri-calendar-event-line" style="margin-right: 5px;"></i> 
+                            <p>To do List</p>
                         </div>
+
+                        <div class="todo-box">
+                        <!-- Task Name 1 -->
                         <div class="todos">
-                            <p class="big">Complete Task<i class="fa-solid fa-ellipsis"></i></p>
-                            <p>{{task_Description}}</p>
-                            <div class="images"></div>
+                            <!-- work when hover -->
+                            <div class="icons">
+                                <i class="ri-checkbox-blank-circle-fill" style="color: orange; font-size: 20px;"></i> 
+                                <i class="ri-check-double-line" style="font-size: 20px;"></i>
+                                <i class="ri-delete-bin-5-line" style="font-size: 20px;"></i>
+                            </div>
+
+                            <div class="task-data">                            
+                                <div class="big">
+                                    <p>Task Name 1</p> 
+                                </div>
+                                <p>{{task_Description}}</p>
+                            </div>
+                            <!-- <div class="images"></div> -->
                         </div>
+
+                        <!-- Task Name 2 -->
                         <div class="todos">
-                            <p class="big">Complete Task<i class="fa-solid fa-ellipsis"></i></p>
-                            <p>{{task_Description}}</p>
-                            <div class="images"></div>
+                            <!-- work when hover -->
+                            <div class="icons">
+                                <i class="ri-checkbox-blank-circle-fill" style="color: orange; font-size: 20px;"></i> 
+                                <i class="ri-check-double-line" style="font-size: 20px;"></i>
+                                <i class="ri-delete-bin-5-line" style="font-size: 20px;"></i>
+                            </div>
+
+                            <div class="task-data">
+                                <div class="big">
+                                    <p>Task Name 2</p> 
+                                </div>
+                                <p>{{task_Description}}</p>
+                            </div>
+                            <!-- <div class="images"></div> -->
+                        </div>
+
+                        <!-- Task Name 3 -->
+                        <div class="todos">
+                            <!-- work when hover -->
+                            <div class="icons">
+                                <i class="ri-checkbox-blank-circle-fill" style="color: orange; font-size: 20px;"></i> 
+                                <i class="ri-check-double-line" style="font-size: 20px;"></i>
+                                <i class="ri-delete-bin-5-line" style="font-size: 20px;"></i>
+                            </div>
+
+                            <div class="task-data">
+                                <div class="big">
+                                    <p>Task Name 3</p> 
+                                </div>
+                                <p>{{task_Description}}</p>
+                            </div>
+                            <!-- <div class="images"></div> -->
+                        </div>
                         </div>
                     </div>
                 </div>
             </div>
 
         </div>
+    </div>
 
-</div>
 </div>

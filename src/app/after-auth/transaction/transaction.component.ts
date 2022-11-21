@@ -1,6 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import {MatDialog} from '@angular/material/dialog';
 import { AddmessageComponent } from './addmessage/addmessage.component';
+import { collection, Firestore } from '@angular/fire/firestore';
+import { getDoc, doc, addDoc, getDocs, QuerySnapshot  } from 'firebase/firestore';
+// import { Item } from '@angular/fire/analytics';
+
+
+
+
 
 @Component({
   selector: 'app-transaction',
@@ -8,113 +15,44 @@ import { AddmessageComponent } from './addmessage/addmessage.component';
   styleUrls: ['./transaction.component.css']
 })
 export class TransactionComponent implements OnInit {
-
-  constructor(private dialog : MatDialog) { }
-
-  ngOnInit(): void {
+  items: any[] = [];
+  constructor(private dialog : MatDialog, private firestore: Firestore) { 
+    
   }
-
-  selected = 'Select Year';
+ 
+ 
+  ngOnInit(): void {
+ 
+    getDocs(collection(this.firestore, "appointmentdata")).then(
+      (querySnapshot: QuerySnapshot) => {
+        this.items = [];
+        querySnapshot.forEach((doc: any) => { 
+          this.items.push(doc.data());
+        });
+        console.log("data getting",this.items);
+        
+  })
+}
   
+  selected = 'Select Year'; 
   
   title = 'Table'
-  headers = ["S.No", "Name", "Billing Email Address", "Transaction ID", "Amount"]
-
-
- clients = [
-    {
-      "sno" : "01",
-      // "image" : "",
-      "name" :"Travis",
-      "email" : "travis@gmail.com",
-      "transfer" :"AAFF2587892652652F",
-      "amount" : "₹10,000"
-  
-    },
-    {
-      "sno" : "02",
-      // "image" : "",
-      "name" :"Travis",
-      "email" : "travis@gmail.com",
-      "transfer" :"AAFF2587892652652F",
-      "amount" : "₹10,000"
-  
-    },
-    {
-      "sno" : "03",
-      // "image" : "",
-      "name" :"Travis",
-      "email" : "travis@gmail.com",
-      "transfer" :"AAFF2587892652652F",
-      "amount" : "₹10,000"
-  
-    },
-    {
-      "sno" : "04",
-      // "image" : "",
-      "name" :"Travis",
-      "email" : "travis@gmail.com",
-      "transfer" :"AAFF2587892652652F",
-      "amount" : "₹10,000"
-  
-    },
-    {
-      "sno" : "05",
-      // "image" : "",
-      "name" :"Travis",
-      "email" : "travis@gmail.com",
-      "transfer" :"AAFF2587892652652F",
-      "amount" : "₹10,000"
-  
-    },
-    {
-      "sno" : "06",
-      // "image" : "",
-      "name" :"Travis",
-      "email" : "travis@gmail.com",
-      "transfer" :"AAFF2587892652652F",
-      "amount" : "₹10,000"
-  
-    },
-    {
-      "sno" : "07",
-      // "image" : "",
-      "name" :"Travis",
-      "email" : "travis@gmail.com",
-      "transfer" :"AAFF2587892652652F",
-      "amount" : "₹10,000"
-  
-    },
-    {
-      "sno" : "08",
-      // "image" : "",
-      "name" :"Travis",
-      "email" : "travis@gmail.com",
-      "transfer" :"AAFF2587892652652F",
-      "amount" : "₹10,000"
-  
-    },
-    {
-      "sno" : "09",
-      // "image" : "",
-      "name" :"Travis",
-      "email" : "travis@gmail.com",
-      "transfer" :"AAFF2587892652652F",
-      "amount" : "₹10,000"
-  
-    },
-    {
-      "sno" : "10",
-      // "image" : "",
-      "name" :"Travis",
-      "email" : "travis@gmail.com",
-      "transfer" :"AAFF2587892652652F",
-      "amount" : "₹10,000"
-  
-    },
-  ]
+  headers = ["S.No", "Name", "Email Address", "Service Name", "Stylist Name","Transaction Id", "Amount"]
 
   openDialog(){
-    this.dialog.open(AddmessageComponent);
+    const dialog = this.dialog.open(AddmessageComponent)
+    dialog.componentInstance.close.subscribe(()=>{
+      dialog.close();
+      this.ngOnInit();
+    })
   }
+
+
+ 
+
+
+
+  
+
+
 }

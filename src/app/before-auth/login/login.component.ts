@@ -18,13 +18,14 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  loginForm: any = new FormGroup({
+  loginForm: any = new FormGroup({ 
     email : new FormControl('',[Validators.required]),
     password : new FormControl('',[Validators.required, Validators.minLength(5)])
   }); 
 
+  
   // to login through firebase
-  login(){
+  login(){ 
     if (this.loginForm.valid) { 
       this.auth 
         .emailLogin(this.loginForm.value.email, this.loginForm.value.password)
@@ -34,7 +35,7 @@ export class LoginComponent implements OnInit {
     } else {
       alert("Invalid Login Form");
     }
-  }
+  } 
 
   googleSignin(){
     signInWithPopup(this.Auth, new GoogleAuthProvider()).then(

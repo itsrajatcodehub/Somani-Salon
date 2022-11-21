@@ -1,0 +1,56 @@
+<form [formGroup]="inventoryTable">
+    <mat-stepper [linear]="isLinear" #stepper>
+
+<!-- services Field  -->
+<mat-step label="Service" label="Service">
+    <mat-form-field appearance="fill">
+      <mat-label>Service</mat-label>
+      <mat-select name="services" formControlName="services">
+        <mat-option *ngFor="let service of services" [value]="service.value">
+          {{service.viewValue}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <div>
+      <button type="button" mat-button matStepperPrevious>Back</button>
+      <button type="button" mat-button matStepperNext>Next</button>
+    </div>
+  </mat-step>
+
+
+<!-- types of services Field  -->
+<mat-step label="Type" label="Type">
+    <mat-form-field appearance="fill">
+      <mat-label>Type</mat-label>
+      <mat-select name="types" formControlName="types">
+        <mat-option *ngFor="let type of types" [value]="type.value">
+          {{type.viewValue}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <div>
+      <button type="button" mat-button matStepperPrevious>Back</button>
+      <button type="button" mat-button matStepperNext>Next</button>
+    </div>
+  </mat-step>
+
+
+  <!-- sub types of services Field  -->
+<mat-step label="sub-Types" label="sub-types">
+    <mat-form-field appearance="fill">
+      <mat-label>Sub Types</mat-label>
+      <mat-select name="subtypes" formControlName="subtypes">
+        <mat-option *ngFor="let subtype of subtypes" [value]="subtype.value">
+          {{subtype.viewValue}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field> 
+    <div>
+      <button type="button" mat-button matStepperPrevious>Back</button>
+      <button type="button" mat-button matStepperNext>Next</button>
+      <button mat-button (click)="submit()">Submit</button>
+    </div>
+  </mat-step>
+
+</mat-stepper>
+</form>

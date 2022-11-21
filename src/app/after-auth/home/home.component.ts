@@ -8,10 +8,10 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  @Input() time:string = '00:45 AM'
-  @Input() date:string = '12 July 2022'
-  @Input() name:string = 'Nishchal'
-  @Input() todo:string = 'Here are somewhat you need to done today'
+  @Input() time:string = '04:45 am'
+  @Input() date:string = '12 July 2022' 
+  @Input() name:string = ' RAJAT'
+  @Input() todo:string = 'All I have done this Today'
   @Input() orders:string = '445'
   @Input() income:string = '4578'
   @Input() task_Name:string = 'A'

@@ -1,25 +1,27 @@
 .main-container{
     display: flex;
     width: 100%;
+    user-select: none;
+    /* border: 2px solid blueviolet; */
+    height: 100%;
 }
 
 
 
  
-/* section 1 */
+/* section 1 */ 
 .main-container .logo-section{
     /* border: 10px solid red; */
     width: 55%;
     background-color: rgb(64, 28, 0);
-    height: 890px;
+    height: 100%;
+    margin: 0;
 }
 
 .main-container .logo-section .logo{
-    margin: auto;
-    text-align: center;
-    align-items: center;
-    /* border: 0px solid #5b2804; */
-    margin-top: 100px;
+     /* border: 2px solid red; */
+     text-align: center;
+     margin-top: 50px;
 }
 
 
@@ -39,21 +41,21 @@
 }
 
 .main-container .login-section .login .forget-password{
-    font-size: 30px;
+    font-size: 24px;
     font-family: 'Roboto';
-    font-weight: 500;
+    font-weight: bold;
 }
 
 .main-container .login-section .login .forget-text{
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 14px;
     margin-top: 10px;
 }
 
 .main-container .login-section .login .login-form{
-    margin-top: 80px;
+    margin-top: 60px;
     font-size: 23px;
     /* border: 10px solid olivedrab; */
     font-family: 'Roboto';
@@ -73,7 +75,7 @@
 
 
 .main-container .login-section .login .buttons{
-    margin-top: 30px;
+    margin-top: 10px;
     font-family: 'Roboto';
 }
 
@@ -93,7 +95,8 @@
     display: flex;
     justify-content: center;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 14px;
     margin-top: 200px;
     font-family: 'Roboto';
-}
+    /* border: 2px solid red; */
+}   

@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./addsa.component.css']
 })
 export class AddsaComponent implements OnInit {
-  selected = 'option2';
+  selected = ' ';
   constructor() { }
 
   ngOnInit(): void {

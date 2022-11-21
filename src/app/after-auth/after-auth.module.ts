@@ -23,6 +23,9 @@ import { AddmessageComponent } from './transaction/addmessage/addmessage.compone
 import { MessageComponent } from './message/message.component';
 import {MatStepperModule} from '@angular/material/stepper';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {MatButtonModule} from '@angular/material/button';
+import {MatTreeModule} from '@angular/material/tree';
+import { AddComponent } from './inventory/add/add.component';
 import { AddclientComponent } from './client/addclient/addclient.component';
 import { StaffAttendanceComponent } from './staff-attendance/staff-attendance.component';
 import { AddsaComponent } from './staff-attendance/addsa/addsa.component';
@@ -38,6 +41,7 @@ import { AddsaComponent } from './staff-attendance/addsa/addsa.component';
     ReviewsComponent,
     AddmessageComponent,
     MessageComponent,
+    AddComponent,
     AddclientComponent,
     StaffAttendanceComponent,
     AddsaComponent,
@@ -58,6 +62,9 @@ import { AddsaComponent } from './staff-attendance/addsa/addsa.component';
     MatStepperModule,
     FormsModule,
     ReactiveFormsModule,
+    MatButtonModule,
+    MatTreeModule,
+  
   ],
   exports: [ 
     TransactionComponent,

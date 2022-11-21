@@ -1,5 +1,17 @@
+
 .main-container{
     display: flex;
+    height: 100%;
+    width: 100%; 
+    margin: 0;
+    padding: 0;
+}
+
+.main-container .container2{
+    /* display: flex;  */
+    width: 100%;
+    /* border: 2px solid red; */ 
+    font-family: 'Inter';
 }
 
 /* .container1{
@@ -30,6 +42,7 @@
         background-color: transparent;
         margin-top: 2px;
         cursor: pointer;
+        /* color: #ffff; */
     }
 
 .container2{
@@ -49,21 +62,22 @@ section{
     background-color: #2F1A00;
     color: #ffffff;
     text-align: center;
-    padding: 10px;
+    /* padding: 10px; */
     background: #2F1A00;
     border-radius: 20px 20px 0px 0px;
-    margin-bottom: 0;
+    /* margin-bottom: 0; */
 }
 .heading h2{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Inter';
-    font-style: normal;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 600;
-    font-size: 32px;
-    line-height: 32px;
+    font-size: 30px;
+    /* line-height: 32px; */
     color: #E1E8F0;
+    padding: 12px 0;
+    /* border: 2px solid red; */
 }
 table {
     /* margin: 0 2em ; */
@@ -81,6 +95,9 @@ table th {
     border-bottom: 1px solid #706a6b;
     padding: 0.5em ;
     text-align: left;
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
 }
   
 table td {
@@ -88,6 +105,8 @@ table td {
     border-bottom: 1px solid #706a6b;
     /* width: 100%; */
     /* width: min-content; */
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
 }
 
 .name{

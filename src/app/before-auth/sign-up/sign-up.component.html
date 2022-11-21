@@ -11,17 +11,17 @@
     <!-- LOGIN CREDENTIALS SECTION 2 --> 
     <div class="login-section">
         <div class="login">
-    
-            <div class="greeting">
+     
+            <!-- <div class="greeting"> -->
                 <!-- MORNING -->
-                <h2 *ngIf = "time<12">Good Morning,</h2>
+                <!-- <h2 *ngIf = "time<12">Good Morning,</h2> -->
 
                 <!-- AFTERNOON -->
-                <h2 *ngIf = "time>=12">Good Afternoon,</h2>
+                <!-- <h2 *ngIf = "time>=12">Good Afternoon,</h2> -->
 
                 <!-- EVENING -->
-                <h2 *ngIf = "time>17">Good Evening,</h2>
-            </div>
+                <!-- <h2 *ngIf = "time>17">Good Evening,</h2> -->
+            <!-- </div> -->
 
             <!-- 1 -->
             <div class="heading">Sign up</div>
@@ -44,7 +44,7 @@
             <!-- 3 -->
             <div class="buttons">
                 <!-- row 1 -->
-                <div class="login-now"  (click) = "register()">Sign up</div>
+                <div class="signup-now"  (click) = "register()">Sign up</div>
                 <!-- row 2 -->
                 <div class="login-google"  (click) = "googleSignup()">
                     <div class="google-logo"><img src="assets/img/logo-google-final.png" class="google-logo"></div>

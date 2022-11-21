@@ -4,6 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { Auth, authState, GoogleAuthProvider, signInWithPopup, signOut, UserCredential } from "@angular/fire/auth";
 import { createUserWithEmailAndPassword, signInAnonymously, signInWithEmailAndPassword } from "firebase/auth";
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -32,12 +33,11 @@ emailSignup(email: string, password: string) {
 }
 
 // logout
-
 logout() {
   return signOut(this.auth);
 }
 
-//  trial 
+//  trial - anonymous 
 anonymousSignIn() {
   return signInAnonymously(this.auth);
 }

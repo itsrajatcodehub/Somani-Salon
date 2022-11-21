@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Antic+Slab&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alexandria&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
 .main-container{
     /* border: 2px solid black; */
@@ -10,61 +12,45 @@
     width: 100%;
 }
 
-/* .main-container .container1{ */
-    /* border: 5px solid red; */
-    /* width: 16%; */
-    /* width: 300px; */
-/* } */
-
 .main-container .container2{
-    /* margin: 0; */
-    /* border: 10px solid black; */
+    /* border: 2x solid blue; */
     width: 100%;
     display: flex;
 } 
-
  
 
 
-
-
-
-
-
-
-
- 
 /* taskbar page */
 
 .main-container .container2 .taskbar{
     /* border: 2px solid black; */
-    width: 300px;
-    /* width: 1; */
+    width: 15%;
     padding: 10px 20px;
-    /* height: 100%; */
-    /* position: absolute; */
     font-family: 'Inter';
     max-height: 100%;
-    /* overflow-y: scroll; */
 }
  
+.main-container .container2 .taskbar .heading{
+    height: 5%;
+}
+
 .main-container .container2 .taskbar .heading h1{ 
     font-weight: bold;
-    font-size: 30px;
-    font-family: 'Antic Slab', serif;
+    font-size: 24px;
+    font-family: 'Alexandria', sans-serif;
     color: #2F1A00;
 }
 
 .main-container .container2 .taskbar .search-bar{
     /* border: 2px solid red; */
     font-family: Arial, Helvetica, sans-serif;
+    height: 7%;
 }
 
 .main-container .container2 .taskbar .search-bar .search{
     border: 3px solid rgb(187, 185, 185);
     display: flex;
     font-size: 18px;
-    /* padding: 15px; */
     border-radius: 5px;
 }
 
@@ -73,7 +59,6 @@
     padding-bottom: 0;
     padding-left: 5px;
     /* border: 2px solid black; */
-    /* color: rgb(129, 127, 127); */
     cursor: pointer;
 }
 
@@ -95,57 +80,39 @@
     /* border: 2px solid red; */
     margin-top: 20px;
     overflow-y: scroll;
-    height: 90%;
+    height: 86%;
 }
 
 .main-container .container2 .taskbar .menu-task .task{
     /* border: 2px solid blue; */
     cursor: pointer;
+    
 }
 
 .main-container .container2 .taskbar .menu-task .task h2{
     /* border: 2px solid black; */
     margin: 0;
     padding: 0;
-    font-family: 'Lato', sans-serif;
-    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    line-height: 20px;
 }
 
 .main-container .container2 .taskbar .menu-task .task p{
     /* border: 2px solid blueviolet; */
-    font-family: 'Lato', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 12px;
+    line-height: 12px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
 
 
 /* inventory page */
 .main-container .container2 .inventory{
     /* border: 2px solid blueviolet; */
-    width: 100%;
-    height: 100%;
-    /* position: relative; */
+    width: 80%;
+    /* height: 100%; */
     border-radius: 40px;
     margin: 15px;
-    /* box-shadow: -5px -5px 10px lightgrey; */
     box-shadow: -15px 15px 99px rgba(48, 66, 84, 0.15);
 }
 
@@ -158,12 +125,12 @@
     /* border: 2px solid red; */
     display: flex;
     justify-content:space-between;
-    margin: 30px;
+    margin: 24px;
 }
 
 .main-container .container2 .header .heading{
     /* border: 2px solid blue; */
-    font-size: 45px;
+    font-size: 24px;
     padding-top: 10px;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
@@ -172,10 +139,10 @@
 
 .main-container .container2 .header .add-icon{
     /* border: 2px solid blueviolet;     */
-    border-radius: 50px;
-    height: 50px;
-    width: 50px;
-    line-height: 50px;
+    border-radius: 40px;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
     border-radius: 50%;
     text-align: center;
     background-color: #FFA500;

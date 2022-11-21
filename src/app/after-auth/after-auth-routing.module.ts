@@ -41,9 +41,9 @@ const routes: Routes = [
     component: ReviewsComponent
   },
   {
-    path : 'staffattendence',
+    path : 'staff-attendance',
     component: StaffAttendanceComponent
-  },
+  }
 ];
 
 
