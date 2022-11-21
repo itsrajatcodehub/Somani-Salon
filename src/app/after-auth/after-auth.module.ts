@@ -23,6 +23,9 @@ import { AddmessageComponent } from './transaction/addmessage/addmessage.compone
 import { MessageComponent } from './message/message.component';
 import {MatStepperModule} from '@angular/material/stepper';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AddclientComponent } from './client/addclient/addclient.component';
+import { StaffAttendanceComponent } from './staff-attendance/staff-attendance.component';
+import { AddsaComponent } from './staff-attendance/addsa/addsa.component';
 @NgModule({
   declarations: [
     AfterAuthComponent, 
@@ -35,6 +38,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ReviewsComponent,
     AddmessageComponent,
     MessageComponent,
+    AddclientComponent,
+    StaffAttendanceComponent,
+    AddsaComponent,
 
   ],
   imports: [

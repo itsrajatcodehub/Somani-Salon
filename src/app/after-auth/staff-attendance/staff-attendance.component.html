@@ -1,0 +1,161 @@
+<div class="main-container">
+  <!-- container 1 -->
+  <div class="container1">
+      <app-leftpanel></app-leftpanel>
+  </div>
+<section>
+    <div class="task">
+      <h2>Task</h2>
+      <div class="search">
+        <i class="ri-search-line"></i>
+        <input type="search" placeholder="Search events.." />
+      </div>
+      <p>20 records found</p>
+      <div class="boxes">
+        <div class="box">
+          <h3>Task 1</h3>
+          <p>12th Sep 2021</p>
+        </div>
+        <div class="box">
+          <h3>Task 2</h3>
+          <p>12th Sep 2021</p>
+        </div>
+        <div class="box">
+          <h3>Task 3</h3>
+          <p>12th Sep 2021</p>
+        </div>
+        <div class="box">
+          <h3>Task 4</h3>
+          <p>12th Sep 2021</p>
+        </div>
+        <div class="box">
+          <h3>Task 5</h3>
+          <p>12th Sep 2021</p>
+        </div>
+        <div class="box">
+          <h3>Task 6</h3>
+          <p>12th Sep 2021</p>
+        </div>
+        <div class="box">
+          <h3>Task 7</h3>
+          <p>12th Sep 2021</p>
+        </div>
+        <div class="box">
+          <h3>Task 8</h3>
+          <p>12th Sep 2021</p>
+        </div>
+        <div class="box">
+          <h3>Task 9</h3>
+          <p>12th Sep 2021</p>
+        </div>
+        <div class="box">
+          <h3>Task 10</h3>
+          <p>12th Sep 2021</p>
+        </div>
+        <div class="box">
+          <h3>Task 11</h3>
+          <p>12th Sep 2021</p>
+        </div>
+        <div class="box">
+          <h3>Task 12</h3>
+          <p>12th Sep 2021</p>
+        </div>
+        <div class="box">
+          <h3>Task 13</h3>
+          <p>12th Sep 2021</p>
+        </div>
+        <div class="box">
+          <h3>Task 14</h3>
+          <p>12th Sep 2021</p>
+        </div>
+        <div class="box">
+          <h3>Task 15</h3>
+          <p>12th Sep 2021</p>
+        </div>
+        <div class="box">
+          <h3>Task 16</h3>
+          <p>12th Sep 2021</p>
+        </div>
+      </div>
+    </div>
+  
+    <div class="staff">
+      <div class="top">
+        <h3>Staff attendence</h3>
+        <div class="plus-btn">
+           <button (click)="openDialog()"  >+</button>   
+        </div>
+      </div>
+      <div class="team" id="t1" (click)="steam('t1')">Social Media Team <span><i class="ri-arrow-up-s-line"></i></span></div>
+      <div class="scontent" *ngIf="id === 't1'">
+          <table>
+              <thead>
+                <tr>
+                  <th *ngFor="let header of headers">
+                    {{ header }}
+                  </th>
+                </tr>
+              </thead>
+              <tr *ngFor="let staff of staffs">
+                  <td>
+                    {{ staff.name }}
+                  </td>
+                  <td>
+                    {{ staff.monday }}
+                   
+                  </td>
+                  <td>
+                    {{ staff.tuesday }}
+                  </td>
+                  <td>
+                    {{ staff.wednesday }}
+                  </td>
+                  <td>
+                    {{ staff.thursday }}
+                  </td>
+          
+                  <td>
+                    {{ staff.friday }}
+                  </td>
+                 
+                </tr>
+              </table>
+      </div>
+      <div class="team" id="t2" (click)="steam('t2')">Graphic Team <span><i class="ri-arrow-up-s-line"></i></span></div>
+      <div class="scontent" *ngIf="id === 't2'">
+        <table>
+          <thead>
+            <tr>
+              <th *ngFor="let header of headers">
+                {{ header }}
+              </th>
+            </tr>
+          </thead>
+          <tr *ngFor="let staff of staffs">
+              <td>
+                {{ staff.name }}
+              </td>
+              <td>
+                {{ staff.monday }}
+               
+              </td>
+              <td>
+                {{ staff.tuesday }}
+              </td>
+              <td>
+                {{ staff.wednesday }}
+              </td>
+              <td style="color:red !important ;">
+                {{ staff.thursday }}
+              </td>
+      
+              <td style="color:red ;">
+                {{ staff.friday }}
+              </td>
+             
+            </tr>
+          </table>
+        </div>
+    </div>
+  </section>
+</div>

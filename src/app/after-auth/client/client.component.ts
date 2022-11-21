@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { AddclientComponent } from './addclient/addclient.component';
+
 
 @Component({
   selector: 'app-client',
@@ -7,11 +10,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClientComponent implements OnInit {
   
-  constructor() { }
+  constructor(private dialog : MatDialog) { }
 
   ngOnInit(): void {
     
   } 
+  openDialog(){
+    this.dialog.open(AddclientComponent);
+  }
 
   title = 'Table'
     headers = [ "Name", "MobileNo", "Email", "Date"]

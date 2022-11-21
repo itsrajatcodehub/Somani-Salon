@@ -7,6 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { InventoryComponent } from './inventory/inventory.component';
 import { MessageComponent } from './message/message.component';
 import { ReviewsComponent } from './reviews/reviews.component';
+import { StaffAttendanceComponent } from './staff-attendance/staff-attendance.component';
 import { TaskComponent } from './task/task.component';
 import { TransactionComponent } from './transaction/transaction.component';
 
@@ -38,6 +39,10 @@ const routes: Routes = [
   {
     path : 'review',
     component: ReviewsComponent
+  },
+  {
+    path : 'staffattendence',
+    component: StaffAttendanceComponent
   },
 ];
 
