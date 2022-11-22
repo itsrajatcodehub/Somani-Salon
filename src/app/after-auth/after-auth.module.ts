@@ -29,6 +29,7 @@ import { AddComponent } from './inventory/add/add.component';
 import { AddclientComponent } from './client/addclient/addclient.component';
 import { StaffAttendanceComponent } from './staff-attendance/staff-attendance.component';
 import { AddsaComponent } from './staff-attendance/addsa/addsa.component';
+import {MatTabsModule} from '@angular/material/tabs';
 @NgModule({
   declarations: [
     AfterAuthComponent, 
@@ -64,6 +65,7 @@ import { AddsaComponent } from './staff-attendance/addsa/addsa.component';
     ReactiveFormsModule,
     MatButtonModule,
     MatTreeModule,
+    MatTabsModule
   
   ],
   exports: [ 

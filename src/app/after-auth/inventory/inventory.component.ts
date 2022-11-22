@@ -49,7 +49,7 @@ export class InventoryComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    getDocs(collection(this.firestore, "inventory")).then(
+    getDocs(collection(this.firestore, "services")).then(
       (querySnapshot: QuerySnapshot) => {
         this.items = [];
         querySnapshot.forEach((doc: any) => { 

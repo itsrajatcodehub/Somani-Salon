@@ -2,6 +2,8 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import {FormBuilder, Validators, FormGroup, FormControlName, FormControl} from '@angular/forms';
 import { collection, Firestore } from '@angular/fire/firestore';
 import { getDoc, doc, addDoc } from 'firebase/firestore';
+import { MatButton } from '@angular/material/button';
+import {MatDialog, MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog';
 
 interface SER {
   value: string;
@@ -20,15 +22,16 @@ interface SER {
 })
 export class AddComponent implements OnInit {
   displayAddData: any
-  constructor(private _formBuilder: FormBuilder, private firestore: Firestore) { }
+  constructor(private _formBuilder: FormBuilder, private firestore: Firestore, public dialog: MatDialog) { }
   @Output() close:EventEmitter<any>=new EventEmitter()
 
   ngOnInit(): void {
   }
-
+  
+  
   isLinear = false;
   
-
+  
   services: SER[] = [
     {value: 'Facial-0', viewValue: 'Facial'},
     {value: 'Hair-1', viewValue: 'Hair'},
@@ -44,35 +47,70 @@ export class AddComponent implements OnInit {
     {value: 'color-3', viewValue: 'Color'},
     // {value: 'Auctor-4', viewValue: 'Auctor5'},
   ]
-
+  
   subtypes: SER[]=[
     {value: 'Type1-0', viewValue: 'Type-1'},
     {value: 'Type2-0', viewValue: 'Type-2'},
     {value: 'Type3-0', viewValue: 'Type-3'},
     {value: 'Type4-0', viewValue: 'Type-4'},
   ] 
-
-   
+  
+  
   inventoryTable = new FormGroup({
     services : new FormControl('',[Validators.required]),
     types : new FormControl('',[Validators.required]),
     subtypes : new FormControl('',[Validators.required]),
   })
 
-
+  
   // add data
   submit(){
     console.log(this.inventoryTable.value);
     this.close.emit()
     // to add the data
-    addDoc(collection(this.firestore,'inventory'),
+    addDoc(collection(this.firestore,'services'),
       {
         service: this.inventoryTable.value.services, 
         name:this.inventoryTable.value.types, 
         email: this.inventoryTable.value.subtypes,
-      }).then((inventory)=>{
+      }).then((services)=>{
         console.log('Doc added');
-    }).catch((error) => alert("problem in add doc"))
-  }
+      }).catch((error) => alert("problem in add doc"))
+    }
+
+
+
+  // public closeIcon : boolean = true;
+  // public showDialog1 : boolean = true;
+  // public showDialog2 : boolean = false;
+  // public showDialog3 : boolean = false;
+  
+
+  // forDialog2=(event:any):void=>{
+  //   this.showDialog1 = false;
+  //   this.showDialog2 = true;
+  //   this.showDialog3 = false;
+  // }
+
+  // forDialog3=(event:any):void=>{
+  //   this.showDialog1 = false;
+  //   this.showDialog2 = false;
+  //   this.showDialog3 = true;
+  // }
+  
+
+  selected = 'option2';
+
+
+
+
+
+
 }
- 
+
+
+
+
+
+
+

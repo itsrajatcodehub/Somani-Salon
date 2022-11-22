@@ -1,56 +1,192 @@
-<form [formGroup]="inventoryTable">
-    <mat-stepper [linear]="isLinear" #stepper>
+<!-- <form [formGroup]="inventoryTable">
+  <mat-stepper [linear]="isLinear" #stepper> -->
 
-<!-- services Field  -->
-<mat-step label="Service" label="Service">
+    <!-- Name -->
+    <!-- <mat-step>
+      <ng-template matStepLabel>Name</ng-template>
+      <mat-form-field appearance="fill">
+        <mat-label>Name</mat-label>
+        <input matInput placeholder="Last name, First name" name="name" formControlName="name" required>
+      </mat-form-field>
+      <div>
+        <button type="button" mat-button matStepperNext>Next</button>
+      </div>
+    </mat-step> -->
+
+
+    <!-- services Field  -->
+    <!-- <mat-step label="Service" label="Service">
+      <mat-form-field appearance="fill">
+        <mat-label>Service</mat-label>
+        <mat-select name="services" formControlName="services">
+          <mat-option *ngFor="let service of services" [value]="service.value">
+            {{service.viewValue}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <div>
+        <button type="button" mat-button matStepperPrevious>Back</button>
+        <button type="button" mat-button matStepperNext>Next</button>
+      </div>
+    </mat-step> -->
+
+
+    <!-- types of services Field  -->
+    <!-- <mat-step label="Type" label="Type">
+      <mat-form-field appearance="fill">
+        <mat-label>Type</mat-label>
+        <mat-select name="types" formControlName="types">
+          <mat-option *ngFor="let type of types" [value]="type.value">
+            {{type.viewValue}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <div>
+        <button type="button" mat-button matStepperPrevious>Back</button>
+        <button type="button" mat-button matStepperNext>Next</button>
+      </div>
+    </mat-step> -->
+
+
+    <!-- sub types of services Field  -->
+    <!-- <mat-step label="sub-Types" label="sub-types">
+      <mat-form-field appearance="fill">
+        <mat-label>Sub Types</mat-label>
+        <mat-select name="subtypes" formControlName="subtypes">
+          <mat-option *ngFor="let subtype of subtypes" [value]="subtype.value">
+            {{subtype.viewValue}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <div>
+        <button type="button" mat-button matStepperPrevious>Back</button>
+        <button type="button" mat-button matStepperNext>Next</button>
+        <button mat-button (click)="submit()">Submit</button>
+      </div>
+    </mat-step>
+
+  </mat-stepper> -->
+
+
+    
+  <!-- <ng-template #dialog1 [showCloseIcon] ="closeIcon" [visible] ="showDialog1">
     <mat-form-field appearance="fill">
-      <mat-label>Service</mat-label>
-      <mat-select name="services" formControlName="services">
-        <mat-option *ngFor="let service of services" [value]="service.value">
-          {{service.viewValue}}
-        </mat-option>
-      </mat-select>
+      <mat-label>Name</mat-label>
+      <input matInput placeholder="Enter Name of Service1" name="name" formControlName="name" required>
     </mat-form-field>
     <div>
-      <button type="button" mat-button matStepperPrevious>Back</button>
-      <button type="button" mat-button matStepperNext>Next</button>
+      <button type="button" mat-button (click) ="forDialog2($event)">Next</button>
+      <button type="button" mat-button>Cancel</button>
     </div>
-  </mat-step>
+  </ng-template>
 
 
-<!-- types of services Field  -->
-<mat-step label="Type" label="Type">
+
+  <ng-template #dialog2 [showCloseIcon] ="closeIcon" [visible] ="showDialog2">
     <mat-form-field appearance="fill">
-      <mat-label>Type</mat-label>
-      <mat-select name="types" formControlName="types">
-        <mat-option *ngFor="let type of types" [value]="type.value">
-          {{type.viewValue}}
-        </mat-option>
-      </mat-select>
+      <mat-label>Email</mat-label>
+      <input matInput placeholder="Enter Name of Service2" name="name" formControlName="name" required>
     </mat-form-field>
     <div>
-      <button type="button" mat-button matStepperPrevious>Back</button>
-      <button type="button" mat-button matStepperNext>Next</button>
+      <button type="button" mat-button (click) ="forDialog3($event)">Next</button>
+      <button type="button" mat-button>Cancel</button>
     </div>
-  </mat-step>
+  </ng-template>
 
 
-  <!-- sub types of services Field  -->
-<mat-step label="sub-Types" label="sub-types">
-    <mat-form-field appearance="fill">
-      <mat-label>Sub Types</mat-label>
-      <mat-select name="subtypes" formControlName="subtypes">
-        <mat-option *ngFor="let subtype of subtypes" [value]="subtype.value">
-          {{subtype.viewValue}}
-        </mat-option>
-      </mat-select>
-    </mat-form-field> 
-    <div>
-      <button type="button" mat-button matStepperPrevious>Back</button>
-      <button type="button" mat-button matStepperNext>Next</button>
-      <button mat-button (click)="submit()">Submit</button>
-    </div>
-  </mat-step>
 
-</mat-stepper>
-</form>
+  <ng-template #dialog3>
+    <p>dialog 3works</p>
+  </ng-template> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- <h1 mat-dialog-title>Hi</h1>
+<div mat-dialog-content >
+  <p>What's your favorite animal?</p>
+  <mat-form-field appearance="fill">
+    <mat-label>Favorite Animal</mat-label>
+    <input matInput [(ngModel)]="data.animal">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">No Thanks</button>
+  <button mat-button [mat-dialog-close]="data.animal" cdkFocusInitial>Ok</button>
+</div> -->
+
+
+
+
+
+
+
+<!-- <div class="dialog1">
+  <p>Dialog 1 works</p>
+  <button type="button" mat-button (click) ="forDialog2($event)">for btn 2</button>
+</div>
+
+
+<div class="dialog2">
+  <p>Dialog 2 works</p>
+  <button type="button" mat-button (click) ="forDialog3($event)">for btn </button>
+</div>
+
+
+<div class="dialog3">
+  <p>Dialog 2 works</p>
+</div> -->
+
+
+<!-- </form> -->
+
+
+
+
+
+
+
+
+
+<section>
+  <p>Add Service</p>
+
+  <mat-tab-group>
+    <!-- label 1 -->
+    <mat-tab label="First"> Content 1 </mat-tab>
+
+    <!-- label 2 -->
+    <mat-tab label="Second"> Content 2 </mat-tab>
+
+    <!-- label -->
+    <mat-tab label="Third"> Content 3 </mat-tab>
+      <!-- <mat-form-field appearance="fill">
+        <mat-label>Select an option</mat-label>
+        <mat-select [(value)]="selected">
+          <mat-option>None</mat-option>
+          <mat-option value="option1">Option 1</mat-option>
+          <mat-option value="option2">Option 2</mat-option>
+          <mat-option value="option3">Option 3</mat-option>
+        </mat-select>
+      </mat-form-field>
+      
+      <p>You selected: {{selected}}</p> -->
+
+    <!-- label 4 -->
+    <mat-tab label="Fourth"> Content 4 </mat-tab>
+  </mat-tab-group>
+</section>
