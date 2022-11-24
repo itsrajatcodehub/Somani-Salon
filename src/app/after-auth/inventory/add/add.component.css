@@ -3,6 +3,10 @@ section header{
     justify-content: space-between;
 }
 
+section{
+    max-height: 500px;
+    overflow-y: scroll;
+}
 
 /* BUTTON - ADD ICON */
 /* section header div{

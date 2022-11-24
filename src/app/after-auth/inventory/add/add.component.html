@@ -269,7 +269,7 @@
       <!-- -----input------ -->
       <div class="last">
         
-        <form  class="container mt-3" [formGroup]="label2Form"  #addressForm="ngForm">
+        <form  class="container mt-3" [formGroup]="label2Form">
 
           <div class="boxbox">
             <div class="txtxt">
@@ -277,7 +277,7 @@
                 <mat-form-field style="width:100%;">
                   <mat-label>Service Name</mat-label>
                   <!-- formControlName="service" -->
-                  <input type="text" matInput [formControl]="address.control">
+                  <input type="text" matInput [formControl]="address.control" matNativeControl >
                 </mat-form-field>
                 
               </section>
@@ -289,7 +289,7 @@
             </div> -->
 
             <!-- delete btn -->
-            <div class="btn-dlt">
+            <div class="btn-dlt"> 
               <section class="container border mb-4 p-3" *ngFor="let address of addresses; let i = index;">
                 <button style="margin-bottom:2.5em ;" type="button" class="btn btn-danger btn-sm"
                   (click)="removeAddress(i)"><i class="ri-delete-bin-line"></i></button>
@@ -299,7 +299,7 @@
         </div>
         <br>
         
-        <button mat-button style="float: right;" (click) ="stage2tostage3(addressForm.value)">Next</button>
+        <button mat-button style="float: right;" (click) ="stage2tostage3()">Next</button>
         </form>
       </div>
     </mat-tab>
@@ -311,16 +311,19 @@
 
 
     <!-- label 3-->
-    <mat-tab label="Stage 3" let i = index; *ngFor="let value of addresses">
+    <mat-tab label="Stage 3" let i = index;>
       <!-- <mat-form-field style="width: 100%">
         <mat-label style="font-size: 15px;">Select Year</mat-label>
         <mat-select [(value)] ="selected" style="width: 80%;">
           <mat-option style="font-size: 15px;">{{displayValue}}</mat-option>
         </mat-select>
       </mat-form-field> -->
-      Dropdown
+      <mat-form-field *ngFor="let value of addresses">
+        Dropdown
+        {{value.control.value}}
+
+      </mat-form-field>
       <!-- {{stage3value.address}} -->
-      {{value.control.value}}
       
     </mat-tab>
 

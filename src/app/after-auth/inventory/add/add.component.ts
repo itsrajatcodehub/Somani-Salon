@@ -119,9 +119,9 @@ export class AddComponent implements OnInit {
   
   value:any;
   stage3value:any;
-  public stage2tostage3(value:any) {
+  public stage2tostage3() {
     this.selectedIndex += 1;
-    this.stage3value = value;
+    // this.stage3value = value;
     // this.stageValue = address;
     console.log(this.stage3value);
     
@@ -130,7 +130,7 @@ export class AddComponent implements OnInit {
 
 
   public addresses: any[] = [];
-
+ 
 
   addAddress() {
     let control = new FormControl()
@@ -142,7 +142,8 @@ export class AddComponent implements OnInit {
 
       // to hold the values
     });
-
+    console.log(this.addresses);
+    
     // this.label2Form.setValue(this.label2Form.service)
   }
 
