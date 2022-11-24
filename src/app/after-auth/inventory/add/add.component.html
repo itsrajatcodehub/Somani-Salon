@@ -1,8 +1,8 @@
 <!-- <form [formGroup]="inventoryTable">
   <mat-stepper [linear]="isLinear" #stepper> -->
 
-    <!-- Name -->
-    <!-- <mat-step>
+<!-- Name -->
+<!-- <mat-step>
       <ng-template matStepLabel>Name</ng-template>
       <mat-form-field appearance="fill">
         <mat-label>Name</mat-label>
@@ -14,8 +14,8 @@
     </mat-step> -->
 
 
-    <!-- services Field  -->
-    <!-- <mat-step label="Service" label="Service">
+<!-- services Field  -->
+<!-- <mat-step label="Service" label="Service">
       <mat-form-field appearance="fill">
         <mat-label>Service</mat-label>
         <mat-select name="services" formControlName="services">
@@ -31,8 +31,8 @@
     </mat-step> -->
 
 
-    <!-- types of services Field  -->
-    <!-- <mat-step label="Type" label="Type">
+<!-- types of services Field  -->
+<!-- <mat-step label="Type" label="Type">
       <mat-form-field appearance="fill">
         <mat-label>Type</mat-label>
         <mat-select name="types" formControlName="types">
@@ -48,8 +48,8 @@
     </mat-step> -->
 
 
-    <!-- sub types of services Field  -->
-    <!-- <mat-step label="sub-Types" label="sub-types">
+<!-- sub types of services Field  -->
+<!-- <mat-step label="sub-Types" label="sub-types">
       <mat-form-field appearance="fill">
         <mat-label>Sub Types</mat-label>
         <mat-select name="subtypes" formControlName="subtypes">
@@ -68,8 +68,8 @@
   </mat-stepper> -->
 
 
-    
-  <!-- <ng-template #dialog1 [showCloseIcon] ="closeIcon" [visible] ="showDialog1">
+
+<!-- <ng-template #dialog1 [showCloseIcon] ="closeIcon" [visible] ="showDialog1">
     <mat-form-field appearance="fill">
       <mat-label>Name</mat-label>
       <input matInput placeholder="Enter Name of Service1" name="name" formControlName="name" required>
@@ -116,7 +116,7 @@
 
 
 
-  <!-- <h1 mat-dialog-title>Hi</h1>
+<!-- <h1 mat-dialog-title>Hi</h1>
 <div mat-dialog-content >
   <p>What's your favorite animal?</p>
   <mat-form-field appearance="fill">
@@ -163,30 +163,176 @@
 
 
 <section>
-  <p>Add Service</p>
+  <header>
+    <p>Add Service</p>
+    <!-- <div style="outline: none;">+</div> -->
+  </header>
 
-  <mat-tab-group>
+  <mat-tab-group [(selectedIndex)]="selectedIndex" (selectedTabChange)="tabChanged($event)">
+    
+    
+    
+    
+    
     <!-- label 1 -->
-    <mat-tab label="First"> Content 1 </mat-tab>
+    <mat-tab label="Stage 1" *ngFor="let number of [0];let i=index; ">
+
+      <form [formGroup]="serviceForm" mat-form-field style=" margin-top: 10px;">
+        <!-- NAME -->
+        <mat-form-field>
+          <mat-label>Name</mat-label>
+          <input matInput name="name" class="form-field" placeholder="Enter your name" formControlName="name">
+        </mat-form-field>
+
+        <br>
+
+        <!-- CATEGORY -->
+        <mat-form-field>
+          <mat-label>Category</mat-label>
+          <input matInput name="category" class="form-field" placeholder="Enter the category"  formControlName="category">
+        </mat-form-field>
+
+        <br>
+
+        <!-- DESCRIPTION -->
+        <mat-form-field>
+          <mat-label>DESCRIPTION</mat-label>
+          <textarea matInput name="description" class="form-field" placeholder="Enter your description"  formControlName="description"></textarea>
+        </mat-form-field>
+
+        <br>
+
+        <!-- UPLOAD PHOTO -->
+
+        <br>
+
+        <!-- PRICE -->
+        <mat-form-field>
+          <mat-label>Price</mat-label>
+          <input matInput type="number" name="price" class="form-field" placeholder="Enter your price"  formControlName="price">
+        </mat-form-field>
+
+        <br>
+
+        <!-- COST  -->
+        <mat-form-field>
+          <mat-label>Cost</mat-label>
+          <input matInput type="number" name="cost" class="form-field" placeholder="Enter your cost"  formControlName="cost">
+        </mat-form-field>
+
+        <br>
+
+        <!-- TAX CHARGE  -->
+        <mat-form-field>
+          <mat-label>Tax Charge</mat-label>
+          <input matInput type="number" name="tax" class="form-field" placeholder="Enter your tax"  formControlName="tax">
+        </mat-form-field>
+
+        <br>
+
+        <!-- TIME  -->
+        <mat-form-field>
+          <mat-label>Time </mat-label>
+          <input matInput type="time" name="time" class="form-field" placeholder="Enter your time"  formControlName="time">
+        </mat-form-field>
+
+        <br>
+
+        <!-- MAX ALLOWED PRICE  -->
+        <mat-form-field>
+          <mat-label>Discount</mat-label>
+          <input matInput type="number" name="discount" class="form-field" placeholder="Enter your discount"  formControlName="discount">
+        </mat-form-field>
+
+        <br>
+
+        <button mat-button style="float: right;" (click)= "stage1tostage2()">Next</button>
+      </form>
+    </mat-tab>
+
+
+
+
+
+
 
     <!-- label 2 -->
-    <mat-tab label="Second"> Content 2 </mat-tab>
+    <mat-tab label="Stage 2">
+      <div class="head">
+      <p>Basic Details</p>
+      <!-- ---- +button ---- -->
+      <div class="mid">
+        <div (click)="addAddress()" class="add-icon">+</div>
+      </div>
+    </div>
 
-    <!-- label -->
-    <mat-tab label="Third"> Content 3 </mat-tab>
-      <!-- <mat-form-field appearance="fill">
-        <mat-label>Select an option</mat-label>
-        <mat-select [(value)]="selected">
-          <mat-option>None</mat-option>
-          <mat-option value="option1">Option 1</mat-option>
-          <mat-option value="option2">Option 2</mat-option>
-          <mat-option value="option3">Option 3</mat-option>
+      <!-- -----input------ -->
+      <div class="last">
+        
+        <form  class="container mt-3" [formGroup]="label2Form"  #addressForm="ngForm">
+
+          <div class="boxbox">
+            <div class="txtxt">
+              <section *ngFor="let address of addresses; let i = index;">
+                <mat-form-field style="width:100%;">
+                  <mat-label>Service Name</mat-label>
+                  <!-- formControlName="service" -->
+                  <input type="text" matInput [formControl]="address.control">
+                </mat-form-field>
+                
+              </section>
+            </div>
+            <div class="btn-section">
+            <!-- add btn  -->
+            <!-- <div class="btn-add">
+                <i class="ri-check-double-line"></i>
+            </div> -->
+
+            <!-- delete btn -->
+            <div class="btn-dlt">
+              <section class="container border mb-4 p-3" *ngFor="let address of addresses; let i = index;">
+                <button style="margin-bottom:2.5em ;" type="button" class="btn btn-danger btn-sm"
+                  (click)="removeAddress(i)"><i class="ri-delete-bin-line"></i></button>
+              </section>
+            </div>
+          </div>
+        </div>
+        <br>
+        
+        <button mat-button style="float: right;" (click) ="stage2tostage3(addressForm.value)">Next</button>
+        </form>
+      </div>
+    </mat-tab>
+
+
+
+
+
+
+
+    <!-- label 3-->
+    <mat-tab label="Stage 3" let i = index; *ngFor="let value of addresses">
+      <!-- <mat-form-field style="width: 100%">
+        <mat-label style="font-size: 15px;">Select Year</mat-label>
+        <mat-select [(value)] ="selected" style="width: 80%;">
+          <mat-option style="font-size: 15px;">{{displayValue}}</mat-option>
         </mat-select>
-      </mat-form-field>
+      </mat-form-field> -->
+      Dropdown
+      <!-- {{stage3value.address}} -->
+      {{value.control.value}}
       
-      <p>You selected: {{selected}}</p> -->
+    </mat-tab>
+
+
+
+
+
+
+
+
 
     <!-- label 4 -->
-    <mat-tab label="Fourth"> Content 4 </mat-tab>
+    <mat-tab label="Stage 4"> Content 4 </mat-tab>
   </mat-tab-group>
 </section>
