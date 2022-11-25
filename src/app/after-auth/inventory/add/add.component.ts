@@ -35,6 +35,7 @@ export class AddComponent implements OnInit {
     discount: new FormControl(''),
     features: this.featuresForm
   });
+  activeTab:number = 0;
   features: {control:FormControl,types:{name:FormControl,price:FormControl}[]}[] = [];
   ngOnInit(): void {
       

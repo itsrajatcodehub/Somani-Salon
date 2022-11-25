@@ -2,7 +2,7 @@
   <header>
     <p>Add Service</p>
   </header>
-  <mat-tab-group>
+  <mat-tab-group [selectedIndex]="activeTab">
     <mat-tab label="Stage 1">
       <form [formGroup]="addServiceForm" class="grid">
         <mat-form-field>
@@ -38,7 +38,7 @@
             formControlName="discount">
         </mat-form-field>
         <p></p>
-        <button mat-stroked-button color="primary" type="button">Next</button>
+        <button mat-stroked-button color="primary" type="button" (click)="activeTab=2">Next</button>
       </form>
     </mat-tab>
     <mat-tab label="Stage 2">
