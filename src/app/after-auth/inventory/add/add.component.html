@@ -1,167 +1,3 @@
-<!-- <form [formGroup]="inventoryTable">
-  <mat-stepper [linear]="isLinear" #stepper> -->
-
-<!-- Name -->
-<!-- <mat-step>
-      <ng-template matStepLabel>Name</ng-template>
-      <mat-form-field appearance="fill">
-        <mat-label>Name</mat-label>
-        <input matInput placeholder="Last name, First name" name="name" formControlName="name" required>
-      </mat-form-field>
-      <div>
-        <button type="button" mat-button matStepperNext>Next</button>
-      </div>
-    </mat-step> -->
-
-
-<!-- services Field  -->
-<!-- <mat-step label="Service" label="Service">
-      <mat-form-field appearance="fill">
-        <mat-label>Service</mat-label>
-        <mat-select name="services" formControlName="services">
-          <mat-option *ngFor="let service of services" [value]="service.value">
-            {{service.viewValue}}
-          </mat-option>
-        </mat-select>
-      </mat-form-field>
-      <div>
-        <button type="button" mat-button matStepperPrevious>Back</button>
-        <button type="button" mat-button matStepperNext>Next</button>
-      </div>
-    </mat-step> -->
-
-
-<!-- types of services Field  -->
-<!-- <mat-step label="Type" label="Type">
-      <mat-form-field appearance="fill">
-        <mat-label>Type</mat-label>
-        <mat-select name="types" formControlName="types">
-          <mat-option *ngFor="let type of types" [value]="type.value">
-            {{type.viewValue}}
-          </mat-option>
-        </mat-select>
-      </mat-form-field>
-      <div>
-        <button type="button" mat-button matStepperPrevious>Back</button>
-        <button type="button" mat-button matStepperNext>Next</button>
-      </div>
-    </mat-step> -->
-
-
-<!-- sub types of services Field  -->
-<!-- <mat-step label="sub-Types" label="sub-types">
-      <mat-form-field appearance="fill">
-        <mat-label>Sub Types</mat-label>
-        <mat-select name="subtypes" formControlName="subtypes">
-          <mat-option *ngFor="let subtype of subtypes" [value]="subtype.value">
-            {{subtype.viewValue}}
-          </mat-option>
-        </mat-select>
-      </mat-form-field>
-      <div>
-        <button type="button" mat-button matStepperPrevious>Back</button>
-        <button type="button" mat-button matStepperNext>Next</button>
-        <button mat-button (click)="submit()">Submit</button>
-      </div>
-    </mat-step>
-
-  </mat-stepper> -->
-
-
-
-<!-- <ng-template #dialog1 [showCloseIcon] ="closeIcon" [visible] ="showDialog1">
-    <mat-form-field appearance="fill">
-      <mat-label>Name</mat-label>
-      <input matInput placeholder="Enter Name of Service1" name="name" formControlName="name" required>
-    </mat-form-field>
-    <div>
-      <button type="button" mat-button (click) ="forDialog2($event)">Next</button>
-      <button type="button" mat-button>Cancel</button>
-    </div>
-  </ng-template>
-
-
-
-  <ng-template #dialog2 [showCloseIcon] ="closeIcon" [visible] ="showDialog2">
-    <mat-form-field appearance="fill">
-      <mat-label>Email</mat-label>
-      <input matInput placeholder="Enter Name of Service2" name="name" formControlName="name" required>
-    </mat-form-field>
-    <div>
-      <button type="button" mat-button (click) ="forDialog3($event)">Next</button>
-      <button type="button" mat-button>Cancel</button>
-    </div>
-  </ng-template>
-
-
-
-  <ng-template #dialog3>
-    <p>dialog 3works</p>
-  </ng-template> -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- <h1 mat-dialog-title>Hi</h1>
-<div mat-dialog-content >
-  <p>What's your favorite animal?</p>
-  <mat-form-field appearance="fill">
-    <mat-label>Favorite Animal</mat-label>
-    <input matInput [(ngModel)]="data.animal">
-  </mat-form-field>
-</div>
-<div mat-dialog-actions>
-  <button mat-button (click)="onNoClick()">No Thanks</button>
-  <button mat-button [mat-dialog-close]="data.animal" cdkFocusInitial>Ok</button>
-</div> -->
-
-
-
-
-
-
-
-<!-- <div class="dialog1">
-  <p>Dialog 1 works</p>
-  <button type="button" mat-button (click) ="forDialog2($event)">for btn 2</button>
-</div>
-
-
-<div class="dialog2">
-  <p>Dialog 2 works</p>
-  <button type="button" mat-button (click) ="forDialog3($event)">for btn </button>
-</div>
-
-
-<div class="dialog3">
-  <p>Dialog 2 works</p>
-</div> -->
-
-
-<!-- </form> -->
-
-
-
-
-
-
-
-
-
 <section>
   <header>
     <p>Add Service</p>
@@ -169,11 +5,7 @@
   </header>
 
   <mat-tab-group [(selectedIndex)]="selectedIndex" (selectedTabChange)="tabChanged($event)">
-    
-    
-    
-    
-    
+     
     <!-- label 1 -->
     <mat-tab label="Stage 1" *ngFor="let number of [0];let i=index; ">
 
@@ -251,13 +83,8 @@
     </mat-tab>
 
 
-
-
-
-
-
     <!-- label 2 -->
-    <mat-tab label="Stage 2">
+    <mat-tab label="Stage 2" class="stage-2">
       <div class="head">
       <p>Basic Details</p>
       <!-- ---- +button ---- -->
@@ -283,16 +110,12 @@
               </section>
             </div>
             <div class="btn-section">
-            <!-- add btn  -->
-            <!-- <div class="btn-add">
-                <i class="ri-check-double-line"></i>
-            </div> -->
 
             <!-- delete btn -->
             <div class="btn-dlt"> 
               <section class="container border mb-4 p-3" *ngFor="let address of addresses; let i = index;">
                 <button style="margin-bottom:2.5em ;" type="button" class="btn btn-danger btn-sm"
-                  (click)="removeAddress(i)"><i class="ri-delete-bin-line"></i></button>
+                (click)="removeAddress(i)"><i class="ri-delete-bin-line"></i></button>
               </section>
             </div>
           </div>
@@ -312,21 +135,101 @@
 
     <!-- label 3-->
     <mat-tab label="Stage 3" let i = index;>
-      <!-- <mat-form-field style="width: 100%">
-        <mat-label style="font-size: 15px;">Select Year</mat-label>
-        <mat-select [(value)] ="selected" style="width: 80%;">
-          <mat-option style="font-size: 15px;">{{displayValue}}</mat-option>
-        </mat-select>
-      </mat-form-field> -->
-      <mat-form-field *ngFor="let value of addresses">
-        Dropdown
-        {{value.control.value}}
+      <div class="label-3">
 
-      </mat-form-field>
-      <!-- {{stage3value.address}} -->
+        <!-- header DIV -->
+      <div *ngFor="let value of addresses" class="label3_data">
+        <!-- heading -->
+        <div class="data_display">
+          {{value.control.value}}
+        </div>
+        <!-- add icon -->
+        <div *ngIf ="btn_value" class="btn_display">
+          <div (click) ="addfield()" class="stage3-add-icon">+</div>
+        </div>
+
+      </div>
+
+      <!-- DATA* START -->
+      <div class="form3-data" *ngIf ="btn_value">
+        <!-- <form [formGroup]="form" style="margin: 0;">
+          <div formArrayName="service">
+            <div *ngFor="let serviceGroup of service?.controls; let i = index" [formGroupName]="i" style="display: flex; justify-content: space-between; margin-bottom: 3px;">
+              <input type="text" formControlName="name" matInput placeholder="Type Name" style="width: 300px; padding: 8px;" /> -->
+
+              <!-- <div class="price"> -->
+
+                <!-- <input type="number" formControlName="name" matInput placeholder="price" style="width: 170px; padding: 8px;" />
+                <section *ngFor="let serviceGroup of service?.controls; let i = index">
+                  <i class="ri-delete-bin-line" (click)="removefield(i)"></i>
+                </section> -->
+
+              <!-- </div> -->
+
+            <!-- </div>
+          </div> 
+        </form> -->
+
+
+
+
+
+
+
+
+ <div class="last">
+        
+        <form  class="container mt-3" [formGroup]="label2Form">
+
+          <div class="boxbox">
+            <div class="txtxt">
+              <div *ngFor="let serviceGroup of service; let i = index">
+                <mat-form-field style="width:100%;">
+                  <mat-label>Service Name</mat-label>
+                  <input type="text" matInput [formControl]="serviceGroup.control" matNativeControl >
+                  <!-- <i class="ri-delete-bin-line" (click)="removefield(i)"></i> -->
+                </mat-form-field>
+                
+              </div>
+            </div>
+            <div class="btn-section">
+
+            <!-- delete btn -->
+            <div class="btn-dlt"> 
+              <div class="container border mb-4 p-3" *ngFor="let serviceGroup of service; let i = index">
+                <button style="margin-bottom:2.5em ;" type="button" class="btn btn-danger btn-sm"
+                (click)="removefield(i)"><i class="ri-delete-bin-line"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br>
+        
+        <button mat-button style="float: right;" (click) ="stage2tostage3()">Next</button>
+        </form>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <!-- DATA* END  -->
+
+
+      </div>
       
     </mat-tab>
-
+    
 
 
 

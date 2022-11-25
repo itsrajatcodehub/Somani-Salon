@@ -1,5 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { FormBuilder, Validators, FormGroup, FormControlName, FormControl } from '@angular/forms';
+import { FormBuilder, Validators, FormGroup, FormControlName, FormControl, FormArray } from '@angular/forms';
 import { collection, Firestore } from '@angular/fire/firestore';
 import { getDoc, doc, addDoc } from 'firebase/firestore';
 import { MatButton } from '@angular/material/button';
@@ -28,7 +28,19 @@ export class AddComponent implements OnInit {
   constructor(private _formBuilder: FormBuilder, private firestore: Firestore, public dialog: MatDialog) { }
   @Output() close: EventEmitter<any> = new EventEmitter()
 
+  form: any;
   ngOnInit(): void {
+
+    // field 3 form
+    // this.form = new FormGroup({
+    //   service: new FormArray([
+    //     new FormGroup({
+    //       name: new FormControl('')
+    //     })
+    //   ])
+    // });
+
+    // console.log(this.form);
   }
 
 
@@ -111,27 +123,28 @@ export class AddComponent implements OnInit {
     this.selectedIndex += 1;
     console.log(this.serviceForm.value);
   }
-
+  
   public previousStep() {
     this.selectedIndex -= 1;
-
+    
   }
   
   value:any;
   stage3value:any;
+  btn_value: boolean = false;
   public stage2tostage3() {
+    this.btn_value = true;
     this.selectedIndex += 1;
     // this.stage3value = value;
     // this.stageValue = address;
     console.log(this.stage3value);
-    
   }
 
 
 
   public addresses: any[] = [];
- 
-
+  
+  
   addAddress() {
     let control = new FormControl()
     console.log('name'+(this.addresses.length+1).toString());
@@ -139,37 +152,56 @@ export class AddComponent implements OnInit {
     
     this.addresses.push({
       control: control,
-
-      // to hold the values
+      
+      // to hold the values 
     });
     console.log(this.addresses);
     
     // this.label2Form.setValue(this.label2Form.service)
   }
-
+  
   removeAddress(i: number) {
     this.addresses.splice(i, 1);
   }
-  logValue() {
-    console.log(this.addresses);
-  }
-
   
 
+  // FIELD 3
+  
+  
+  // get service(): FormArray {
+    //   return this.form.get('service') as FormArray;
+    // }
+    
+    public service :any[]=[]
+  addfield(){
+    // this.service.push(
+    //   new FormGroup({
+    //     name: new FormControl('',[Validators.required]),
+    //   })
+    // );
 
 
-  // submit btn to SWITCH THE TAB
-  // selectedTab = 0;
-  //   changeTab(tabIndex: number) {
-  //     this.selectedTab = tabIndex;
-  //   }
 
-  selected = ''
+    let control1 = new FormControl()
+    console.log('name'+(this.service.length+1).toString());
+    this.label2Form.addControl('name'+(this.service.length+1).toString(),control1)
+    
+    this.service.push({
+      control: control1,
 
+      // to hold the values 
+    });
+    console.log(this.service);
+    
+    // this.label2Form.setValue(this.label2Form.service)
+  }
 
+  removefield(i:number){
+    this.service.splice(i, 1);
+  }
 
+  }
 
-}
 
 
 

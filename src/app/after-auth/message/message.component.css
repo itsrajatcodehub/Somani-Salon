@@ -8,55 +8,6 @@ section {
   display: flex;
 }
 
-/* .task {
-  width: 15%;
-  background-color: #fff;
-  padding-left: 5px;
-  height: 100%;
-}
-
-.task h2 {
-  margin: 10px;
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 24px;
-
-  color: #2f1a00;
-}
-
-.search {
-  margin: 10px;
-  border: 1px solid black;
-
-  background-color: #ffffff;
-  display: flex;
-  padding: 0.5em;
-  border-radius: 10px;
-}
-
-.search i {
-  position: relative;
-  top: 2px;
-}
-
-.search input {
-  margin: 0;
-  padding: 0.5em;
-  border: transparent;
-  background-color: transparent;
-}
-
-p {
-  margin: 10px;
-  font-family: "Inter";
-  font-style: italic;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 12px;
-  color: #61758a;
-} */
 
 .boxes {
   width: 100%;
@@ -131,7 +82,7 @@ p {
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 700;
-  font-size: 26px;
+  font-size: 22px;
   line-height: 32px;
   color: #304254;
 }
@@ -147,7 +98,7 @@ p {
   font-family: 'Inter';
   font-style: normal;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 15px;
   line-height: 20px;
   color: #5A5A5A;
 }
@@ -164,6 +115,7 @@ p {
   font-size: 15px;
   line-height: 20px;
   color: #8F8F8F;
+  margin: 0;
 
 }
 
@@ -177,7 +129,7 @@ p {
 .taskbar{
   /* border: 2px solid black; */
   width: 15%;
-  padding: 10px 20px;
+  padding: 10px 0px 10px 20px;
   font-family: 'Inter';
   max-height: 100%;
 }
@@ -258,4 +210,3 @@ p {
   line-height: 12px;
   font-size: 12px;
 }
-
