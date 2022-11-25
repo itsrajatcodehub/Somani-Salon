@@ -1,244 +1,78 @@
 <section>
   <header>
     <p>Add Service</p>
-    <!-- <div style="outline: none;">+</div> -->
   </header>
-
-  <mat-tab-group [(selectedIndex)]="selectedIndex" (selectedTabChange)="tabChanged($event)">
-     
-    <!-- label 1 -->
-    <mat-tab label="Stage 1" *ngFor="let number of [0];let i=index; ">
-
-      <form [formGroup]="serviceForm" mat-form-field style=" margin-top: 10px;">
-        <!-- NAME -->
+  <mat-tab-group>
+    <mat-tab label="Stage 1">
+      <form [formGroup]="addServiceForm" class="grid">
         <mat-form-field>
           <mat-label>Name</mat-label>
           <input matInput name="name" class="form-field" placeholder="Enter your name" formControlName="name">
         </mat-form-field>
-
-        <br>
-
-        <!-- CATEGORY -->
         <mat-form-field>
           <mat-label>Category</mat-label>
-          <input matInput name="category" class="form-field" placeholder="Enter the category"  formControlName="category">
+          <input matInput name="category" class="form-field" placeholder="Enter the category" formControlName="category">
         </mat-form-field>
-
-        <br>
-
-        <!-- DESCRIPTION -->
         <mat-form-field>
           <mat-label>DESCRIPTION</mat-label>
-          <textarea matInput name="description" class="form-field" placeholder="Enter your description"  formControlName="description"></textarea>
+          <textarea matInput name="description" class="form-field" placeholder="Enter your description"
+            formControlName="description"></textarea>
         </mat-form-field>
-
-        <br>
-
-        <!-- UPLOAD PHOTO -->
-
-        <br>
-
-        <!-- PRICE -->
         <mat-form-field>
           <mat-label>Price</mat-label>
-          <input matInput type="number" name="price" class="form-field" placeholder="Enter your price"  formControlName="price">
+          <input matInput type="number" name="price" class="form-field" placeholder="Enter your price"
+            formControlName="price">
         </mat-form-field>
-
-        <br>
-
-        <!-- COST  -->
         <mat-form-field>
           <mat-label>Cost</mat-label>
-          <input matInput type="number" name="cost" class="form-field" placeholder="Enter your cost"  formControlName="cost">
+          <input matInput type="number" name="cost" class="form-field" placeholder="Enter your cost"
+            formControlName="cost">
         </mat-form-field>
-
-        <br>
-
-        <!-- TAX CHARGE  -->
         <mat-form-field>
           <mat-label>Tax Charge</mat-label>
-          <input matInput type="number" name="tax" class="form-field" placeholder="Enter your tax"  formControlName="tax">
+          <input matInput type="number" name="tax" class="form-field" placeholder="Enter your tax" formControlName="tax">
         </mat-form-field>
-
-        <br>
-
-        <!-- TIME  -->
-        <mat-form-field>
-          <mat-label>Time </mat-label>
-          <input matInput type="time" name="time" class="form-field" placeholder="Enter your time"  formControlName="time">
-        </mat-form-field>
-
-        <br>
-
-        <!-- MAX ALLOWED PRICE  -->
         <mat-form-field>
           <mat-label>Discount</mat-label>
-          <input matInput type="number" name="discount" class="form-field" placeholder="Enter your discount"  formControlName="discount">
+          <input matInput type="number" name="discount" class="form-field" placeholder="Enter your discount"
+            formControlName="discount">
         </mat-form-field>
-
-        <br>
-
-        <button mat-button style="float: right;" (click)= "stage1tostage2()">Next</button>
+        <p></p>
+        <button mat-stroked-button color="primary" type="button">Next</button>
       </form>
     </mat-tab>
-
-
-    <!-- label 2 -->
-    <mat-tab label="Stage 2" class="stage-2">
-      <div class="head">
-      <p>Basic Details</p>
-      <!-- ---- +button ---- -->
-      <div class="mid">
-        <div (click)="addAddress()" class="add-icon">+</div>
+    <mat-tab label="Stage 2">
+      <div class="row">
+        Features <button type="button" (click)="addFeature()" mat-raised-button color="primary"><mat-icon>add</mat-icon> Add Feature</button>
       </div>
-    </div>
-
-      <!-- -----input------ -->
-      <div class="last">
-        
-        <form  class="container mt-3" [formGroup]="label2Form">
-
-          <div class="boxbox">
-            <div class="txtxt">
-              <section *ngFor="let address of addresses; let i = index;">
-                <mat-form-field style="width:100%;">
-                  <mat-label>Service Name</mat-label>
-                  <!-- formControlName="service" -->
-                  <input type="text" matInput [formControl]="address.control" matNativeControl >
+      <form [formGroup]="featuresForm" (ngSubmit)="finalSubmit()">
+        <div class="grid">
+          <div *ngFor="let featureControl of features" class="box-vr">
+            <div class="row" >
+              <mat-form-field>
+                <mat-label>Feature</mat-label>
+                <input matInput name="feature" [formControl]="featureControl.control" class="form-field" placeholder="Enter your detail">
+              </mat-form-field>
+              <button mat-icon-button color="danger"><mat-icon>delete</mat-icon></button>
+              <button mat-raised-button color="primary" (click)="addType(featureControl)"><mat-icon>add</mat-icon></button>
+            </div>
+            <div class="types">
+              <div class="row" *ngFor="let featureControl of featureControl.types">
+                <mat-form-field>
+                  <mat-label>Type</mat-label>
+                  <input matInput name="feature" [formControl]="featureControl.name" class="form-field" placeholder="Enter your detail">
                 </mat-form-field>
-                
-              </section>
-            </div>
-            <div class="btn-section">
-
-            <!-- delete btn -->
-            <div class="btn-dlt"> 
-              <section class="container border mb-4 p-3" *ngFor="let address of addresses; let i = index;">
-                <button style="margin-bottom:2.5em ;" type="button" class="btn btn-danger btn-sm"
-                (click)="removeAddress(i)"><i class="ri-delete-bin-line"></i></button>
-              </section>
-            </div>
-          </div>
-        </div>
-        <br>
-        
-        <button mat-button style="float: right;" (click) ="stage2tostage3()">Next</button>
-        </form>
-      </div>
-    </mat-tab>
-
-
-
-
-
-
-
-    <!-- label 3-->
-    <mat-tab label="Stage 3" let i = index;>
-      <div class="label-3">
-
-        <!-- header DIV -->
-      <div *ngFor="let value of addresses" class="label3_data">
-        <!-- heading -->
-        <div class="data_display">
-          {{value.control.value}}
-        </div>
-        <!-- add icon -->
-        <div *ngIf ="btn_value" class="btn_display">
-          <div (click) ="addfield()" class="stage3-add-icon">+</div>
-        </div>
-
-      </div>
-
-      <!-- DATA* START -->
-      <div class="form3-data" *ngIf ="btn_value">
-        <!-- <form [formGroup]="form" style="margin: 0;">
-          <div formArrayName="service">
-            <div *ngFor="let serviceGroup of service?.controls; let i = index" [formGroupName]="i" style="display: flex; justify-content: space-between; margin-bottom: 3px;">
-              <input type="text" formControlName="name" matInput placeholder="Type Name" style="width: 300px; padding: 8px;" /> -->
-
-              <!-- <div class="price"> -->
-
-                <!-- <input type="number" formControlName="name" matInput placeholder="price" style="width: 170px; padding: 8px;" />
-                <section *ngFor="let serviceGroup of service?.controls; let i = index">
-                  <i class="ri-delete-bin-line" (click)="removefield(i)"></i>
-                </section> -->
-
-              <!-- </div> -->
-
-            <!-- </div>
-          </div> 
-        </form> -->
-
-
-
-
-
-
-
-
- <div class="last">
-        
-        <form  class="container mt-3" [formGroup]="label2Form">
-
-          <div class="boxbox">
-            <div class="txtxt">
-              <div *ngFor="let serviceGroup of service; let i = index">
-                <mat-form-field style="width:100%;">
-                  <mat-label>Service Name</mat-label>
-                  <input type="text" matInput [formControl]="serviceGroup.control" matNativeControl >
-                  <!-- <i class="ri-delete-bin-line" (click)="removefield(i)"></i> -->
+                <mat-form-field>
+                  <mat-label>Price</mat-label>
+                  <input matInput name="feature" [formControl]="featureControl.price" class="form-field" placeholder="Enter your detail">
                 </mat-form-field>
-                
-              </div>
-            </div>
-            <div class="btn-section">
-
-            <!-- delete btn -->
-            <div class="btn-dlt"> 
-              <div class="container border mb-4 p-3" *ngFor="let serviceGroup of service; let i = index">
-                <button style="margin-bottom:2.5em ;" type="button" class="btn btn-danger btn-sm"
-                (click)="removefield(i)"><i class="ri-delete-bin-line"></i></button>
+                <button mat-icon-button color="danger"><mat-icon>delete</mat-icon></button>
               </div>
             </div>
           </div>
         </div>
-        <br>
-        
-        <button mat-button style="float: right;" (click) ="stage2tostage3()">Next</button>
-        </form>
-      </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <!-- DATA* END  -->
-
-
-      </div>
-      
+        <button mat-raised-button color="primary" type="submit">Final Submit</button>
+      </form>
     </mat-tab>
-    
-
-
-
-
-
-
-
-
-    <!-- label 4 -->
-    <mat-tab label="Stage 4"> Content 4 </mat-tab>
   </mat-tab-group>
 </section>

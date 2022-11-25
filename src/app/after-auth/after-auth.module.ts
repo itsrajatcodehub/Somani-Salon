@@ -66,7 +66,7 @@ import {MatTabsModule} from '@angular/material/tabs';
     MatButtonModule,
     MatTreeModule,
     MatTabsModule,
-  
+    MatIconModule
   ],
   exports: [ 
     TransactionComponent,

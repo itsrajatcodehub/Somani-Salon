@@ -1,160 +1,140 @@
 <div class="main-container">
-    
-        <!-- 1st container -->
-        <div class="container1">
-          <app-leftpanel></app-leftpanel>
-        </div>
-  
-        <!-- 2rd container --> 
-        <div class="container2">
+  <!-- 1st container -->
+  <div class="container1">
+    <app-leftpanel></app-leftpanel>
+  </div>
 
-          <div class="taskbar">
-            <!-- section 1 -->
-            <div class="heading"> 
-                <h1>Task</h1>
-            </div>
-         
-            <!-- section 2 -->
-            <div class="search-bar">
-                <div class="search">
-                    <div class="search-logo">
-                        <mat-icon fontIcon="search"></mat-icon>
-                    </div>
-                    
-                    <div class="search-input">
-                        <input type="text" name="search" placeholder="Search ..." style="outline: none; border: 0; font-size: 15px; width: 60%;">
-                    </div>
-        
-                </div>
-                
-                <div class="counting">
-                    <!-- use binding to display the data -->
-                    {{'0 records found'}}
-                </div>
-            </div>
-        
-            <!-- section 3 -->
-            <div class="menu-task">
-                <div class="task">
-                    <h2>Task 1</h2>        
-                    <p>12th Sep 2022</p>
-                </div>
-        
-                <div class="task">
-                    <h2>Task 2</h2>        
-                    <p>12th Sep 2022</p>
-                </div>
-        
-                <div class="task">
-                    <h2>Task 3</h2>        
-                    <p>12th Sep 2022</p>
-                </div>
-        
-                <div class="task">
-                    <h2>Task 4</h2>        
-                    <p>12th Sep 2022</p>
-                </div>
-        
-                <div class="task">
-                    <h2>Task 4</h2>        
-                    <p>12th Sep 2022</p>
-                </div>
-        
-                <div class="task">
-                    <h2>Task 5</h2>        
-                    <p>12th Sep 2022</p>
-                </div>
-        
-                <div class="task">
-                    <h2>Task 6</h2>        
-                    <p>12th Sep 2022</p>
-                </div>
-        
-                <div class="task">
-                    <h2>Task 7</h2>        
-                    <p>12th Sep 2022</p>
-                </div>
-        
-                <div class="task"> 
-                    <h2>Task 8</h2>        
-                    <p>12th Sep 2022</p>
-                </div>
-        
-                <div class="task">
-                    <h2>Task 9</h2>        
-                    <p>12th Sep 2022</p>
-                </div>
-        
-                <div class="task">
-                    <h2>Task 10</h2>        
-                    <p>12th Sep 2022</p>
-                </div>
-        
-                <div class="task">
-                    <h2>Task 11</h2>        
-                    <p>12th Sep 2022</p>
-                </div>
-        
-                <div class="task">
-                    <h2>Task 12</h2>        
-                    <p>12th Sep 2022</p>
-                </div>
-        
-                <div class="task">
-                    <h2>Task 13</h2>        
-                    <p>12th Sep 2022</p>
-                </div>
-        
-            </div>
-        </div>
-        
-        
+  <!-- 2rd container -->
+  <div class="container2">
 
- 
-          <div class="inventory">
-            <div class="inventory-section">
-          <div class="header">
-              <div class="heading">Services</div>
-              <div class="add-icon" (click) ="openDialog()">+</div>
+    <div class="taskbar">
+      <!-- section 1 -->
+      <div class="heading">
+        <h1>Task</h1>
+      </div>
+
+      <!-- section 2 -->
+      <div class="search-bar">
+        <div class="search">
+          <div class="search-logo">
+            <mat-icon fontIcon="search"></mat-icon>
           </div>
-      
-          
 
-          
-          <div class="expand-panel">
-            <div class="expansion" style="border-top: 1px solid rgb(206, 198, 198);">
-
-              <mat-tree [dataSource]="dataSource" [treeControl]="treeControl">
-                <!-- This is the tree node template for leaf nodes -->
-                <mat-tree-node *matTreeNodeDef="let node" matTreeNodePadding>
-                  <!-- use a disabled button to provide padding for tree leaf -->
-                  <button mat-icon-button disabled></button>
-                  {{node.name}}
-                </mat-tree-node>
-                <!-- This is the tree node template for expandable nodes -->
-                <mat-tree-node *matTreeNodeDef="let node;when: hasChild" matTreeNodePadding>
-                  <button mat-icon-button matTreeNodeToggle
-                          [attr.aria-label]="'Toggle ' + node.name">
-                    <mat-icon class="mat-icon-rtl-mirror">
-                      {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
-                    </mat-icon>
-                  </button>
-                  {{node.name}}
-                </mat-tree-node>
-              </mat-tree>
-              
-            </div>
+          <div class="search-input">
+            <input type="text" name="search" placeholder="Search ..."
+              style="outline: none; border: 0; font-size: 15px; width: 60%;">
           </div>
-        
 
+        </div>
 
+        <div class="counting">
+          <!-- use binding to display the data -->
+          {{'0 records found'}}
+        </div>
+      </div>
 
+      <!-- section 3 -->
+      <div class="menu-task">
+        <div class="task">
+          <h2>Task 1</h2>
+          <p>12th Sep 2022</p>
+        </div>
 
+        <div class="task">
+          <h2>Task 2</h2>
+          <p>12th Sep 2022</p>
+        </div>
 
+        <div class="task">
+          <h2>Task 3</h2>
+          <p>12th Sep 2022</p>
+        </div>
+
+        <div class="task">
+          <h2>Task 4</h2>
+          <p>12th Sep 2022</p>
+        </div>
+
+        <div class="task">
+          <h2>Task 4</h2>
+          <p>12th Sep 2022</p>
+        </div>
+
+        <div class="task">
+          <h2>Task 5</h2>
+          <p>12th Sep 2022</p>
+        </div>
+
+        <div class="task">
+          <h2>Task 6</h2>
+          <p>12th Sep 2022</p>
+        </div>
+
+        <div class="task">
+          <h2>Task 7</h2>
+          <p>12th Sep 2022</p>
+        </div>
+
+        <div class="task">
+          <h2>Task 8</h2>
+          <p>12th Sep 2022</p>
+        </div>
+
+        <div class="task">
+          <h2>Task 9</h2>
+          <p>12th Sep 2022</p>
+        </div>
+
+        <div class="task">
+          <h2>Task 10</h2>
+          <p>12th Sep 2022</p>
+        </div>
+
+        <div class="task">
+          <h2>Task 11</h2>
+          <p>12th Sep 2022</p>
+        </div>
+
+        <div class="task">
+          <h2>Task 12</h2>
+          <p>12th Sep 2022</p>
+        </div>
+
+        <div class="task">
+          <h2>Task 13</h2>
+          <p>12th Sep 2022</p>
+        </div>
+
+      </div>
+    </div>
+    <div class="inventory">
+      <div class="inventory-section">
+        <div class="header">
+          <div class="heading">Services</div>
+          <div class="add-icon" (click)="openDialog()">+</div>
+        </div>
+        <div class="expand-panel">
+          <div class="expansion" style="border-top: 1px solid rgb(206, 198, 198);">
+            <mat-tree [dataSource]="dataSource" [treeControl]="treeControl">
+              <!-- This is the tree node template for leaf nodes -->
+              <mat-tree-node *matTreeNodeDef="let node" matTreeNodePadding>
+                <!-- use a disabled button to provide padding for tree leaf -->
+                <button mat-icon-button disabled></button>
+                {{node.name}}
+              </mat-tree-node>
+              <!-- This is the tree node template for expandable nodes -->
+              <mat-tree-node *matTreeNodeDef="let node;when: hasChild" matTreeNodePadding>
+                <button mat-icon-button matTreeNodeToggle [attr.aria-label]="'Toggle ' + node.name">
+                  <mat-icon class="mat-icon-rtl-mirror">
+                    {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
+                  </mat-icon>
+                </button>
+                {{node.name}}
+              </mat-tree-node>
+            </mat-tree>
+          </div>
         </div>
       </div>
     </div>
-
-
-
+  </div>
 </div>

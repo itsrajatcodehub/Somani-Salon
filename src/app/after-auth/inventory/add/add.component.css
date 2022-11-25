@@ -1,239 +1,35 @@
-section header{
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:20px;
+    padding: 10px;
+}
+.box-hr{
     display: flex;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
+    padding: 8px;
+    border-radius: 15px;
+}
+.box-vr{
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 3px 15px rgba(0,0,0,0.1);
+    padding: 8px;
+    border-radius: 15px;
+}
+.row{
+    display: flex;
+    flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    gap:10px;
+    /* border-bottom: 1px solid #ccc; */
 }
-
-/* BUTTON - ADD ICON */
-/* section header div{
-    border-radius: 40px;
-    height: 40px;
-    width: 40px;
-    line-height: 40px;
-    border-radius: 50%;
-    text-align: center;
-    background-color: #FFA500; 
-    font-size: 30px;
-    color: #ffff;
-    font-weight: 0;
-    cursor: pointer;
-    box-shadow: -5px -5px 10px lightgrey;
-    position: relative;
-    transition-duration: 0.4s;
-    text-decoration: none;
-    user-select:none;
-}
-
-section header div:active{
-    top: 1px;
-} */
-
-header p {
-    font-size: 24px;
-    font-family: 'Montserrat';
-    line-height: 40px;
-}
-
 mat-form-field{
     width: 100%;
 }
-
-mat-form-field input{
-    font-size: 14px;
-}
-
-
-
-
-.top-heading{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.mid{
-    display: flex;
-    /* align-items: flex-end;
-    justify-content: flex-end; */
-}
-.add-icon{
-    border-radius: 40px;
-    height: 40px;
-    width: 40px;
-    line-height: 40px;
-    border-radius: 50%;
-    text-align: center;
-    background-color: #FFA500;
-    font-size: 30px;
-    color: #ffff;
-    font-weight: 0;
-    cursor: pointer;
-    box-shadow: -5px -5px 10px lightgrey;
-    position: relative;
-    transition-duration: 0.4s;
-    text-decoration: none;
-    user-select:none;
-    margin-right:14px;
-}
-.add-icon:active{
-    top: 1px;
-}
-form{
-    margin-top: 2em;
-}
-.tname{
-    width: 24em;
-}
-
-.price{
-    margin-left: 2em;
-}
-/* .last{
-    display: flex;
-} */
-.boxbox{
-    display: flex;
-    /* border: 2px solid blueviolet; */
-    width: 100%;
-    overflow-y: scroll;
-    max-height: 300px;
-}
-
-.btn{
-    /* margin-left: 29em; */
-    width: 3em;
-    height: 3em;
-    border-radius: 59px;
-    border: none;
-    /* color: #fff; */
-    /* background: orange; */
-    /* background-color: red; */
-    /* font-weight: 900; */
-    cursor: pointer;
-    /* position: absolute; */
-    /* top: 48px; */
-    /* border: 2px solid black; */
-}
-
-.btn-dlt i{
-    color: red;
-    font-size: 19px;
-}
-
-/* .btn-dlt */
-
-.head{
-    /* border: 2px solid red; */
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-}
-
-.head p{
-    font-size: 20px;
-    margin-top: 7px;
-    font-family: 'Montserrat';
-}
-
-.btn-section{
-    display: flex;
-}
-
-.btn-add{
-    line-height: 24px;
-    width: 3em;
-    height: 3em;
-    border-radius: 59px;
-    border: none;
-    color: #fff;
-    background: orange;
-    /* font-weight: 900; */
-    cursor: pointer;
-}
-
-.txtxt section{
-    display: flex;
-    /* border: 2px solid red; */
-}
-
-.txtxt{
-    /* border: 2px solid blue; */
-    width: 95%;
-}
-
-.btn-dlt{
-    float: right;
-    /* border: 2px solid red; */
-    width: 5%;
-}
-
-.label-3{
-    overflow-y: scroll;
-    max-height: 300px;
-
-}
-
-.label-3 .label3_data{
-    /* border: 2px solid red; */
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-}
-
-.label-3 .label3_data .data_display{
-    font-size: 20px;
-    font-family: 'Montserrat';
-    margin-top: 11px;
-}
-
-.label-3 .label3_data .btn_display{
-    /* border: 2px solid blue; */
-    float: right;
-
-}
-
-.stage3-add-icon{
-    border-radius: 40px;
-    height: 40px;
-    width: 40px;
-    line-height: 40px;
-    border-radius: 50%;
-    text-align: center;
-    background-color: #FFA500;
-    font-size: 30px;
-    color: #ffff;
-    font-weight: 0;
-    cursor: pointer;
-    box-shadow: -5px -5px 10px lightgrey;
-    position: relative;
-    transition-duration: 0.4s;
-    text-decoration: none;
-    user-select:none;
-    margin-right:14px;
-}
-.stage3-add-icon:active{
-    top: 1px;
-}
-
-.label-3 .form3-data{
-    /* border: 2px solid red; */
-    margin-left: 35px;
-    margin-right: 14px;
-    margin-top: 20px;
-}
-
-.label-3 .form3-data input{
-    border: none;
-    outline: none;
-    /* background-color: #f3f3f3; */
-    height: 20px;
-    width: 100px;
-    border-radius: 5px;
-}
-
-.form3-data i{
-
-    color: red;
-    font-size: 24px;
-    cursor: pointer;
-    line-height: 24px;
-    /* margin-top: 10px; */
+section{
+    overflow-y: auto;
+    height: 80vh;
 }
