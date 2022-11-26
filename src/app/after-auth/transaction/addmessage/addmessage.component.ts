@@ -36,7 +36,7 @@ export class AddmessageComponent implements OnInit {
     {value: 'Hair Dryer-4', viewValue: 'Hair Dryer'},
   ];
 
-  stylists: STY[]=[
+  stylists: STY[]=[ 
     {value: 'Auctor-0', viewValue: 'Auctor1'},
     {value: 'Auctor-1', viewValue: 'Auctor2'},
     {value: 'Auctor-2', viewValue: 'Auctor3'},

@@ -65,8 +65,8 @@ import {MatTabsModule} from '@angular/material/tabs';
     ReactiveFormsModule,
     MatButtonModule,
     MatTreeModule,
-    MatTabsModule
-  
+    MatTabsModule,
+    MatIconModule
   ],
   exports: [ 
     TransactionComponent,
