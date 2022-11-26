@@ -1,8 +1,8 @@
 <!-- <form [formGroup]="inventoryTable">
   <mat-stepper [linear]="isLinear" #stepper> -->
 
-    <!-- Name -->
-    <!-- <mat-step>
+<!-- Name -->
+<!-- <mat-step>
       <ng-template matStepLabel>Name</ng-template>
       <mat-form-field appearance="fill">
         <mat-label>Name</mat-label>
@@ -13,9 +13,8 @@
       </div>
     </mat-step> -->
 
-
-    <!-- services Field  -->
-    <!-- <mat-step label="Service" label="Service">
+<!-- services Field  -->
+<!-- <mat-step label="Service" label="Service">
       <mat-form-field appearance="fill">
         <mat-label>Service</mat-label>
         <mat-select name="services" formControlName="services">
@@ -30,9 +29,8 @@
       </div>
     </mat-step> -->
 
-
-    <!-- types of services Field  -->
-    <!-- <mat-step label="Type" label="Type">
+<!-- types of services Field  -->
+<!-- <mat-step label="Type" label="Type">
       <mat-form-field appearance="fill">
         <mat-label>Type</mat-label>
         <mat-select name="types" formControlName="types">
@@ -47,9 +45,8 @@
       </div>
     </mat-step> -->
 
-
-    <!-- sub types of services Field  -->
-    <!-- <mat-step label="sub-Types" label="sub-types">
+<!-- sub types of services Field  -->
+<!-- <mat-step label="sub-Types" label="sub-types">
       <mat-form-field appearance="fill">
         <mat-label>Sub Types</mat-label>
         <mat-select name="subtypes" formControlName="subtypes">
@@ -67,9 +64,7 @@
 
   </mat-stepper> -->
 
-
-    
-  <!-- <ng-template #dialog1 [showCloseIcon] ="closeIcon" [visible] ="showDialog1">
+<!-- <ng-template #dialog1 [showCloseIcon] ="closeIcon" [visible] ="showDialog1">
     <mat-form-field appearance="fill">
       <mat-label>Name</mat-label>
       <input matInput placeholder="Enter Name of Service1" name="name" formControlName="name" required>
@@ -99,24 +94,7 @@
     <p>dialog 3works</p>
   </ng-template> -->
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <!-- <h1 mat-dialog-title>Hi</h1>
+<!-- <h1 mat-dialog-title>Hi</h1>
 <div mat-dialog-content >
   <p>What's your favorite animal?</p>
   <mat-form-field appearance="fill">
@@ -128,12 +106,6 @@
   <button mat-button (click)="onNoClick()">No Thanks</button>
   <button mat-button [mat-dialog-close]="data.animal" cdkFocusInitial>Ok</button>
 </div> -->
-
-
-
-
-
-
 
 <!-- <div class="dialog1">
   <p>Dialog 1 works</p>
@@ -151,16 +123,7 @@
   <p>Dialog 2 works</p>
 </div> -->
 
-
 <!-- </form> -->
-
-
-
-
-
-
-
-
 
 <section>
   <p>Add Service</p>
@@ -170,11 +133,89 @@
     <mat-tab label="First"> Content 1 </mat-tab>
 
     <!-- label 2 -->
-    <mat-tab label="Second"> Content 2 </mat-tab>
+    <mat-tab label="Second">
+      <!-- ----heading---- -->
+      <div class="top-heading">
+        <h2>Basic Detail</h2>
+      </div>
 
-    <!-- label -->
-    <mat-tab label="Third"> Content 3 </mat-tab>
-      <!-- <mat-form-field appearance="fill">
+      <!-- ---- +button ---- -->
+      <div class="mid">
+        <div (click)="addAddress()" class="add-icon">+</div>
+      </div>
+
+      <!-- -----input------ -->
+      <div class="last">
+        <form #addressForm="ngForm" class="container mt-3" (ngSubmit)="logValue()">
+          <div class="boxbox">
+            <div class="txtxt">
+              <section *ngFor="let address of addresses; let i = index">
+                <mat-form-field appearance="fill">
+                  <mat-label>Service Name</mat-label>
+                  <input type="text" [(ngModel)]="address.address" name="address_{{ i }}" matInput
+                    placeholder="Service Name" />
+                  <!-- <mat-hint>Hairstyle</mat-hint> -->
+                </mat-form-field>
+              </section>
+            </div>
+            <div class="btn-dlt">
+              <section class="container border mb-4 p-3" *ngFor="let address of addresses; let i = index">
+                <button style="margin-bottom: 2.5em" type="button" class="btn btn-danger btn-sm"
+                  (click)="removeAddress(i)">
+                  <i class="ri-delete-bin-line"></i>
+                </button>
+              </section>
+            </div>
+          </div>
+        </form>
+      </div>
+    </mat-tab>
+
+
+
+    <!-- label third -->
+    <mat-tab label="Third">
+      <div class="top-heading">
+        <h2>Basic Detail</h2>
+      </div>
+
+      <!-- ---- +button ---- -->
+      <div class="mid">
+        <div (click)="addname()" class="add-icon">+</div>
+      </div>
+
+      <!-- -----input------ -->
+      <div class="last">
+        <form  #nameForm="ngForm" class="container mt-3" (ngSubmit)="logname()">
+          <div class="boxbox">
+            <div class="txtxt">
+              <section *ngFor="let name of  names; let i = index">
+          <mat-form-field appearance="fill" class="tname">
+            <mat-label>TypeName</mat-label>
+            <input type="text" [(ngModel)]="name.name" name="name_{{ i }}"  matInput placeholder="Type Name" />
+            <!-- <mat-hint>Hairstyle</mat-hint> -->
+          </mat-form-field>
+        </section>
+      </div>
+      <div class="btn-dlt">
+        <!-- <section class="container border mb-4 p-3" *ngFor="let name of  names; let i = index">
+          <button style="margin-bottom: 2.5em" type="button" class="btn btn-danger btn-sm"
+            (click)="removename(i)">
+            <i class="ri-delete-bin-line"></i>
+          </button>
+        </section> -->
+      </div>
+    </div>
+  
+          <mat-form-field appearance="fill" class="price">
+            <mat-label>Price</mat-label>
+            <input matInput placeholder="Price" />
+            <!-- <mat-hint>Hairstyle</mat-hint> -->
+          </mat-form-field>
+        </form>
+      </div>
+    </mat-tab>
+    <!-- <mat-form-field appearance="fill">
         <mat-label>Select an option</mat-label>
         <mat-select [(value)]="selected">
           <mat-option>None</mat-option>

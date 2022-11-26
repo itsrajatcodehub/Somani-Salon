@@ -5,6 +5,7 @@ import { getDoc, doc, addDoc } from 'firebase/firestore';
 import { MatButton } from '@angular/material/button';
 import {MatDialog, MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog';
 
+
 interface SER {
   value: string;
   viewValue: string;
@@ -26,6 +27,40 @@ export class AddComponent implements OnInit {
   @Output() close:EventEmitter<any>=new EventEmitter()
 
   ngOnInit(): void {
+  }
+  public addresses: any[] = [{
+    address: '',
+  }];
+  addAddress() {
+    // const uniqueID = uuid.v4();
+    this.addresses.push({
+      address: '',
+      
+    });
+  }
+  removeAddress(i: number) {
+    this.addresses.splice(i, 1);
+  }
+  logValue() {
+    console.log(this.addresses);
+  }
+
+  
+  public names: any[] = [{
+    name: '',
+  }];
+  addname() {
+    // const uniqueID = uuid.v4();
+    this.names.push({
+      name: '',
+      
+    });
+  }
+  removename(i: number) {
+    this.names.splice(i, 1);
+  }
+  logname() {
+    console.log(this.names);
   }
   
   

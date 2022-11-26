@@ -113,7 +113,7 @@
           <table> 
             <thead>
               <tr>
-                <th *ngFor="let header of headers" style="font-size: 16px;">
+                <th *ngFor="let header of headers" style="font-size: 13px;">
                   {{ header }}
                 </th>
               </tr> 
@@ -121,36 +121,36 @@
 
             <!-- <tr *ngFor="let client of clients"> -->
             <tr *ngFor="let item of items">
-              <td style="font-size: 14px; font-family: 'Lato', sans-serif;">
-
+              <td style="font-size: 12px; font-family: 'Lato', sans-serif;">
+                {{item.sno}}
               </td> 
  
               <td>
                 <div class="client">
                   <div class="dp"><img src="assets/img/dp.png" alt=""></div>
-                  <div class="name" style="font-size: 14px; font-family: 'Lato', sans-serif;">    
+                  <div class="name" style="font-size: 12px; font-family: 'Lato', sans-serif;">    
                     {{item.name}}
                   </div>
                 </div>
               </td>
 
-              <td style="font-size: 14px; font-family: 'Lato', sans-serif;">
+              <td style="font-size: 12px; font-family: 'Lato', sans-serif;">
                 {{item.email}}
               </td>
 
-              <td style="font-size: 14px; font-family: 'Lato', sans-serif;"> 
+              <td style="font-size: 12px; font-family: 'Lato', sans-serif;"> 
                 {{item.services}}
               </td>
 
-              <td style="font-size: 14px; font-family: 'Lato', sans-serif;">
+              <td style="font-size: 12px; font-family: 'Lato', sans-serif;">
                 {{item.stylists}}
               </td>
 
-              <td style="font-size: 14px; font-family: 'Lato', sans-serif;">
+              <td style="font-size: 12px; font-family: 'Lato', sans-serif;">
                 {{ item.transaction_id }}
               </td>
 
-              <td style="font-size: 14px; font-family: 'Lato', sans-serif;">
+              <td style="font-size: 12px; font-family: 'Lato', sans-serif;">
                 {{ item.amount }}
               </td>
 

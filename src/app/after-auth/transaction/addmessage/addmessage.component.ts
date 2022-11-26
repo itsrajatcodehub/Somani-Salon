@@ -46,6 +46,7 @@ export class AddmessageComponent implements OnInit {
 
   
   appointment = new FormGroup({
+    sno : new FormControl('',[Validators.required]),
     name : new FormControl('',[Validators.required]),
     email : new FormControl('',[Validators.required]),
     services : new FormControl('',[Validators.required]),
@@ -61,6 +62,7 @@ export class AddmessageComponent implements OnInit {
     // to add the data
     addDoc(collection(this.firestore,'appointmentdata'),
       {
+        sno:this.appointment.value.sno, 
         name:this.appointment.value.name, 
         email: this.appointment.value.email,
         service: this.appointment.value.services, 
