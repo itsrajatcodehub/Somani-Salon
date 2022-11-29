@@ -49,3 +49,53 @@ $AngularSomaniPanel-theme: mat.define-light-theme((
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+#bill{
+    position: absolute;
+    top:0px;
+    left:0px;
+    visibility: hidden;
+    // visibility: visible;
+    padding: 15px;
+    visibility: hidden;
+    padding: 15px;
+    width: calc(100% - 30px);
+    p{
+        margin:0px;
+    }
+    img{
+        width: 250px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+    .billRow{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+    }
+    .subFinal , .final{
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        grid-gap: 20px;
+        padding: 0px 10px;
+        p:nth-child(2){
+            text-align: center;
+        }
+    }
+    .subFinal{
+        font-weight: bold;
+        font-size: 1em;
+    }
+    .final{
+        font-weight: bold;
+        font-size: 1.2em;
+    }
+    .info{
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+    }
+    table{
+        width: 100%;
+    }
+}

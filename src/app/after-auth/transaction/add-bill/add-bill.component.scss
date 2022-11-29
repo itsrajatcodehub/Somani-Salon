@@ -1,0 +1,56 @@
+section{
+    max-height: 70vh;
+    // display: none;
+    overflow-y: scroll;
+}
+.container{
+    padding: 20px;
+}
+form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+.row{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    width: 400px;
+}
+.column{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+}
+#billMain{
+    visibility: hidden;
+    border: 2px solid;
+    max-width: 250px;
+    padding: 15px;
+    p{
+        margin:0px;
+    }
+    img{
+        width: 150px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+    .billRow{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+    }
+    .subFinal{
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        grid-gap: 20px;
+    }
+    .info{
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+    }
+    table{
+        width: 100%;
+    }
+}
