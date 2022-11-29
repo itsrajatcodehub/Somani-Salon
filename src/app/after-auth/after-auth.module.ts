@@ -32,6 +32,11 @@ import { AddsaComponent } from './staff-attendance/addsa/addsa.component';
 import {MatTabsModule} from '@angular/material/tabs';
 import { NgChartsModule } from 'ng2-charts';
 import { EmployeeComponent } from './home/employee/employee.component';
+import { EditEmployeeComponent } from './home/edit-employee/edit-employee.component';
+import { AddCustomerComponent } from './home/add-customer/add-customer.component';
+import { EditCustomerComponent } from './home/edit-customer/edit-customer.component';
+import { AddServiceComponent } from './home/add-service/add-service.component';
+import { EditServiceComponent } from './home/edit-service/edit-service.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +55,11 @@ import { EmployeeComponent } from './home/employee/employee.component';
     StaffAttendanceComponent,
     AddsaComponent,
     EmployeeComponent,
+    EditEmployeeComponent,
+    AddCustomerComponent,
+    EditCustomerComponent,
+    AddServiceComponent,
+    EditServiceComponent,
 
   ],
   imports: [

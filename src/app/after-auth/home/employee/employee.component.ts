@@ -49,12 +49,14 @@ export class EmployeeComponent implements OnInit {
     this.close.emit() 
     // to add the data
     addDoc(collection(this.firestore,'employee'),
-      {
-        name:this.employee.value.name, 
-        shift: this.employee.value.shift,
-        attendance: this.employee.value.attendance
-      }).then((appointmentdata)=>{
+      this.employee.value
+      ).then((appointmentdata)=>{
         console.log('Doc added');
     }).catch((error) => alert("problem in add doc"))
+}
+
+
+reset(){
+  this.employee.reset();
 }
 }

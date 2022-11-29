@@ -1,0 +1,13 @@
+<form [formGroup]="serviceForm">
+    <div>
+        <h1 style="font-family: 'Montserrat';">Enter Details</h1>
+        <mat-form-field>
+          <mat-label>Service</mat-label>
+          <input matInput placeholder="Enter Service Name" name="name" formControlName="name" required>
+        </mat-form-field>
+
+      <div style="text-align: right;">
+        <button mat-button (click)="edit(services.id)">Edit</button>
+      </div>
+    </div>
+</form>

@@ -474,15 +474,19 @@
     height: 30%;
     display: flex;
     margin: 20px;
+    /* padding: 10px; */
 }
 
 .row-1 .col-1{
     /* border: 2px solid black; */
-    height: 100%;
+    height: 90%;
     width: 30%;
     text-align: center;
     font-size: 30px;
     margin-right: 10px;
+    padding: 10px;
+    border-radius: 12px;
+    box-shadow: -4px -4px 19px rgb(48 66 84 / 15%);
 }
 
 /* chart */
@@ -492,7 +496,6 @@
 }
 
 .row-1 .col-1 .first-chart .chart{
-    box-shadow: -4px -4px 19px rgb(48 66 84 / 15%);
 }
 
 .row-1 .col-1 .first-chart .target{
@@ -503,12 +506,14 @@
 
 .row-1 .col-2{
     /* border: 2px solid black; */
-    height: 100%;
+    height: 90%;
     width: 70%;
     text-align: center;
     font-size: 30px;
     margin-left: 10px;
     box-shadow: -4px -4px 19px rgb(48 66 84 / 15%);
+    padding: 10px;
+    border-radius: 12px;
 }
 
 
@@ -636,15 +641,26 @@
     font-size: 30px;
     margin-right: 10px;
     box-shadow: -4px -4px 19px rgb(48 66 84 / 15%);
+    border-radius: 12px;
+    /* padding: 10px; */
 }
+
+.row-2 .col-1 .chart1{
+    /* border: 2px solid red; */
+    padding: 10px;
+}
+
 
 .row-2 .col-2{
     /* border: 2px solid black; */
-    height: 100%;
+    height: 90%;
     width: 70%;
+    text-align: center;
+    font-size: 30px;
+    margin-left: 10px;
     box-shadow: -4px -4px 19px rgb(48 66 84 / 15%);
-    /* text-align: center; */
-    /* margin-left: 10px; */
+    padding: 10px;
+    border-radius: 12px;
     
 }
 
@@ -686,6 +702,9 @@
     border-left: 4px solid orange;
 }
 
+.row-2 .col-2 table tr td i:hover{
+    background-color: #cac3c3;
+}
 
 
 .row-3{
@@ -697,6 +716,8 @@
     /* font-size: 30px; */
     width: 95%;
     box-shadow: -4px -4px 19px rgb(48 66 84 / 15%);
+    padding: 0 10px;
+    border-radius: 12px;
 }
 
 .row-3 .header{
@@ -807,5 +828,44 @@
 .row-3 .data table tr td i:hover{
     background-color: #cac3c3;
 }
+
+.col-2 table th{ 
+    /* border: 2px solid black; */
+    /* width: 100%; */
+    border-bottom: 1px solid #969696;
+    padding: 0.5em;
+    text-align: left;
+    font-size: 16px;
+    font-family: 'Montserrat';
+}
+
+.col-2 table tr td{
+    padding: 0.1em 0 0.1em 0.7em;
+    border-bottom: 1px solid #969696;
+    font-size: 12px;
+    font-family: 'Montserrat';
+    text-align: left;
+}
+
+.col-2 table tr td i{
+    margin-right: 4px; 
+    padding: 3px; 
+    border-radius: 6px; 
+    cursor: pointer; 
+    /* color: blue;  */
+    background-color: #e2e2e2
+}
+
+/* i:hover{
+    background-color: #ffb120;
+    transform: scale(1.1);
+} */
  
 
+.Present{
+    background-color: green;
+}
+
+.Absent{
+    background-color: red;
+}

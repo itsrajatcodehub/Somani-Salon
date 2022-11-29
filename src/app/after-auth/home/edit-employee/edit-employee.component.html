@@ -1,14 +1,14 @@
-<form [formGroup]="employee">
+<form [formGroup]="employeeForm">
 
-    <div>
-        <h1 style="font-family: 'Montserrat';">Enter Details</h1>
+        <h1 style="font-family: 'Montserrat';">Edit Details</h1>
+        <ng-template matStepLabel>Edit Details</ng-template>
         <mat-form-field>
           <mat-label>Name</mat-label>
           <input matInput placeholder="Employee Name" name="name" formControlName="name" required>
         </mat-form-field>
-
-        &nbsp; &nbsp;
   
+        &nbsp; &nbsp;
+
         <mat-form-field>
           <mat-label>Shift</mat-label>
           <mat-select name="shift" formControlName="shift">
@@ -29,8 +29,6 @@
             </mat-select>
           </mat-form-field>
           <div style="text-align: right;">
-            <button type="button" mat-button (click)= "reset()">Reset</button>
-            <button mat-button (click)="submit()">Submit</button>
+            <button mat-button (click)="edit(employee.id)">Edit</button>
           </div>
-    </div>
   </form>
