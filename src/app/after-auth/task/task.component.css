@@ -4,6 +4,7 @@
   width: 100%;
   margin: 0;
   padding: 0;
+  font-family: 'Montserrat';
 }
 
 .container1{
@@ -74,7 +75,7 @@ p {
   margin-bottom: 10px;
 }
 .box h3 {
-  font-family: "Inter";
+  /* font-family: "Inter"; */
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -84,7 +85,7 @@ p {
   margin-bottom: 4px;
 }
 .box p {
-  font-family: "Inter";
+  /* font-family: "Inter"; */
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
@@ -93,7 +94,7 @@ p {
   color: #61758a;
 }
 .taskk{
-  width: 80%;
+  width: 100%;
   margin: 1em 1.5em;
   background-color: #ffffff;
   padding: 1em;
@@ -118,11 +119,12 @@ p {
 .brown-box{
   width: 97.5%;
   height: 26%;
-  background-color: #2f1a00;
-  color: #ffffff;
+  /* background-color: #2f1a00;  */
+  /* color: #ffffff; */
   border-radius: 10px;
   padding: 1em;
   padding: 0.5em;
+  box-shadow: -4px -4px 19px rgb(48 66 84 / 15%);
   /* display: flex;
   justify-content: center;
   text-align: center; */
@@ -133,18 +135,18 @@ p {
   font-weight: 500;
   font-size: 20px;
   line-height: 32px;
-  color: #FFFFFF;
+  /* color: #FFFFFF; */
   padding-left: 10px;
 }
 .p-text p{
-  font-family: 'Inter';
+  /* font-family: 'Inter'; */
 font-style: normal;
 font-weight: 300;
 font-size: 14px;
 line-height: 20px;
 margin: 0;
 
-color: #91A4B7;
+/* color: #91A4B7; */
 }
 .btns{
   margin-left: 20px;
@@ -203,7 +205,7 @@ color: #91A4B7;
   margin: auto;
 }
 .opacity {
-font-family: 'Inter';
+/* font-family: 'Inter'; */
 font-style: normal;
 font-weight: 600;
 font-size: 14px;
@@ -345,7 +347,7 @@ color: #2f1a00;
 height: 36px;
 cursor: pointer;
 font-size: 15px;
-font-family: 'Inter';
+/* font-family: 'Inter'; */
 font-style: normal;
 font-weight: 500;
 /* font-size: 14px; */
@@ -416,7 +418,7 @@ transform: scale(1.1);
   /* border: 2px solid black; */
   width: 15%;
   padding: 10px 20px;
-  font-family: 'Inter';
+  /* font-family: 'Inter'; */
   height: 100%;
 }
 
@@ -456,7 +458,7 @@ transform: scale(1.1);
 
 .search-input{
   /* border: 2px solid black; */
-  font-family: 'Inter';
+  /* font-family: 'Inter'; */
   padding-top: 8px;
   width: 80%;
   padding-left: 5px;
@@ -484,7 +486,7 @@ transform: scale(1.1);
 }
 
 .task h2{
-  /* border: 2px solid black; */
+  /* border: 2px solid black; */ 
   margin: 0;
   padding: 0;
   font-family: 'Montserrat', sans-serif;

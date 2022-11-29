@@ -13,16 +13,108 @@ interface FoodNode {
 
 const TREE_DATA: FoodNode[] = [
   {
-    name: 'Vegetables',
+    name: 'Hair',
     children: [
       {
-        name: 'Green',
-        children: [{name: 'Broccoli'}, {name: 'Brussels sprouts'}],
+        name: 'Cutting',
+        children: [{name: 'Shortcutting'}, {name: 'Longcutting'}, {name: 'Touching'}],
       },
       {
-        name: 'Orange',
-        children: [{name: 'Pumpkins'}, {name: 'Carrots'}],
+        name: 'Styling',
+        children: [{name: 'Shampoo'}, {name: 'Dryer'}],
       },
+    ],
+  },
+  {
+    name: 'Makeup',
+    children: [
+      {
+        name: 'Regular',
+        children: [{name: 'Party'}, {name: 'BaseMakeup'}, {name: 'Eye Makeup'}],
+      },
+      {
+        name: 'Bride',
+        children: [{name: 'Engagement Makeup'}, {name: 'Wedding Makeup'}, {name: 'Reception Makeup'}],
+      },
+    ],
+  },
+  {
+    name: 'Facial',
+    children: [
+      {
+        name: 'Luxury',
+        children: [{name: 'Bleach'}, {name: 'Cleanups'}, {name: 'Treading'}],
+      },
+      {
+        name: 'Regular',
+        children: [{name: 'Bleach'}, {name: 'Cleanups'}, {name: 'Treading'}],
+      },
+    ],
+  },
+  {
+    name: 'Hands & Feets',
+    children: [
+      {
+        name: 'Manicure'
+      },
+      {
+        name: 'Spa Pedicure'
+      },
+      {
+        name: 'Pedicure'
+      },
+      {
+        name: 'Waxing'
+      },
+      
+    ],
+  },
+  {
+    name: 'Nails',
+    children: [
+      {
+        name: 'Nail Paint',
+      },
+      {
+        name: 'Nail Art',
+      },
+      {
+        name: 'Nail Filling',
+      },
+    ],
+  },
+  {
+    name: 'Skin Care',
+    children: [
+      {
+        name: 'Regular',
+        children: [{name: 'Clean Ups'}, {name: 'Facials'}, {name: 'Organic Treatments'}, {name: 'Manicure'}, {name: 'Pedicure'}],
+      },
+      {
+        name: 'Occasion - Premium',
+        children: [{name: 'Clean Ups'}, {name: 'Facials'}, {name: 'Organic Treatments'}, {name: 'Manicure'}, {name: 'Pedicure'}],
+      },
+    ],
+  },
+  {
+    name: 'Beard Grooming',
+    children: [
+      {
+        name: 'Beard Trim',
+      },
+      {
+        name: 'Beard Colour',
+      },
+      {
+        name: 'Beard Styling',
+      },
+      {
+        name: 'Shave',
+      },
+      {
+        name: 'Luxury Shave & Beard Spa',
+      },
+
     ],
   },
 ];
@@ -70,7 +162,7 @@ export class InventoryComponent implements OnInit {
     return {
       expandable: !!node.children && node.children.length > 0,
       name: node.name,
-      level: level,
+      level: level, 
     };
   };
 

@@ -5,6 +5,7 @@
 .main-container {
     display: flex;
     height: 100%;
+    font-family: 'Montserrat';
 }
 
 section {
@@ -90,7 +91,7 @@ p {
 }
 
 .staff {
-    width: 80%;
+    width: 100%;
     margin: 1em 1.5em;
     background-color: #ffffff;
     padding: 1em;

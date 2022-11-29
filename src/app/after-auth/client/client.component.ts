@@ -20,57 +20,64 @@ export class ClientComponent implements OnInit {
   }
 
   title = 'Table'
-    headers = [ "Name", "MobileNo", "Email", "Date"]
+    headers = [ "Name", "MobileNo", "Email", "Service" ,"Date"]
 
 
- clients = [
+ clients = [ 
     {
-      "name" :"Travis",
+      "name" :"Rohan",
       "mobileNo" :"+919569695869",
-      "email" : "travis@gmail.com",
-      "date" : "cutting,23 june 2022"
+      "email" : "Rohan@gmail.com",
+      "service" : "Cutting",
+      "date" : "23/Jan/2022"
   
     },
     {
-      "name" :"Travis",
+      "name" :"Danil",
       "mobileNo" :"+919569695869",
-      "email" : "travis@gmail.com",
-      "date" : "cutting,23 june 2022"
+      "email" : "Danil@gmail.com",
+      "service" : "Shaving",
+      "date" : "2/May/2022"
   
     },
     {
-      "name" :"Travis",
+      "name" :"Rahul",
       "mobileNo" :"+919569695869",
-      "email" : "travis@gmail.com",
-      "date" : "cutting,23 june 2022"
+      "email" : "Rahul@gmail.com",
+      "service" : "Skin",
+      "date" : "3/July/2022"
   
     },
     {
-      "name" :"Travis",
+      "name" :"Sneha",
       "mobileNo" :"+919569695869",
-      "email" : "travis@gmail.com",
-      "date" : "cutting,23 june 2022"
+      "email" : "Sneha@gmail.com",
+      "service" : "Nailing",
+      "date" : "10/Aug/2022"
   
     },
     {
-      "name" :"Travis",
+      "name" :"Shubhi",
       "mobileNo" :"+919569695869",
-      "email" : "travis@gmail.com",
-      "date" : "cutting,23 june 2022"
+      "email" : "Shubhi@gmail.com",
+      "service" : "MAkeup",
+      "date" : "23/Sep/2022"
   
     },
     {
-      "name" :"Travis",
+      "name" :"Sourav",
       "mobileNo" :"+919569695869",
-      "email" : "travis@gmail.com",
-      "date" : "cutting,23 june 2022"
+      "email" : "Sourav@gmail.com",
+      "service" : "Beard",
+      "date" : "21/Oct/2022"
   
     },
     {
-      "name" :"Travis",
+      "name" :"Ritik",
       "mobileNo" :"+919569695869",
-      "email" : "travis@gmail.com",
-      "date" : "cutting,23 june 2022"
+      "email" : "Ritik@gmail.com",
+      "service" : "Cutting",
+      "date" : "30/Oct/2022"
   
     }
  ]

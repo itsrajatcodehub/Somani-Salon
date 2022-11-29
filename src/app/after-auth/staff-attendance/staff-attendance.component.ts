@@ -13,34 +13,34 @@ export class StaffAttendanceComponent implements OnInit {
 
   staffs = [
     {
-      "name" : "Travis",
+      "name" : "Rahul",
       "monday" : "Present",
-      "tuesday" :"Presen",
-      "wednesday" :"Presen",
-      "thursday" : "Absent" ,
+      "tuesday" :"Present",
+      "wednesday" :"Present",
+      "thursday" : "Absent" , 
       "friday" : "Absent"
   
     },
     {
-      "name" : "Travis",
+      "name" : "David",
       "monday" : "Present",
-      "tuesday" :"Presen",
-      "wednesday" :"Presen",
+      "tuesday" :"Present",
+      "wednesday" :"Present",
       "thursday" : "Absent",
       "friday" : "Absent"
   
     },
     {
-      "name" : "Travis",
+      "name" : "Rohan",
       "monday" : "Present",
-      "tuesday" :"Presen",
-      "wednesday" :"Presen",
+      "tuesday" :"Present",
+      "wednesday" :"Present",
       "thursday" : "Absent",
       "friday" : "Absent"
   
     },
     {
-      "name" : "Travis",
+      "name" : "Danil",
       "monday" : "present",
       "tuesday" :"Present",
       "wednesday" :"present",
@@ -49,7 +49,7 @@ export class StaffAttendanceComponent implements OnInit {
   
     },
     {
-      "name" : "Travis",
+      "name" : "Avi",
       "monday" : "present",
       "tuesday" :"present",
       "wednesday" :"present",
@@ -58,7 +58,7 @@ export class StaffAttendanceComponent implements OnInit {
   
     },
     {
-      "name" : "Travis",
+      "name" : "Shubham",
       "monday" : "present",
       "tuesday" :"present",
       "wednesday" :"present",
@@ -67,7 +67,7 @@ export class StaffAttendanceComponent implements OnInit {
   
     },
     {
-      "name" : "Travis",
+      "name" : "Sourav",
       "monday" : "present",
       "tuesday" :"present",
       "wednesday" :"present",
@@ -76,7 +76,7 @@ export class StaffAttendanceComponent implements OnInit {
   
     },
     {
-      "name" : "Travis",
+      "name" : "Ritik",
       "monday" : "present",
       "tuesday" :"present",
       "wednesday" :"present",
@@ -85,7 +85,7 @@ export class StaffAttendanceComponent implements OnInit {
   
     },
     {
-      "name" : "Travis",
+      "name" : "Aman",
       "monday" : "present",
       "tuesday" :"present",
       "wednesday" :"present",
@@ -94,7 +94,7 @@ export class StaffAttendanceComponent implements OnInit {
   
     },
     {
-      "name" : "Travis",
+      "name" : "Shivam",
       "monday" : "present",
       "tuesday" :"present",
       "wednesday" :"present",
@@ -103,7 +103,7 @@ export class StaffAttendanceComponent implements OnInit {
   
     },
     {
-      "name" : "Travis",
+      "name" : "Shiva",
       "monday" : "present",
       "tuesday" :"present",
       "wednesday" :"present",
@@ -112,7 +112,7 @@ export class StaffAttendanceComponent implements OnInit {
   
     },
     {
-      "name" : "Travis",
+      "name" : "Nouman",
       "monday" : "present",
       "tuesday" :"present",
       "wednesday" :"present",
@@ -121,7 +121,7 @@ export class StaffAttendanceComponent implements OnInit {
   
     },
     {
-      "name" : "Travis",
+      "name" : "Naman",
       "monday" : "present",
       "tuesday" :"present",
       "wednesday" :"present",
@@ -130,7 +130,7 @@ export class StaffAttendanceComponent implements OnInit {
   
     },
     {
-      "name" : "Travis",
+      "name" : "Rohan",
       "monday" : "present",
       "tuesday" :"present",
       "wednesday" :"present",
@@ -139,7 +139,7 @@ export class StaffAttendanceComponent implements OnInit {
   
     },
     {
-      "name" : "Travis",
+      "name" : "Aditya",
       "monday" : "present",
       "tuesday" :"present",
       "wednesday" :"present",
@@ -148,7 +148,7 @@ export class StaffAttendanceComponent implements OnInit {
   
     },
     {
-      "name" : "Travis",
+      "name" : "Sanjay",
       "monday" : "present",
       "tuesday" :"present",
       "wednesday" :"present",
@@ -157,7 +157,7 @@ export class StaffAttendanceComponent implements OnInit {
   
     },
     {
-      "name" : "Travis",
+      "name" : "Deepak",
       "monday" : "present",
       "tuesday" :"present",
       "wednesday" :"present",
@@ -166,7 +166,7 @@ export class StaffAttendanceComponent implements OnInit {
   
     },
     {
-      "name" : "Travis",
+      "name" : "Sahib",
       "monday" : "present",
       "tuesday" :"present",
       "wednesday" :"present",
@@ -175,7 +175,7 @@ export class StaffAttendanceComponent implements OnInit {
   
     },
     {
-      "name" : "Travis",
+      "name" : "Vipul",
       "monday" : "present",
       "tuesday" :"present",
       "wednesday" :"Present",
@@ -184,7 +184,7 @@ export class StaffAttendanceComponent implements OnInit {
   
     },
     {
-      "name" : "Travis",
+      "name" : "Satyam",
       "monday" : "present",
       "tuesday" :"presen",
       "wednesday" :"presen",
