@@ -73,7 +73,7 @@ section{
     align-items: center;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
-    font-size: 18px;
+    font-size: 30px;
     /* line-height: 32px; */
     color: #E1E8F0;
     padding: 12px 0;
@@ -93,12 +93,11 @@ table table {
 
 table th {
     border-bottom: 1px solid #706a6b;
-    padding: 0.4em;
+    padding: 0.5em ;
     text-align: left;
-    font-size: 15px;
+    font-size: 18px;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
-
 }
   
 table td {
@@ -107,7 +106,7 @@ table td {
     /* width: 100%; */
     /* width: min-content; */
     font-family: 'Montserrat', sans-serif;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .name{

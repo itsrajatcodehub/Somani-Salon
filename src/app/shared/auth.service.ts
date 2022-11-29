@@ -18,7 +18,7 @@ googleLogin() {
     async (credentials: UserCredential) => {
       this.user = credentials.user;
     }
-  );
+  ); 
 }
 
 

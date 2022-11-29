@@ -30,6 +30,9 @@ import { AddclientComponent } from './client/addclient/addclient.component';
 import { StaffAttendanceComponent } from './staff-attendance/staff-attendance.component';
 import { AddsaComponent } from './staff-attendance/addsa/addsa.component';
 import {MatTabsModule} from '@angular/material/tabs';
+import { NgChartsModule } from 'ng2-charts';
+import { EmployeeComponent } from './home/employee/employee.component';
+
 @NgModule({
   declarations: [
     AfterAuthComponent, 
@@ -46,6 +49,7 @@ import {MatTabsModule} from '@angular/material/tabs';
     AddclientComponent,
     StaffAttendanceComponent,
     AddsaComponent,
+    EmployeeComponent,
 
   ],
   imports: [
@@ -66,7 +70,8 @@ import {MatTabsModule} from '@angular/material/tabs';
     MatButtonModule,
     MatTreeModule,
     MatTabsModule,
-    MatIconModule
+    MatIconModule,
+    NgChartsModule
   ],
   exports: [ 
     TransactionComponent,

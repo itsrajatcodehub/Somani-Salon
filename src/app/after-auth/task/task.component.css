@@ -105,7 +105,7 @@ p {
 }
 
 .top h3{
-  font-size: 21px;
+  font-size: 24px;
   font-family: 'Montserrat';
 }
 
@@ -118,22 +118,22 @@ p {
 .brown-box{
   width: 97.5%;
   height: 26%;
-  background-color: #fff;
+  background-color: #2f1a00;
   color: #ffffff;
   border-radius: 10px;
   padding: 1em;
   padding: 0.5em;
-  font-size: 11px;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.09);
- 
+  /* display: flex;
+  justify-content: center;
+  text-align: center; */
 }
 .brown-box p{
   font-family: 'Inter';
   font-style: normal;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 32px;
-  color: #000;
+  color: #FFFFFF;
   padding-left: 10px;
 }
 .p-text p{
@@ -206,8 +206,8 @@ color: #91A4B7;
 font-family: 'Inter';
 font-style: normal;
 font-weight: 600;
-font-size: 13px;
-/* line-height: 14px; */
+font-size: 14px;
+line-height: 14px;
 /* identical to box height, or 100% */
 
 letter-spacing: 0.05em;
@@ -240,18 +240,17 @@ margin: 0.2em 1em;
 }
 .inputbox{
 position: relative;
-width: 87%;
+width: 250px;
 }
 .inputbox input{
-  width: 100%;
-  padding: 8px;
-  border: 1px solid #fff;
-  background: #fff;
-  outline: none;
-  border-radius: 5px;
-  color: #fff;
-  margin: 0 1em;
-  border: 1px solid black;
+width: 800px;
+padding: 8px;
+border: 1px solid #fff;
+background: #2f1a00;
+outline: none;
+border-radius: 5px;
+color: #fff;
+margin: 0 1em;
 }
 .inputbox span{
 position: absolute;
@@ -259,7 +258,7 @@ left: 24px;
 bottom: 5px;
 pointer-events: none;
 font-size: 1em;
-color: #000;
+color: rgba(255, 255, 255, 0.25);
 /* text-transform: uppercase; */
 transition: .5s;
 }
@@ -293,22 +292,20 @@ border-radius: 2px;
 .inputs{
 display: flex;
 margin: 2em 0;
-width: 100%;
 }
 .boxip{
 position: relative;
 width: 140px;
 }
 .boxip input{
-  width: 100px;
-  padding: 8px;
-  border: 1px solid #fff;
-  background: #fff;
-  outline: none;
-  border-radius: 5px;
-  color: #fff;
-  border: 1px solid black;
-  margin: 0 0 0 1em;
+width: 100px;
+padding: 8px;
+border: 1px solid #fff;
+background: #2f1a00;
+outline: none;
+border-radius: 5px;
+color: #fff;
+margin: 0 0 0 1em;
 }
 .boxip span{
 position: absolute;
@@ -316,7 +313,7 @@ left: 18px;
 bottom: 7px;  
 pointer-events: none;
 font-size: 1em;
-color: #000;
+color: transparent;
  /* text-transform: uppercase; */
 transition: .5s;
 }
@@ -331,13 +328,12 @@ background: #2f1a00;
 /* border-right: 1px solid #fff; */
 }
 select{
-  color: #000;
-  height: 36px;
-  border: 1px solid #fff;
-  border-radius: 5px;
-  width: 102%;
-  background-color: #fff;
-  border: 1px solid black;
+color: #fff;
+height: 36px;
+border: 1px solid #fff;
+border-radius: 5px;
+width: 297px;
+background-color: #2f1a00;
 }
 .inputs button{
 margin-left: 1em;
@@ -354,7 +350,6 @@ font-style: normal;
 font-weight: 500;
 /* font-size: 14px; */
 transition: .3s;
-border: 1px solid black;
 }
 .inputs button:hover{
 transform: scale(1.1);
@@ -381,7 +376,6 @@ transform: scale(1.1);
   border-radius: 5px;
   margin-right: 10px;
   width: 250px;
-  font-size: 11px;
 }
 .tasks #blue {
   background-color: #e1e8f0;
@@ -393,7 +387,6 @@ transform: scale(1.1);
   margin-right: 10px;
   transition: .3s;
 cursor: pointer;
-font-size: 11px;
 }
 .tasks #blue:hover{
 transform: scale(1.1);
@@ -408,7 +401,6 @@ transform: scale(1.1);
   border-radius: 10px;
   transition: .3s;
 cursor: pointer;
-font-size: 11px;
 }
 .tasks #complete:hover{
 transform: scale(1.1);

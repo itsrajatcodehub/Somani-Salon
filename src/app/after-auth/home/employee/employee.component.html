@@ -1,0 +1,49 @@
+<form [formGroup]="employee">
+
+    <mat-stepper [linear]="isLinear" #stepper>
+  
+      <!-- name Field -->
+      <mat-step>
+        <ng-template matStepLabel>Enter Details</ng-template>
+        <mat-form-field>
+          <mat-label>Name</mat-label>
+          <input matInput placeholder="Employee Name" name="name" formControlName="name" required>
+        </mat-form-field>
+        <!-- <div>
+          <button type="button" mat-button matStepperNext>Next</button>
+        </div> -->
+      <!-- </mat-step> -->
+  
+        &nbsp; &nbsp;
+  
+      <!-- services Field  -->
+      <!-- <mat-step label="Service" label="Service"> -->
+        <mat-form-field>
+          <mat-label>Shift</mat-label>
+          <mat-select name="shift" formControlName="shift">
+            <mat-option *ngFor="let shift of shifts" [value]="shift.value">
+              {{shift.viewValue}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        &nbsp; &nbsp;
+
+        <!-- shifts -->
+        <mat-form-field>
+            <mat-label>Attendance</mat-label>
+            <mat-select name="attendance" formControlName="attendance">
+              <mat-option *ngFor="let att of attendance" [value]="att.value">
+                {{att.viewValue}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+          <div style="text-align: right;">
+            <!-- <button type="button" mat-button matStepperPrevious>Back</button>
+            <button type="button" mat-button matStepperNext>Next</button> -->
+            <button type="button" mat-button (click)= "stepper.reset()">Reset</button>
+            <button mat-button (click)="submit()">Submit</button>
+          </div>
+        </mat-step>
+    </mat-stepper>
+  </form>

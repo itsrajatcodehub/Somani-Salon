@@ -135,11 +135,7 @@ p {
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 700;
-<<<<<<< HEAD
-    font-size: 18px;
-=======
     font-size: 24px;
->>>>>>> ac3f97a816342b67cc45966ed35afcc4305c24e6
     line-height: 32px;
     color: #304254;
 }
@@ -154,19 +150,12 @@ p {
 .first {
     display: flex;
 }
-.first img{
-    width: 50px;
-}
 
 .name-txt {
     font-family: "Montserrat";
     font-style: normal;
     font-weight: 500;
-<<<<<<< HEAD
-    font-size: 18px;
-=======
     font-size: 19px;
->>>>>>> ac3f97a816342b67cc45966ed35afcc4305c24e6
     line-height: 29px;
     color: #304254;
     margin: 0 20px;
@@ -176,8 +165,8 @@ p {
     font-family: "Inter";
     font-style: normal;
     font-weight: 500;
-    font-size: 12px;
-    line-height: 12px;
+    font-size: 16px;
+    line-height: 20px;
     color: #cfc4c4;
     margin: 0 20px;
 }
@@ -209,11 +198,7 @@ p {
     font-family: "Inter";
     font-style: normal;
     font-weight: 300;
-<<<<<<< HEAD
-    font-size: 14px;
-=======
     font-size: 16px;
->>>>>>> ac3f97a816342b67cc45966ed35afcc4305c24e6
     line-height: 20px;
     text-align: justify;
     color: #000000;
@@ -351,12 +336,8 @@ button i {
     font-family: 'Inter';
     font-style: normal;
     font-weight: 500;
-<<<<<<< HEAD
-    font-size: 15px;
-=======
 
  font-size: 15px;
->>>>>>> ac3f97a816342b67cc45966ed35afcc4305c24e6
     line-height: 20px;
     color: #938989;
     padding: 2px 1px;
@@ -454,9 +435,4 @@ button i {
     font-family: 'Montserrat', sans-serif;
     line-height: 12px;
     font-size: 10px;
-<<<<<<< HEAD
   }
-  
-=======
-  }
->>>>>>> ac3f97a816342b67cc45966ed35afcc4305c24e6

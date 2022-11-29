@@ -31,7 +31,7 @@ export class TransactionComponent implements OnInit {
         });
         console.log("data getting",this.items);
         
-  })
+  }) 
 }
   
   selected = 'Select Year'; 
