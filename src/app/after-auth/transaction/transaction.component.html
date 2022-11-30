@@ -1,25 +1,19 @@
 <div class="main-container">
-
-
   <!-- container 1* -->
   <div class="left-panel">
     <app-leftpanel></app-leftpanel>
   </div>
-
-
-
-
   <!-- container 2* -->
   <div class="container2">
 
-    <div class="taskbar"> 
+    <div class="taskbar">
       <!-- section 1 -->
       <div class="heading">
         <h1>Total Sales</h1>
       </div>
 
       <!-- section 2 -->
-      <div class="recent"> 
+      <div class="recent">
         <h1>Recent</h1>
       </div>
 
@@ -34,7 +28,6 @@
             <mat-option style="font-size: 15px;" value="2022">2022</mat-option>
           </mat-select>
         </mat-form-field>
-
         <!-- <p class="selected">{{selected}}</p> -->
       </div>
 
@@ -56,23 +49,14 @@
         </div>
       </div>
     </div>
-
-
   </div>
-
-
-
-
   <!-- container 3* -->
   <div class="container3">
-
-
     <div class="display">
       <div class="total">
         <h1>Total</h1>
-        <p>{{'₹ 1,00,000'}}</p>
+        <p>&#8377;{{totalCost}}</p>
       </div>
-
       <div class="calendar">
         <mat-form-field>
           <mat-label style="font-size: 16px;">Select Date</mat-label>
@@ -80,93 +64,66 @@
           <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
           <mat-datepicker #picker></mat-datepicker>
         </mat-form-field>
-
       </div>
     </div>
-
-
-    
     <!-- transaction content -->
     <div class="transaction">
-      
       <div class="heading">
         <div class="heading-icons">
-          
           <!-- heading para -->
           <div class="head">
             <p>Recent Sales</p>
           </div>
-          
           <!-- heading Add Icon -->
-          <nav class="add-icon" (click)="openDialog()">+</nav>
+          <nav class="add-icon" (click)="addTransaction()">+</nav>
           <div class="icon">
           </div>
-
-        </div> 
-
-
+        </div>
       </div>
-
-
       <div class="table">
         <table>
-          <table> 
+          <table>
             <thead>
               <tr>
                 <th *ngFor="let header of headers" style="font-size: 16px;">
                   {{ header }}
                 </th>
-              </tr> 
+              </tr>
             </thead>
-
             <!-- <tr *ngFor="let client of clients"> -->
             <tr *ngFor="let item of items; let i=index;">
               <td style="font-size: 14px; font-family: 'Lato', sans-serif;">
                 {{i+1}}
-              </td>  
- 
+              </td>
               <td>
                 <div class="client">
-                  <div class="dp"><img src="assets/img/dp.png" alt=""></div>
-                  <div class="name" style="font-size: 14px; font-family: 'Lato', sans-serif;">    
-                    {{item.name}}
+                  <div class="dp"><img [src]="'https://avatars.dicebear.com/api/identicon/'+item.id+'.svg'" alt=""></div>
+                  <div class="name" style="font-size: 14px; font-family: 'Lato', sans-serif;">
+                    {{item.customerName | titlecase}}
                   </div>
                 </div>
               </td>
-
               <td style="font-size: 14px; font-family: 'Lato', sans-serif;">
-                {{item.email}}
+                {{item.customerEmail}}
               </td>
-
-              <td style="font-size: 14px; font-family: 'Lato', sans-serif;"> 
-                {{item.services}}
+              <td style="font-size: 14px; font-family: 'Lato', sans-serif;">
+                <ng-container *ngFor="let item of item.services">
+                  <li>{{item}}</li>
+                </ng-container>
               </td>
-
               <td style="font-size: 14px; font-family: 'Lato', sans-serif;">
                 {{item.stylists}}
               </td>
-
               <td style="font-size: 14px; font-family: 'Lato', sans-serif;">
-                {{ item.transaction_id }}
+                {{ item.id }}
               </td>
-
               <td style="font-size: 14px; font-family: 'Lato', sans-serif;">
-                {{ item.amount }}
+                {{ item.finalCost }}
               </td>
-
             </tr>
           </table>
         </table>
       </div>
-
-
-
-
-
     </div>
   </div>
-
-
-
-
 </div>

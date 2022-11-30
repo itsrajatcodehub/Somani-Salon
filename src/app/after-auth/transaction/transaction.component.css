@@ -59,8 +59,7 @@
 
 .container3 .client .name {
     /* border: 1px solid red; */
-    padding-top: 12px;
-    padding-left: 5px;
+    margin: auto 10px;
 }
 
 .container3 .transaction .heading{
@@ -270,4 +269,10 @@
 .container2 .select-month .months .month:active {
     background-color: #2F1A00;
     user-select: none;
+}
+.dp img{
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    border-radius: 50%;
 }

@@ -37,6 +37,7 @@ import { AddCustomerComponent } from './home/add-customer/add-customer.component
 import { EditCustomerComponent } from './home/edit-customer/edit-customer.component';
 import { AddServiceComponent } from './home/add-service/add-service.component';
 import { EditServiceComponent } from './home/edit-service/edit-service.component';
+import { AddBillComponent } from './transaction/add-bill/add-bill.component';
 
 @NgModule({
   declarations: [
@@ -60,7 +61,7 @@ import { EditServiceComponent } from './home/edit-service/edit-service.component
     EditCustomerComponent,
     AddServiceComponent,
     EditServiceComponent,
-
+    AddBillComponent
   ],
   imports: [
     CommonModule,
@@ -81,7 +82,8 @@ import { EditServiceComponent } from './home/edit-service/edit-service.component
     MatTreeModule,
     MatTabsModule,
     MatIconModule,
-    NgChartsModule
+    NgChartsModule,
+    MatInputModule
   ],
   exports: [ 
     TransactionComponent,

@@ -42,11 +42,12 @@
                             <td style="width: 60%;">{{data.name}}</td>
                             <td style="width: 15%;">{{data.contact}}</td>
                             <td style="font-size:20px; width: 15%;">
-                                <!-- <i class="ri-pencil-line" style="color: blue;" (click)="updateCustomer(data)"></i> -->
-                                <!-- <i class="ri-delete-bin-5-fill" style="color: red;" -->
-                                    <!-- (click)="deleteCustomer(data.id)"></i> -->
-                                <button mat-icon-button color="primary" (click)="updateCustomer(data)"><mat-icon>edit</mat-icon></button>
-                                <button mat-icon-button color="danger" (click)="deleteCustomer(data.id)"><mat-icon>delete</mat-icon></button>
+                                <button mat-icon-button color="primary" (click)="updateCustomer(data)">
+                                    <mat-icon>edit</mat-icon>
+                                </button>
+                                <button mat-icon-button color="danger" (click)="deleteCustomer(data.id)">
+                                    <mat-icon>delete</mat-icon>
+                                </button>
                             </td>
                         </tr>
                     </table>
@@ -88,9 +89,12 @@
                             <td style="width: 5%;">{{i+1}}</td>
                             <td style="width: 60%;">{{service.name}}</td>
                             <td style="font-size:20px; width: 15%;">
-                                <i class="ri-pencil-line" style="color: blue;" (click)="updateService(service)"></i>
-                                <i class="ri-delete-bin-5-fill" style="color: red;"
-                                    (click)="deleteService(service.id)"></i>
+                                <button mat-icon-button color="primary" (click)="updateService(service)">
+                                    <mat-icon>edit</mat-icon>
+                                </button>
+                                <button mat-icon-button color="danger" (click)="deleteService(service.id)">
+                                    <mat-icon>delete</mat-icon>
+                                </button>
                             </td>
                         </tr>
                     </table>
@@ -128,26 +132,21 @@
                         <td style="width: 50%;">{{employee.name}}</td>
                         <td style="width: 15%;">{{employee.shift}}</td>
                         <td style="width: 15%;">
-                            <p [class]="employee.attendance"
-                                style="width: 60px; text-align:center; border-radius: 9px; color: #fff">
+                            <p [class]="employee.attendance">
                                 {{employee.attendance}}
                             </p>
                         </td>
                         <td style="font-size:20px; width: 10%;">
-                            <i class="ri-pencil-line" style="color: blue;" (click)="updateEmployee(employee)"></i>
-                            <i class="ri-delete-bin-5-fill" style="color: red;"
-                                (click)="deleteEmployee(employee.id)"></i>
+                            <button mat-icon-button color="primary" (click)="updateEmployee(employee)">
+                                <mat-icon>edit</mat-icon>
+                            </button>
+                            <button mat-icon-button color="danger" (click)="deleteEmployee(employee.id)">
+                                <mat-icon>delete</mat-icon>
+                            </button>
                         </td>
                     </tr>
                 </table>
             </div>
         </div>
     </div>
-
-
-
-
-
-
-
 </div>

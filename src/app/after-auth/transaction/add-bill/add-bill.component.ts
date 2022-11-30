@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { AlertsAndNotificationsService } from 'src/app/services/alerts-and-notifications.service';
+import { DatabaseService } from 'src/app/services/database.service';
 
 @Component({
   selector: 'app-add-bill',
@@ -52,8 +54,8 @@ export class AddBillComponent implements OnInit {
   addControls(event:any){
     // remove all controls
     this.addedControls.forEach((control)=>{
-      this.servicesForm.removeControl(control.control)
-      this.servicesForm.removeControl(control.quantityControl)
+      this.servicesForm.removeControl(control.control.name)
+      this.servicesForm.removeControl(control.quantityControl.name)
     })
     this.addedControls = []
     console.log(event)
@@ -62,10 +64,10 @@ export class AddBillComponent implements OnInit {
       let quantityControl = new FormControl(1,Validators.required)
       this.servicesForm.addControl(service.name,control)
       this.servicesForm.addControl(service.name+"Quantity",quantityControl)
-      this.addedControls.push({control:control,name:service.name,quantityControl:quantityControl})
+      this.addedControls.push({control:control,name:service.name,quantityControl:quantityControl,quantityControlName:service.name+"Quantity"})
     })
   }
-  constructor() { }
+  constructor(private databaseService:DatabaseService,private alertify:AlertsAndNotificationsService) { }
   calculateBill(){
     let prices = []
     let totalPrice = 0
@@ -77,6 +79,7 @@ export class AddBillComponent implements OnInit {
     this.totalTax = finalCost/100 * this.billForm.value.tax
     this.totalDiscount = this.billForm.value.discount
     this.finalCost = finalCost
+    this.billForm.patchValue({finalCost:finalCost})
     console.log(this.totalTax,this.totalDiscount,this.finalCost)
   }
   ngOnInit(): void {
@@ -89,7 +92,14 @@ export class AddBillComponent implements OnInit {
   }
   saveAndPrint(){
     if (this.billForm.valid){
-      
+      console.log(this.billForm.value)
+      this.printBill()
+      this.databaseService.addTransaction(this.billForm.value).then((data)=>{
+        this.alertify.presentToast("Transaction added successfully")
+        this.ngOnInit()
+      }).catch((err)=>{
+        this.alertify.presentToast("Error adding transaction")
+      })
     }
   }
 

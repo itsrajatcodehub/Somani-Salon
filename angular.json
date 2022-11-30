@@ -23,8 +23,8 @@
               "src/assets"
             ],
             "styles": [
-              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
-              "src/styles.css"
+              "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
+              "src/styles.scss"
             ],
             "scripts": []
           },
@@ -91,8 +91,8 @@
               "src/assets"
             ],
             "styles": [
-              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
-              "src/styles.css"
+              "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
+              "src/styles.scss"
             ],
             "scripts": []
           }
@@ -103,8 +103,8 @@
             "prerender": false,
             "ssr": false,
             "browserTarget": "SOMANI:build:production",
-            "firebaseProject": "project-somani",
-            "firebaseHostingSite": "project-somani"
+            "firebaseProject": "somanisalon",
+            "firebaseHostingSite": "somanisalon"
           }
         }
       }
