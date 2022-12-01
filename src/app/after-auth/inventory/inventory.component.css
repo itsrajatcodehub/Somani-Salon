@@ -38,7 +38,7 @@
     font-weight: bold;
     font-size: 24px;
     font-family: 'Alexandria', sans-serif;
-    color: #2F1A00;
+    color: var(--primaryColor);
 }
 
 .main-container .container2 .taskbar .search-bar{

@@ -18,13 +18,19 @@
                 <mat-label>Customer Address</mat-label>
                 <input formControlName="customerAddress" matInput placeholder="Name">
             </mat-form-field>
-            <mat-form-field  appearance="outline">
+            <mat-form-field  appearance="outline" style="grid-column: span 2;">
+                <mat-label>Stylist</mat-label>
+                <mat-select formControlName="stylist">
+                    <mat-option *ngFor="let service of employees" [value]="service">{{service.name}}</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field  appearance="outline" [style]="addedControls.length == 0 ? 'grid-column: span 2' : ''">
                 <mat-label>Services</mat-label>
                 <mat-select [formControl]="servicesControl" (selectionChange)="addControls($event)" multiple>
                     <mat-option *ngFor="let service of services" [value]="service">{{service.name}}</mat-option>
                 </mat-select>
             </mat-form-field>
-            <form [formGroup]="servicesForm" class="column">
+            <form [formGroup]="servicesForm" class="column" *ngIf="addedControls.length != 0">
                 <div class="row" *ngFor="let item of addedControls">
                     <mat-form-field  appearance="outline" floatLabel="always">
                         <mat-label>{{item.name}} Amount</mat-label>
@@ -40,7 +46,7 @@
                     </mat-form-field>
                 </div>
             </form>
-            <mat-form-field  appearance="outline" class="example-full-width">
+            <mat-form-field appearance="outline" class="example-full-width">
                 <mat-label>Final Cost</mat-label>
                 <input formControlName="finalCost" matInput type="number" placeholder="{{finalCost}}">
             </mat-form-field>
@@ -92,6 +98,11 @@
         <div class="billRow" *ngIf="billForm.value.customerAddress">
             <p>Address</p>
             <p>{{billForm.value.customerAddress}}</p>
+        </div>
+        <hr>
+        <div class="billRow" *ngIf="billForm.value.stylist">
+            <p>Stylist</p>
+            <p>{{billForm.value.stylist}}</p>
         </div>
         <hr>
         <table>

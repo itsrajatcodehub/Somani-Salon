@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Firestore } from '@angular/fire/firestore';
+import { Firestore, getDocs } from '@angular/fire/firestore';
 import { addDoc, collection } from '@firebase/firestore';
 
 @Injectable({
@@ -11,5 +11,10 @@ export class DatabaseService {
 
   addTransaction(data:any){
     return addDoc(collection(this.fs,"transactions"),data)
+  }
+
+
+  getEmployees(){
+    return getDocs(collection(this.fs,"employee"))
   }
 }

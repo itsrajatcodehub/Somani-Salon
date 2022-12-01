@@ -1,6 +1,6 @@
 @import url('remixicon/fonts/remixicon.css');
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; --primaryColor: rgb(50, 50, 50);}
 #bill{
     position: absolute;
     top:0px;
@@ -11,6 +11,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     visibility: hidden;
     padding: 15px;
     width: calc(100% - 30px);
+    
     p{
         margin:0px;
     }

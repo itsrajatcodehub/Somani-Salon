@@ -61,11 +61,11 @@ section{
 .heading{
     /* width: 100%; */
     /* margin: 2em; */
-    background-color: #2F1A00;
+    background-color: var(--primaryColor);
     color: #ffffff;
     text-align: center;
     /* padding: 10px; */
-    background: #2F1A00;
+    background: var(--primaryColor);
     border-radius: 20px 20px 0px 0px;
     /* margin-bottom: 0; */
 }

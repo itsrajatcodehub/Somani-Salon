@@ -54,7 +54,7 @@ section {
     font-size: 24px;
     line-height: 24px;
 
-    color: #2f1a00;
+    color: var(--primaryColor);
 } 
 
 .search {
@@ -369,7 +369,7 @@ button i {
     font-weight: bold;
     font-size: 20px;
     font-family: 'Alexandria', sans-serif;
-    color: #2F1A00;
+    color: var(--primaryColor);
   }
   
   .search-bar{

@@ -45,6 +45,7 @@ export class AddBillComponent implements OnInit {
     finalCost:new FormControl(),
     discount:new FormControl(),
     tax:new FormControl(),
+    stylist:new FormControl(),
   })
   finalCost:number = 0;
   totalTax:number = 0;
@@ -67,9 +68,10 @@ export class AddBillComponent implements OnInit {
       this.addedControls.push({control:control,name:service.name,quantityControl:quantityControl,quantityControlName:service.name+"Quantity"})
     })
   }
+  employees:any[] = []
   constructor(private databaseService:DatabaseService,private alertify:AlertsAndNotificationsService) { }
   calculateBill(){
-    let prices = []
+    let prices = [] 
     let totalPrice = 0
     this.addedControls.forEach((item)=>{
       prices.push(item.control.value)
@@ -79,7 +81,6 @@ export class AddBillComponent implements OnInit {
     this.totalTax = finalCost/100 * this.billForm.value.tax
     this.totalDiscount = this.billForm.value.discount
     this.finalCost = finalCost
-    this.billForm.patchValue({finalCost:finalCost})
     console.log(this.totalTax,this.totalDiscount,this.finalCost)
   }
   ngOnInit(): void {
@@ -89,6 +90,15 @@ export class AddBillComponent implements OnInit {
     this.servicesForm .valueChanges.subscribe((data)=>{
       this.calculateBill()
     })  
+    this.databaseService.getEmployees().then((data)=>{
+      this.employees = []
+      console.log("EMPLOYEES",data.docs.length)
+      data.forEach((doc:any)=>{
+        if (doc.data().attendance == "Present"){
+          this.employees.push({...doc.data(),id:doc.id})
+        }
+      })
+    })
   }
   saveAndPrint(){
     if (this.billForm.valid){

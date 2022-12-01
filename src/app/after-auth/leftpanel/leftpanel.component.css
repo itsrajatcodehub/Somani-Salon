@@ -7,7 +7,7 @@
     /* position: absolute; */
     margin: 0;
     padding: 0;
-    background-color: #2F1A00;
+    background-color: var(--primaryColor);
     /* overflow-y: scroll; */
 }
 
@@ -65,12 +65,12 @@
 }
 
 .side-bar .menu .items:hover{
-    color: #2F1A00;
+    color: var(--primaryColor);
     background-color: #ffff;
 }
 
 .hover{
-    color: #2F1A00;
+    color: var(--primaryColor);
     background-color: #ffff;
 }
 
@@ -101,6 +101,6 @@
 
 .side-bar .menu .logout:hover{
     background-color: #ffff;
-    color: #2F1A00;
+    color: var(--primaryColor);
 }
 
