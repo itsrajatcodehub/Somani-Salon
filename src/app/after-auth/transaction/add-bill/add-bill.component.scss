@@ -13,8 +13,9 @@ form{
 }
 .row{
     display: grid;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 2fr 1fr;
     width: 400px;
+    grid-gap: 10px;
 }
 .column{
     display: grid;

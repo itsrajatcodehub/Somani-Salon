@@ -20,106 +20,7 @@
 section {
   display: flex;
 }
-/* .task {
-  width: 20%;
-  background-color: #fff;
-  margin: 1em;
-}
-.task h2 {
-  margin: 10px;
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 24px;
 
-
-  color: #2f1a00;
-}
-.search {
-  margin: 10px;
-  border: 1px solid black;
-  width: 100%;
-  background-color: #ffffff;
-  padding: 0.5em;
-  border-radius: 10px;
-}
-.search i {
-  position: relative;
-  top: 2px;
-}
-
-.search input {
-  margin: 0;
-  padding: 0.5em;
-  border: transparent;
-  background-color: transparent;
-}
-p {
-  margin: 10px;
-  font-family: "Inter";
-  font-style: italic;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 12px;
-
-  color: #61758a;
-} */
-/* 
-.boxes {
-  width: 100%;
-  overflow-y: auto;
-}
-.box {
-  margin-bottom: 10px;
-}
-.box h3 {
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 16px;
-  margin: 10px;
-  color: #304254;
-  margin-bottom: 4px;
-}
-.box p {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 12px;
-  margin-top: 0;
-  color: #61758a;
-}
-.taskk{
-  width: 100%;
-  margin: 1em 1.5em;
-  background-color: #ffffff;
-  padding: 1em;
-  box-shadow: 0px 5px 15px rgba(28, 27, 27, 0.25);
-  border-radius: 20px;
-  max-height: 100%;
-  height: 100%;
-}
-
-.top h3{
-  font-size: 24px;
-  font-family: 'Montserrat';
-}
-
-.txttxt{ 
-  display: flex;
-  margin: 0;
-}
-
-
-.brown-box{
-  width: 97.5%;
-  height: 26%;
-  border-radius: 10px;
-  padding: 1em;
-  padding: 0.5em;
-  box-shadow: -4px -4px 19px rgb(48 66 84 / 15%);
-}
 .brown-box p{
   font-family: 'Inter';
   font-style: normal;
@@ -181,170 +82,13 @@ input.example-right-align {
 }
 
 
-/* // _________________________ */
-
-
-/* 
-.parent-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 60%;
-  margin: auto;
-  background-color: var(--color-primary);
-  color: #fff;
-}
-.parent-container .buttons button {
-  border: none;
-  height: 40px;
-  width: 40px;
-  border-radius: 50%;
-  padding: 10px;
-  margin-left: 10px;
-  transition: 0.3s;
-  cursor: pointer;
-  font-size: 15px;
-}
-.parent-container .buttons button:hover, .parent-container .buttons button:focus {
-  outline: none;
-  transform: scale(1.12);
-}
-.detail-section {
-  display: flex;
-  flex-direction: column;
-  margin: auto;
-}
-.opacity {
-font-style: normal;
-font-weight: 600;
-font-size: 14px;
-line-height: 14px;
-
-letter-spacing: 0.05em;
-
-color: #91A4B7;
-}
-.detail-section #mart {
-  margin-top: 20px;
-}
-.first-input{
-margin: 0.2em 1em;
-}
-.detail-section .inputs {
-  display: flex;
-  margin: 1em;
-  padding: 1em;
-}
-.detail-section .inputs input {
-  margin-left: 15px;
-  border: none;
-  background-color: #f3f3f3;
-  padding: 8px;
-  border-radius: 5px;
-  font-family: var(--font);
-  border: none;
-  transition: 0.3s;
-  
-}
-.inputbox{
-position: relative;
-width: 250px;
-}
-.inputbox input{
-width: 800px;
-padding: 8px;
-border: 1px solid #fff;
-background: #2f1a00;
-outline: none;
-border-radius: 5px;
-color: #fff;
-margin: 0 1em;
-}
-.inputbox span{
-position: absolute;
-left: 24px;
-bottom: 5px;
-pointer-events: none;
-font-size: 1em;
-color: rgba(255, 255, 255, 0.25);
-transition: .5s;
-}
-.inputbox input:valid ~ span,
-.inputbox input:focus ~ span{
-color: #fff;
-transform: translateX(10px) translateY(-22px);
-font-size: 10px;
-padding: 0 10px;
-background: #2f1a00;
-}
-.inputs:nth-child(2) input:valid ~ span,
-.inputs:nth-child(2) input:focus ~ span{
-background: #00dfc4;
-color: #1d2b3a;
-border-radius: 2px;
-} */
-
-
-
-
-
-/* .detail-section .inputs input:hover {
-  border: 1px solid var(--color-primary);
-}
-.detail-section .inputs select {
-  padding: 8px 15px;
-  background-color: #f3f3f3;
-  font-family: var(--font);
-  border: none;
-  border-radius: 10px;
-  margin-right: 10px;
-} */
-
-
-
-
-/* .inputs{
-display: flex;
-margin: 2em 0;
-}
-.boxip{
-position: relative;
-width: 140px;
-}
-.boxip input{
-width: 100px;
-padding: 8px;
-border: 1px solid #fff;
-background: #2f1a00;
-outline: none;
-border-radius: 5px;
-color: #fff;
-margin: 0 0 0 1em;
-}
-.boxip span{
-position: absolute;
-left: 18px;
-bottom: 7px;  
-pointer-events: none;
-font-size: 1em;
-color: transparent;
-transition: .5s;
-}
-.boxip input:valid ~ span,
-.boxip input:focus ~ span{
-color: #fff;
-transform: translateX(10px) translateY(-22px);
-font-size: 10px;
-padding: 0 10px;
-background: #2f1a00;
-}
 select{
 color: #fff;
 height: 36px;
 border: 1px solid #fff;
 border-radius: 5px;
 width: 297px;
-background-color: #2f1a00;
+background-color: var(--primaryColor);
 }
 .inputs button{
 margin-left: 1em;
@@ -352,7 +96,7 @@ background-color: #fff;
 width: 100px;
 border-radius: 5px;
 border: 1px solid #fff;
-color: #2f1a00;
+color: var(--primaryColor);
 height: 36px;
 cursor: pointer;
 font-size: 15px;
@@ -402,7 +146,7 @@ transform: scale(1.1);
 }
 
 .tasks #complete {
-  background-color: #2f1a00;
+  background-color: var(--primaryColor);
   color: #fff;
   border: none;
   padding: 10px 15px;
@@ -438,7 +182,7 @@ transform: scale(1.1);
   font-size: 24px;
   /* font-family: 'Inter'; */
   font-family: 'Alexandria', sans-serif;
-  color: #2F1A00;
+  color: var(--primaryColor);
 }
 
 .search-bar{

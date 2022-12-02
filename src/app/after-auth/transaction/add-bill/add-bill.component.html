@@ -1,53 +1,60 @@
 <section>
+    <h2>Add Bill</h2>
     <div class="container">
         <form [formGroup]="billForm" (ngSubmit)="saveAndPrint()">
-            <mat-form-field class="example-full-width">
+            <mat-form-field  appearance="outline" class="example-full-width">
                 <mat-label>Customer Name</mat-label>
                 <input formControlName="customerName" matInput placeholder="Name">
             </mat-form-field>
-            <mat-form-field class="example-full-width">
+            <mat-form-field  appearance="outline" class="example-full-width">
                 <mat-label>Customer Email</mat-label>
                 <input formControlName="customerEmail" matInput placeholder="Name">
             </mat-form-field>
-            <mat-form-field class="example-full-width">
+            <mat-form-field  appearance="outline" class="example-full-width">
                 <mat-label>Customer Phone</mat-label>
                 <input formControlName="customerPhone" matInput placeholder="Name">
             </mat-form-field>
-            <mat-form-field class="example-full-width">
+            <mat-form-field  appearance="outline" class="example-full-width">
                 <mat-label>Customer Address</mat-label>
                 <input formControlName="customerAddress" matInput placeholder="Name">
             </mat-form-field>
-            <mat-form-field appearance="fill">
+            <mat-form-field  appearance="outline" style="grid-column: span 2;">
+                <mat-label>Stylist</mat-label>
+                <mat-select formControlName="stylist">
+                    <mat-option *ngFor="let service of employees" [value]="service">{{service.name}}</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field  appearance="outline" [style]="addedControls.length == 0 ? 'grid-column: span 2' : ''">
                 <mat-label>Services</mat-label>
                 <mat-select [formControl]="servicesControl" (selectionChange)="addControls($event)" multiple>
                     <mat-option *ngFor="let service of services" [value]="service">{{service.name}}</mat-option>
                 </mat-select>
             </mat-form-field>
-            <form [formGroup]="servicesForm" class="column">
+            <form [formGroup]="servicesForm" class="column" *ngIf="addedControls.length != 0">
                 <div class="row" *ngFor="let item of addedControls">
-                    <mat-form-field appearance="fill" floatLabel="always">
+                    <mat-form-field  appearance="outline" floatLabel="always">
                         <mat-label>{{item.name}} Amount</mat-label>
-                        <input matInput [formControl]="item.control" type="number" class="example-right-align"
+                        <input matInput [formControlName]="item.name" type="number"
                             placeholder="0">
                         <span matTextPrefix>&#8377;&nbsp;</span>
                         <span matTextSuffix>.00</span>
                     </mat-form-field>
-                    <mat-form-field appearance="fill" floatLabel="always">
+                    <mat-form-field  appearance="outline" floatLabel="always">
                         <mat-label>Quantity</mat-label>
-                        <input matInput [formControl]="item.quantityControl" type="number" class="example-right-align"
+                        <input matInput [formControlName]="item.quantityControlName" type="number"
                             placeholder="0">
                     </mat-form-field>
                 </div>
             </form>
-            <mat-form-field class="example-full-width">
+            <mat-form-field appearance="outline" class="example-full-width">
                 <mat-label>Final Cost</mat-label>
                 <input formControlName="finalCost" matInput type="number" placeholder="{{finalCost}}">
             </mat-form-field>
-            <mat-form-field class="example-full-width">
+            <mat-form-field  appearance="outline" class="example-full-width">
                 <mat-label>Discount</mat-label>
                 <input formControlName="discount" matInput type="number" placeholder="0">
             </mat-form-field>
-            <mat-form-field class="example-full-width">
+            <mat-form-field  appearance="outline" class="example-full-width">
                 <mat-label>Tax</mat-label>
                 <input formControlName="tax" matInput type="number" placeholder="0">
             </mat-form-field>
@@ -91,6 +98,11 @@
         <div class="billRow" *ngIf="billForm.value.customerAddress">
             <p>Address</p>
             <p>{{billForm.value.customerAddress}}</p>
+        </div>
+        <hr>
+        <div class="billRow" *ngIf="billForm.value.stylist">
+            <p>Stylist</p>
+            <p>{{billForm.value.stylist}}</p>
         </div>
         <hr>
         <table>

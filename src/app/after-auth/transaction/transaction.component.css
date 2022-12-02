@@ -59,15 +59,14 @@
 
 .container3 .client .name {
     /* border: 1px solid red; */
-    padding-top: 12px;
-    padding-left: 5px;
+    margin: auto 10px;
 }
 
 .container3 .transaction .heading{
     font-size: 24px;
     padding: 12px 0;
     border-radius: 20px 20px 0 0;
-    background-color: #2F1A00;
+    background-color: var(--primaryColor);
     color: #ffff;
     /* text-align: center; */
 }
@@ -151,7 +150,7 @@
     height: 60px;
     text-align: center;
     border-radius: 20px;
-    background-color: #2F1A00;
+    background-color: var(--primaryColor);
     color: #ffff;
 }
 
@@ -214,7 +213,7 @@
     border-bottom: 1px solid #E8E8E8;
     height: 35px;
     margin-top: 10px;
-    background-color: #2F1A00;
+    background-color: var(--primaryColor);
 }
 
 .container2 .taskbar .recent h1 {
@@ -256,18 +255,24 @@
     padding: 7px 0;
     font-size: 20px;
     /* font-family: 'Inter'; */
-    color: #2F1A00;
+    color: var(--primaryColor);
     cursor: pointer;
     user-select: none;
 }
 
 .container2 .select-month .months .month:hover {
     color: #fff;
-    background-color: #2F1A00;
+    background-color: var(--primaryColor);
     user-select: none;
 }
 
 .container2 .select-month .months .month:active {
-    background-color: #2F1A00;
+    background-color: var(--primaryColor);
     user-select: none;
+}
+.dp img{
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    border-radius: 50%;
 }

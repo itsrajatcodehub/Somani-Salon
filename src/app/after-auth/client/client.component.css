@@ -30,12 +30,14 @@ section {
     padding: 40px;
 
 }
-
-.heading {
-    background-color: #2F1A00;
+.heading{
+    /* width: 100%; */
+    /* margin: 2em; */
+    background-color: var(--primaryColor);
     color: #ffffff;
     text-align: center;
-    background: #2F1A00;
+    /* padding: 10px; */
+    background: var(--primaryColor);
     border-radius: 20px 20px 0px 0px;
 }
 

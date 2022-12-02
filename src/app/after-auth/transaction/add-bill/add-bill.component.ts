@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { AlertsAndNotificationsService } from 'src/app/services/alerts-and-notifications.service';
+import { DatabaseService } from 'src/app/services/database.service';
 
 @Component({
   selector: 'app-add-bill',
@@ -43,6 +45,7 @@ export class AddBillComponent implements OnInit {
     finalCost:new FormControl(),
     discount:new FormControl(),
     tax:new FormControl(),
+    stylist:new FormControl(),
   })
   finalCost:number = 0;
   totalTax:number = 0;
@@ -52,8 +55,8 @@ export class AddBillComponent implements OnInit {
   addControls(event:any){
     // remove all controls
     this.addedControls.forEach((control)=>{
-      this.servicesForm.removeControl(control.control)
-      this.servicesForm.removeControl(control.quantityControl)
+      this.servicesForm.removeControl(control.control.name)
+      this.servicesForm.removeControl(control.quantityControl.name)
     })
     this.addedControls = []
     console.log(event)
@@ -62,12 +65,13 @@ export class AddBillComponent implements OnInit {
       let quantityControl = new FormControl(1,Validators.required)
       this.servicesForm.addControl(service.name,control)
       this.servicesForm.addControl(service.name+"Quantity",quantityControl)
-      this.addedControls.push({control:control,name:service.name,quantityControl:quantityControl})
+      this.addedControls.push({control:control,name:service.name,quantityControl:quantityControl,quantityControlName:service.name+"Quantity"})
     })
   }
-  constructor() { }
+  employees:any[] = []
+  constructor(private databaseService:DatabaseService,private alertify:AlertsAndNotificationsService) { }
   calculateBill(){
-    let prices = []
+    let prices = [] 
     let totalPrice = 0
     this.addedControls.forEach((item)=>{
       prices.push(item.control.value)
@@ -86,10 +90,26 @@ export class AddBillComponent implements OnInit {
     this.servicesForm .valueChanges.subscribe((data)=>{
       this.calculateBill()
     })  
+    this.databaseService.getEmployees().then((data)=>{
+      this.employees = []
+      console.log("EMPLOYEES",data.docs.length)
+      data.forEach((doc:any)=>{
+        if (doc.data().attendance == "Present"){
+          this.employees.push({...doc.data(),id:doc.id})
+        }
+      })
+    })
   }
   saveAndPrint(){
     if (this.billForm.valid){
-      
+      console.log(this.billForm.value)
+      this.printBill()
+      this.databaseService.addTransaction(this.billForm.value).then((data)=>{
+        this.alertify.presentToast("Transaction added successfully")
+        this.ngOnInit()
+      }).catch((err)=>{
+        this.alertify.presentToast("Error adding transaction")
+      })
     }
   }
 

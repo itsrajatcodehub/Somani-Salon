@@ -28,7 +28,9 @@ import { providePerformance,getPerformance } from '@angular/fire/performance';
 import { provideRemoteConfig,getRemoteConfig } from '@angular/fire/remote-config';
 import { provideStorage,getStorage } from '@angular/fire/storage';
 import { HttpClientModule } from '@angular/common/http';
-
+import { DatabaseService } from './services/database.service';
+import { AlertsAndNotificationsService } from './services/alerts-and-notifications.service';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,6 +53,7 @@ import { HttpClientModule } from '@angular/common/http';
     MatFormFieldModule,
     MatInputModule,
     MatSelectModule,
+    MatSnackBarModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAnalytics(() => getAnalytics()),
     provideAuth(() => getAuth()),
@@ -62,7 +65,7 @@ import { HttpClientModule } from '@angular/common/http';
     provideStorage(() => getStorage())
   ],
   providers: [
-    ScreenTrackingService,UserTrackingService
+    ScreenTrackingService,UserTrackingService,DatabaseService,AlertsAndNotificationsService
   ],
   bootstrap: [AppComponent]
 })

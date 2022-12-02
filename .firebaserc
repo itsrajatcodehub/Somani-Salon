@@ -6,9 +6,16 @@
           "project-somani"
         ]
       }
+    },
+    "somanisalon": {
+      "hosting": {
+        "SOMANI": [
+          "somanisalon"
+        ]
+      }
     }
   },
   "projects": {
-    "default": "project-somani"
+    "default": "somanisalon"
   }
 }
