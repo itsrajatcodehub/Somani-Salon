@@ -2,19 +2,21 @@
 
     <div class="side-bar">
         <div class="heading">
-            <p>SOMANI SALON</p>
+            <!-- <p>SOMANI SALON</p> -->
+            <img src="assets/img/leftpanel-logo.png">
         </div>
 
         <div class="menu">
             <div class="items" routerLink="/after-auth/home" routerLinkActive="hover">
                 <mat-icon fontIcon="home" fill="none"></mat-icon>
+                <!-- <button mat-icon-button class="red-icon"><mat-icon>home</mat-icon></button> -->
                 <p>&nbsp;Home</p>
             </div>
 
             <div class="items" routerLink="/after-auth/transaction" routerLinkActive="hover">
                 <mat-icon fontIcon="note"></mat-icon>
                 <!-- old name is TRANSACTION -->
-                <p>&nbsp;Bookings</p>
+                <p>&nbsp;Bookings</p> 
             </div>
 
             <div class="items" routerLink="/after-auth/client" routerLinkActive="hover">
@@ -48,7 +50,7 @@
                 <p>&nbsp;Reviews & Feedback</p>
             </div>
 
-            <div class="logout" routerLink="/before-auth/login" routerLinkActive="hover">
+            <div class="items" routerLink="/before-auth/login" routerLinkActive="hover">
                 <mat-icon fontIcon="logout"></mat-icon>
                 <p>&nbsp;Logout</p>
             </div>

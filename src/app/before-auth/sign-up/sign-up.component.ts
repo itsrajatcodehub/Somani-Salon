@@ -12,15 +12,17 @@ import { Auth, signInWithPopup, GoogleAuthProvider, signOut, UserCredential } fr
 })
 export class SignUpComponent implements OnInit {
   user: any;
+  hide = true;
   constructor(private routes: Router, private auth: AuthService, private Auth:Auth) { }
 
   ngOnInit(): void {
   }
 
-  // date and time 
+  // date and time  
   time = (new Date()).getHours();
 
   loginForm : any = new FormGroup({
+    name: new FormControl('', [Validators.required]),
     email: new FormControl('', [Validators.required]),
     password : new FormControl('', [Validators.required])
   });

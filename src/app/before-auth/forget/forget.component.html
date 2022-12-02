@@ -9,7 +9,7 @@
      
     <!-- LOGIN CREDENTIALS SECTION 2 -->
     <div class="login-section">
-        <div class="login">
+        <div class="login"> 
             <!-- 1 -->
             <div class="forget-password">Forgot Password</div>
     
@@ -23,8 +23,14 @@
             <!-- 3 -->
             <div class="login-form">
                 <form action="#">
-                    <label for="email" style="font-family: 'Roboto'; font-size:16px">Email</label>
-                    <input type="text" class ="form-field" name="email" id="email" placeholder="Enter your email" style="font-family: 'Roboto'; font-size:14px">
+                    <!-- <label for="email" style="font-family: 'Roboto'; font-size:16px">Email</label>
+                    <input type="text" class ="form-field" name="email" id="email" placeholder="Enter your email" style="font-family: 'Roboto'; font-size:14px"> -->
+                    <div class="example-container">
+                        <mat-form-field appearance="outline" style="width: 100%;">
+                          <mat-label>Enter your email</mat-label>
+                          <input matInput placeholder="" formControlName = "" required>
+                        </mat-form-field>
+                      </div>
                 </form>     
             </div>
     
@@ -33,7 +39,8 @@
     
             <!-- 4 -->
             <div class="buttons">
-                <div class="login-now" (click)="otp()">Continue</div>
+                <!-- <div class="login-now" (click)="otp()">Continue</div> -->
+                <button mat-raised-button (click) = "otp()" class="login_btn">Continue</button>
             </div>
         
     

@@ -1,7 +1,7 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import {FormBuilder, Validators, FormGroup, FormControlName, FormControl} from '@angular/forms';
 import { collection, Firestore } from '@angular/fire/firestore';
-import { doc, addDoc } from 'firebase/firestore';
+import { getDoc, doc, addDoc } from 'firebase/firestore';
 
 @Component({
   selector: 'app-addclient',
@@ -10,27 +10,28 @@ import { doc, addDoc } from 'firebase/firestore';
 })
 export class AddclientComponent implements OnInit {
 
-  constructor(private firestore: Firestore) { }
-@Output() close: EventEmitter<any>=new EventEmitter()
+  constructor(private _formBuilder: FormBuilder, private firestore: Firestore) { }
+  @Output() close:EventEmitter<any>=new EventEmitter()
   ngOnInit(): void {
   }
-client = new FormGroup({
-  name : new FormControl('',[Validators.required]),
-  mobile: new FormControl('',[Validators.required]),
-  email : new FormControl('',[Validators.required]),
-  date : new FormControl('',[Validators.required]),
-})
+
+customers = new FormGroup({
+    name : new FormControl('',[Validators.required]),
+    contact : new FormControl('',[Validators.required]),
+  })
 
   submit(){
-    addDoc(collection(this.firestore,'clientdata'),{name: this.client.value.name,
-      mobile: this.client.value.mobile,
-      email: this.client.value.email,
-      date: this.client.value.date,
-    }).then((data)=>{
-      console.log('Doc added');
-    })
-    console.log(this.client.value);
-    this.close.emit()
-  }
+    console.log(this.customers.value);
+    this.close.emit() 
+    // to add the data
+    addDoc(collection(this.firestore,'customers'),
+      this.customers.value
+      ).then((appointmentdata)=>{
+        console.log('Doc added');
+    }).catch((error) => alert("problem in add doc"))
+}
 
+reset(){
+  this.customers.reset();
+}
 }

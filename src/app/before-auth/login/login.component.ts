@@ -7,16 +7,18 @@ import { Auth, signInWithPopup, GoogleAuthProvider, signOut, UserCredential } fr
 
 
 @Component({
-  selector: 'app-login',
+  selector: 'app-login', 
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
   user:any;
+  hide = true;
+  
   constructor(private routes : Router , private auth: AuthService, private Auth:Auth) { }
 
   ngOnInit(): void {
-  }
+  } 
 
   loginForm: any = new FormGroup({ 
     email : new FormControl('',[Validators.required]),

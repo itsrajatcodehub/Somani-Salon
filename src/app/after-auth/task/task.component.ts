@@ -9,10 +9,10 @@ export class TaskComponent implements OnInit {
   title = 'watch';
   min: any = '0' + 0;
   sec: any = '0' + 0;
-
+  hide = true;
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit(): void { 
   }
 
 }

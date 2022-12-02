@@ -133,7 +133,7 @@ export class HomeComponent implements OnInit {
       this.ngOnInit();
     });
   }
-
+ 
 
   updateService(services : any){
     const dialog = this.dialog.open(EditServiceComponent,{

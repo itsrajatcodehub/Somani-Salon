@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { Auth, authState, GoogleAuthProvider, signInWithPopup, signOut, UserCredential } from "@angular/fire/auth";
-import { createUserWithEmailAndPassword, signInAnonymously, signInWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword, signInAnonymously, signInWithEmailAndPassword } from "@angular/fire/auth";
 
 
 @Injectable({
