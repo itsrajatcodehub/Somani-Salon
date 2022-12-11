@@ -5,7 +5,7 @@ import { LeftpanelComponent } from './leftpanel.component';
 describe('LeftpanelComponent', () => {
   let component: LeftpanelComponent;
   let fixture: ComponentFixture<LeftpanelComponent>;
-
+ 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [ LeftpanelComponent ]
