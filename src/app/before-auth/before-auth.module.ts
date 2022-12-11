@@ -20,7 +20,7 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 @NgModule({
   declarations: [
     BeforeAuthComponent,
-    LoginComponent,
+    LoginComponent, 
     OtpComponent,
     ForgetComponent,
     SignUpComponent
@@ -29,7 +29,6 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     CommonModule,
     BeforeAuthRoutingModule,
     ReactiveFormsModule,
-    MatFormFieldModule,
     FormsModule,
     MatIconModule,
     MatIconModule,
@@ -37,7 +36,6 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     MatInputModule,
     MatSelectModule,
     MatDialogModule,
-    FormsModule,
     ReactiveFormsModule,
     MatButtonModule,
     MatTabsModule,

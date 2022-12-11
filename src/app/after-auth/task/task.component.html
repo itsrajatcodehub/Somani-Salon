@@ -112,24 +112,21 @@
         <div class="top">
           <h3>Task of Employee Name</h3>
         </div>
-        <div class="brown-box">
+        <div class="box">
           <div class="txttxt">
             <p>New Task</p>
           </div>
-          <!-- <div class="inputbox">
-            <input type="text" required="required" />
-            <span>Task Name</span>
-          </div> -->
 
-          <div class="example-container">
+          <div class="example-container row-1">
             <mat-form-field appearance="outline" style="width: 100%;">
-              <!-- <mat-label>Enter your email</mat-label> -->
-              <input matInput placeholder="Task Name" formControlName = "" required>
+              <mat-label>Task Name</mat-label>
+              <input matInput required>
             </mat-form-field>
           </div>
+          
 
           <div class="inputs">
-            <div class="boxip">
+            <!-- <div class="boxip">
               <input type="date" required="required" />
               <span>Start Time</span>
             </div>
@@ -150,47 +147,125 @@
                 <option>Drake</option>
               </select>
             </div>
-            <button>Assign</button>
-          </div>
+            <button>Assign</button> -->
+
+
+            <div class="row-2">
+              <!-- 1 -->
+              <div class="example-container">
+                <mat-form-field appearance="outline">
+                  <mat-label>Select Date</mat-label>
+                  <input type="date" matInput required>
+                </mat-form-field>
+              </div>
+              
+              <!-- 2 -->
+              <div class="example-container">
+                <mat-form-field appearance="outline">
+                  <mat-label>Select Time</mat-label>
+                  <input type="time" matInput required>
+                </mat-form-field>
+              </div>
+
+              <!-- 3 -->
+                <mat-form-field appearance="outline">
+                  <mat-label>Duration</mat-label>
+                  <input matInput #input maxlength="2">
+                </mat-form-field>
+              
+                <!-- 4 -->
+                <mat-form-field appearance="outline" style="width: 30%;">
+                  <mat-label>Select Staff's Name</mat-label>
+                  <mat-select>
+                    <mat-option value="option">Employee-1</mat-option>
+                    <mat-option value="option">Employee-2</mat-option>
+                    <mat-option value="option">Employee-3</mat-option>
+                    <mat-option value="option">Employee-4</mat-option>
+                    <mat-option value="option">Employee-5</mat-option>
+                  </mat-select>
+                </mat-form-field>
+              
+                <!-- 5 -->
+                
+                <button type="button" mat-flat-button style="background-color:#2F1A00; color: #fff;">Assign</button>
+              </div>
         </div>
 
+        <div class="outputs">
         <p class="opacity">Pending Task</p>
         <div class="tasks">
-          <input type="text" name="" id="" placeholder="Task 1" />
-          <button id="blue">Cancel</button>
-          <button id="complete">Mark Complete</button>
+          <div class="example-container">
+            <mat-form-field appearance="outline" style="width:500px; height: 15px">
+              <mat-label>Task</mat-label>
+              <input matInput required>
+            </mat-form-field>
+          </div> &nbsp;&nbsp;
+          <button mat-raised-button style="background-color:rgb(225, 225, 225)">Cancel</button>&nbsp;&nbsp;
+          <button mat-raised-button style="background-color: #2F1A00; color: #fff">Mark Complete</button>
         </div>
         <div class="tasks">
-          <input type="text" name="" id="" placeholder="Task 1" />
-          <button id="blue">Cancel</button>
-          <button id="complete">Mark Complete</button>
+          <div class="example-container">
+            <mat-form-field appearance="outline" style="width:500px; height: 15px">
+              <mat-label>Task</mat-label>
+              <input matInput required>
+            </mat-form-field>
+          </div> &nbsp;&nbsp;
+          <button mat-raised-button style="background-color:rgb(225, 225, 225)">Cancel</button>&nbsp;&nbsp;
+          <button mat-raised-button style="background-color: #2F1A00; color: #fff">Mark Complete</button>
         </div>
         <div class="tasks">
-          <input type="text" name="" id="" placeholder="Task 1" />
-          <button id="blue">Cancel</button>
-          <button id="complete">Mark Complete</button>
+          <div class="example-container">
+            <mat-form-field appearance="outline" style="width:500px; height: 15px">
+              <mat-label>Task</mat-label>
+              <input matInput required>
+            </mat-form-field>
+          </div> &nbsp;&nbsp;
+          <button mat-raised-button style="background-color:rgb(225, 225, 225)">Cancel</button>&nbsp;&nbsp;
+          <button mat-raised-button style="background-color: #2F1A00; color: #fff">Mark Complete</button>
         </div>
         <div class="tasks">
-          <input type="text" name="" id="" placeholder="Task 1" />
-          <button id="blue">Cancel</button>
-          <button id="complete">Mark Complete</button>
+          <div class="example-container">
+            <mat-form-field appearance="outline" style="width:500px; height: 15px">
+              <mat-label>Task</mat-label>
+              <input matInput required>
+            </mat-form-field>
+          </div> &nbsp;&nbsp;
+          <button mat-raised-button style="background-color:rgb(225, 225, 225)">Cancel</button>&nbsp;&nbsp;
+          <button mat-raised-button style="background-color: #2F1A00; color: #fff">Mark Complete</button>
         </div>
         <div class="tasks">
-          <input type="text" name="" id="" placeholder="Task 1" />
-          <button id="blue">Cancel</button>
-          <button id="complete">Mark Complete</button>
+          <div class="example-container">
+            <mat-form-field appearance="outline" style="width:500px; height: 15px">
+              <mat-label>Task</mat-label>
+              <input matInput required>
+            </mat-form-field>
+          </div> &nbsp;&nbsp;
+          <button mat-raised-button style="background-color:rgb(225, 225, 225)">Cancel</button>&nbsp;&nbsp;
+          <button mat-raised-button style="background-color: #2F1A00; color: #fff">Mark Complete</button>
         </div>
         <div class="tasks">
-          <input type="text" name="" id="" placeholder="Task 1" />
-          <button id="blue">Cancel</button>
-          <button id="complete">Mark Complete</button>
+          <div class="example-container">
+            <mat-form-field appearance="outline" style="width:500px; height: 15px">
+              <mat-label>Task</mat-label>
+              <input matInput required>
+            </mat-form-field>
+          </div> &nbsp;&nbsp;
+          <button mat-raised-button style="background-color:rgb(225, 225, 225)">Cancel</button>&nbsp;&nbsp;
+          <button mat-raised-button style="background-color: #2F1A00; color: #fff">Mark Complete</button>
         </div>
         <div class="tasks">
-          <input type="text" name="" id="" placeholder="Task 1" />
-          <button id="blue">Cancel</button>
-          <button id="complete">Mark Complete</button>
+          <div class="example-container">
+            <mat-form-field appearance="outline" style="width:500px; height: 15px">
+              <mat-label>Task</mat-label>
+              <input matInput required>
+            </mat-form-field>
+          </div> &nbsp;&nbsp;
+          <button mat-raised-button style="background-color:rgb(225, 225, 225)">Cancel</button>&nbsp;&nbsp;
+          <button mat-raised-button style="background-color: #2F1A00; color: #fff">Mark Complete</button>
+        </div>
         </div>
       </div>
+    </div>
     </section>
   </div>
 </div>

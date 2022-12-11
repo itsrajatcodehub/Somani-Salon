@@ -30,5 +30,9 @@ body {
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
-  --primaryColor: red;
+  --primaryColor: #2F1A00 ;
+}
+
+:root{
+  --primary-color: #2F1A00;
 }
